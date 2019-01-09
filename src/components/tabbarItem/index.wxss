@@ -89,3 +89,24 @@
 .item.selected .title {
   color: #333;
 }
+
+/* 主题配色 */
+.item.selected .icons.blue icon {
+  background-image: linear-gradient(to right top, #09f, rgb(153, 243, 255));
+  box-shadow: 0 3px 8px rgba(3, 157, 247, 0.3);
+}
+
+.item.selected .icons.red icon {
+  background-image: linear-gradient(to right top, #f00, #f90);
+  box-shadow: 0 3px 8px rgba(200, 0, 0, 0.3);
+}
+
+.item.selected .icons.orange icon {
+  background-image: linear-gradient(to right top, #f60, #fc0);
+  box-shadow: 0 3px 8px rgba(200, 0, 0, 0.3);
+}
+
+.item.selected .icons.green icon {
+  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
+  box-shadow: 0 3px 8px rgba(14, 121, 80, 0.3);
+}

@@ -32,6 +32,12 @@ Component({
       value: '',
     },
 
+    // 显示更多按钮
+    more: {
+      type: Boolean,
+      value: true,
+    },
+
   },
 
   data: {
@@ -40,6 +46,11 @@ Component({
 
   methods: {
 
-  }
+    // 更多按钮点击
+    onMoreTap(e) {
+      this.triggerEvent('onMoreTap', e);
+    },
+
+  },
 
 });

@@ -1,5 +1,5 @@
 <!-- 搜索入口 start -->
-<search-handler placeholder="文章 / 媒体 / 书籍" input="{{ false }}" 
+<search-handler placeholder="文章 / 媒体 / 书籍" input="{{ false }}"
     bindtap="pushToSearch" />
 <!-- 搜索入口 end -->
 
@@ -19,14 +19,15 @@
 <view class="entries">
   <view class="inner">
     <block wx:for="{{ entries }}" wx:key="index">
-      <entry-item item="{{ item }}"></entry-item>
+      <entry-item item="{{ item }}"
+          data-item="{{ item }}" bindtap="entryCheck"></entry-item>
     </block>
   </view>
 </view>
 <!-- 快捷入口 end -->
 
-<section icon="feed" icon-color="#f00" 
-        title="为您推荐" title-sub="阅读好文"></section>
+<section title="专栏" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
+</section>
 
 <!-- 专题活动入口 start -->
 <special-topic cover="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/ad/001.png?raw=true"></special-topic>

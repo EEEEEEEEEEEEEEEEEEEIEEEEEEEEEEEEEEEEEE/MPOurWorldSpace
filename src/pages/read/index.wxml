@@ -1,0 +1,10 @@
+<view class="wrap">
+
+  <page-header class="header"
+        title="阅读"
+        title-sub="阅读使人进步">
+  </page-header>
+
+  <complete icon="feed" title="专栏" remark="名博专栏"></complete>
+
+</view>

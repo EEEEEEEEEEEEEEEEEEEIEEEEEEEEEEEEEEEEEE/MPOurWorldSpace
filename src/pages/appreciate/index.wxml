@@ -1,0 +1,10 @@
+<view class="wrap">
+
+  <page-header class="header"
+        title="欣赏"
+        title-sub="慢慢欣赏来之不易的风景">
+  </page-header>
+
+  <complete icon="feed" title="专栏" remark="名博专栏"></complete>
+
+</view>

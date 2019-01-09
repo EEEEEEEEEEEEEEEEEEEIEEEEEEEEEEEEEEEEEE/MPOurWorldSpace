@@ -16,7 +16,12 @@
   "pages": [
     "pages/index/index",
     "pages/home/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/special/index",
+    "pages/media/index",
+    "pages/read/index",
+    "pages/appreciate/index",
+    "pages/scientist/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

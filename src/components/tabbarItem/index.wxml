@@ -1,9 +1,9 @@
 <view class="item {{ selected ? 'selected' : '' }}">
 
-  <view class="icons">
+  <view class="icons {{ theme }}">
     <icon class="icon" type="{{ icon }}" size="{{ selected ? 16 : 20 }}" />
   </view>
 
   <text class="title">{{ title }}</text>
-  
+
 </view>

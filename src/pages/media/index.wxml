@@ -1,0 +1,10 @@
+<view class="wrap">
+
+  <page-header class="header"
+        title="媒体"
+        title-sub="用耳朵倾听，用思维分析">
+  </page-header>
+
+  <complete icon="feed" title="专栏" remark="名博专栏"></complete>
+
+</view>

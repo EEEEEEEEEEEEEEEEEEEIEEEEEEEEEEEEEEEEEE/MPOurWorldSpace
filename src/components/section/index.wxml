@@ -3,14 +3,17 @@
   <view class="header">
 
     <view class="title">
-      <icon type="{{ icon }}" size="{{ iconSize }}" style="color: {{ iconColor }};" />
+      <icon type="{{ icon }}" size="{{ iconSize }}"
+            wx:if="{{ icon }}"
+            style="color: {{ iconColor }};" />
       <view class="text">
         <text class="base">{{ title }}</text>
         <text class="sub">{{ titleSub }}</text>
       </view>
     </view>
 
-    <text class="more">更多</text>
+    <text class="more" wx:if="{{ more }}"
+          bindtap="onMoreTap">更多</text>
 
   </view>
 

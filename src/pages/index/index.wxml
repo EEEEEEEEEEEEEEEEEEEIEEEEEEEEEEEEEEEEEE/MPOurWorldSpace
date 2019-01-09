@@ -17,7 +17,7 @@
     </scroll-view>
 
     <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 1 }}">
-    
+
       <complete icon="feed" title="Comming soon~" remark="努力开发测试中···">
         <button type="primary" size="mini">加了个油~</button>
       </complete>
@@ -33,7 +33,7 @@
   </view>
 
   <tabbar class="tabbar-base">
-    <tabbarItem wx:for="{{ tabbarSet }}" title="{{ item.title }}" icon="{{ item.icon }}" selected="{{ tabSelected === index }}" data-id="{{ index }}" bindtap="tabCheck" wx:key="{{ index }}" />
+    <tabbarItem wx:for="{{ tabbarSet }}" title="{{ item.title }}" icon="{{ item.icon }}" selected="{{ tabSelected === index }}" data-id="{{ index }}" bindtap="tabCheck" wx:key="{{ index }}" theme="{{ item.theme }}" />
   </tabbar>
 
 </view>

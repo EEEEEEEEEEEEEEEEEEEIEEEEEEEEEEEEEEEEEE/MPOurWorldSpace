@@ -5,14 +5,17 @@ const app = getApp();
 const tabbarSet = [{
   title: "主页",
   icon: "home",
+  theme: "blue",
   slogan: "探索自然科学的奥秘",
 }, {
   title: "探索",
   icon: "earth",
+  theme: "green",
   slogan: "发现未知 探索自然",
 }, {
   title: "我",
   icon: "user",
+  theme: "orange",
   slogan: "看得见的成长",
 }, ];
 

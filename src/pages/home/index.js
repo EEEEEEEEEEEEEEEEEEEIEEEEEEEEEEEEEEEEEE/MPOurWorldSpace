@@ -35,30 +35,35 @@ Page({
     entries: [{
       id: "0001",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/001.png?raw=true",
+      name: "special",
       title: "专栏",
       remark: "领域知识，一网打尽",
       badge: 0,
     }, {
       id: "0002",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/002.png?raw=true",
+      name: "media",
       title: "视听",
       remark: "用耳朵倾听，用思维分析",
       badge: 45,
     }, {
       id: "0003",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/003.png?raw=true",
+      name: "scientist",
       title: "科学家",
       remark: "请铭记他们为人类科学探索做出的贡献",
       badge: 8,
     }, {
       id: "0004",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/004.png?raw=true",
+      name: "appreciate",
       title: "欣赏",
       remark: "慢慢欣赏来之不易的风景",
       badge: 99,
     }, {
       id: "0005",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      name: "read",
       title: "阅读",
       remark: "阅读使人进步",
       badge: 0,
@@ -73,10 +78,25 @@ Page({
     });
   },
 
+  // 入口条目选择
+  entryCheck(e) {
+    let item = e.target.dataset.item;
+    wx.navigateTo({
+      url: `/pages/${item.name}/index`,
+    });
+  },
+
   // 跳转到搜索页面
   pushToSearch() {
     wx.navigateTo({
-      url: '/pages/search/index',
+      url: "/pages/search/index",
+    });
+  },
+
+  // 跳转到专栏页面
+  pushToSpecial() {
+    wx.navigateTo({
+      url: "/pages/special/index",
     });
   },
 

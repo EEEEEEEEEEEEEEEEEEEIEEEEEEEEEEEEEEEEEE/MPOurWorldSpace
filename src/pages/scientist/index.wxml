@@ -1,0 +1,10 @@
+<view class="wrap">
+
+  <page-header class="header"
+        title="科学家"
+        title-sub="请铭记他们为人类科学探索做出的贡献">
+  </page-header>
+
+  <complete icon="feed" title="专栏" remark="名博专栏"></complete>
+
+</view>
