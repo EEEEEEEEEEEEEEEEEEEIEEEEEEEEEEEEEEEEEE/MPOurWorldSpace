@@ -1,0 +1,33 @@
+<view class="wrap">
+
+  <page-header class="header" title="{{ tabbarSelected.title }}" title-sub="{{ tabbarSelected.slogan }}">
+
+    <icon-group wx:if="{{ tabSelected === 0 }}">
+      <view class="btn-handler" hover-class="btn-handler-hover">
+      <icon type="box" />
+      </view>
+    </icon-group>
+
+  </page-header>
+
+  <view class="main">
+
+    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 0 }}">
+      <page-home></page-home>
+    </scroll-view>
+
+    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 1 }}">
+      <section icon="feed" title="Tips" title-sub="Comming soon~"></section>
+    </scroll-view>
+
+    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 2 }}">
+      <section icon="feed" title="Tips" title-sub="Comming soon~"></section>
+    </scroll-view>
+
+  </view>
+
+  <tabbar class="tabbar-base">
+    <tabbarItem wx:for="{{ tabbarSet }}" title="{{ item.title }}" icon="{{ item.icon }}" selected="{{ tabSelected === index }}" data-id="{{ index }}" bindtap="tabCheck" wx:key="{{ index }}" />
+  </tabbar>
+
+</view>

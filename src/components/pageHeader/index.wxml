@@ -1,0 +1,12 @@
+<view class="page-header">
+
+  <view class="sub">
+    <text class="title">{{ title }}</text>
+    <text class="title-sub">{{ titleSub }}</text>
+  </view>
+
+  <view class="sub">
+    <slot></slot>
+  </view>
+
+</view>

@@ -1,0 +1,25 @@
+.special-topic {
+  position: relative;
+  margin: 40rpx;
+}
+
+.cover {
+  height: 0;
+  padding-bottom: 34.04%;
+}
+
+.cover image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.cover image.shadow {
+  opacity: .3;
+  filter: blur(6px);
+  transform: translateY(8px);
+  z-index: 1;
+}

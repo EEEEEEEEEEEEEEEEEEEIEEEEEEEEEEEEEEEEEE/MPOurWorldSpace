@@ -1,0 +1,24 @@
+{
+  "component": true,
+  "usingComponents": {
+    "icon": "/components/icon/index",
+    "icon-group": "/components/iconGroup/index",
+    "special-topic": "../../components/specialTopic/index",
+    "entry-item": "../../components/entryItem/index",
+    "tabbar": "/components/tabbar/index",
+    "tabbarItem": "/components/tabbarItem/index",
+    "page-header": "../../components/pageHeader/index",
+    "carousel-base-item": "../../components/carouselBaseItem/index",
+    "section": "../../components/section/index"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/home/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EBF1F3",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  }
+}

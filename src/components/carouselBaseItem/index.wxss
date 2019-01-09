@@ -1,0 +1,35 @@
+.item {
+  position: relative;
+  margin: 0 5px;
+  z-index: 1;
+}
+
+.image {
+  height: 0;
+  padding-bottom: 54.47619%;
+}
+
+.image image {
+  border-radius: 24rpx;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.image .shadow {
+  transform: scale(0.7);
+  z-index: 1;
+}
+
+.item.current {
+  z-index: 2;
+}
+
+.item.current .image .shadow {
+  opacity: .3;
+  filter: blur(6px);
+  transform: scale(1) translateY(8px);
+}

@@ -1,0 +1,6 @@
+<view class="special-topic">
+  <view class="cover">
+    <image src="{{ cover }}" mode="scaleToFill"></image>
+    <image class="shadow" src="{{ cover }}" mode="scaleToFill"></image>
+  </view>
+</view>

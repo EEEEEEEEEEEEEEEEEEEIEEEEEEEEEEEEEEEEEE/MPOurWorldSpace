@@ -1,0 +1,32 @@
+
+/* 主轮播图 */
+.carousel  {
+  margin-bottom: -40rpx; /* 不要和底部的栏目距离过大 */
+}
+
+.carousel swiper-item {
+  overflow: visible;
+}
+
+/* 快捷入口*/
+.entries {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border: 1px #fafafa solid;
+  border-radius: 24rpx;
+  position: relative;
+  margin: 40rpx;
+}
+
+.entries .inner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx;
+}
+
+.entries .inner entry-item {
+  flex: 1;
+}

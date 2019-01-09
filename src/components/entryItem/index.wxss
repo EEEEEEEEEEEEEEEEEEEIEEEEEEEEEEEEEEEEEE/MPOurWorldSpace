@@ -1,0 +1,54 @@
+.entry-item {
+  margin: 10rpx;
+  padding: 20rpx 10rpx 10rpx;
+  position: relative;
+}
+
+.entry-item, .entry-item view, .entry-item text {
+  /* outline: 1px red solid; */
+}
+
+/* 封面 */
+.cover-wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 80rpx;
+}
+
+.cover {
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.cover image {
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.badge {
+  background-color: #f00;
+  color: #fff;
+  border-radius: 40rpx;
+  font-size: 20rpx;
+  line-height: 32rpx;
+  padding: 0 10rpx;
+  position: absolute;
+  bottom: 0;
+  right: -10rpx;
+  z-index: 2;
+}
+
+.title {
+  color: #999;
+  display: block;
+  font-size: 10px;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}

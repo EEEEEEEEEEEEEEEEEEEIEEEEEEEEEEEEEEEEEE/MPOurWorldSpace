@@ -1,0 +1,6 @@
+<view class="search-handler">
+  <view class="inner">
+    <icon type="search" size="14" />
+    <text class="text">{{ placeholder }}</text>
+  </view>
+</view>

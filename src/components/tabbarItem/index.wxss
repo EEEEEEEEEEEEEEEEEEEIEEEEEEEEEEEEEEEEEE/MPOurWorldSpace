@@ -1,0 +1,91 @@
+.item {
+  color: #999;
+  position: relative;
+}
+
+.item::after {
+  background-image: linear-gradient(to right top, #99f, #FF9999);
+  border-radius: 8px;
+  content: '';
+  height: 8px;
+  opacity: .3;
+  position: absolute;
+  left: 50%;
+  margin-left: -14px;
+  bottom: 6px;
+  transition: all 0.3s .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scaleX(0);
+  width: 28px;
+  z-index: 0;
+}
+
+.icons, .title {
+  position: relative;
+  z-index: 2;
+}
+
+.icons {
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 32px;
+}
+
+.icons icon {
+  border-radius: 50%;
+  line-height: 32px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 32px;
+  z-index: 1;
+}
+
+.icons::after {
+  background-color: #FCE5C6;
+  border-radius: 50%;
+  content: '';
+  height: 8px;
+  position: absolute;
+  right: 100%;
+  top: 100%;
+  width: 8px;
+  z-index: 2;
+  transition: all 0.3s .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(0);
+}
+
+.title {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* 高亮 */
+
+.item.selected {
+  color: #333;
+}
+
+.item.selected::after {
+  transform: scaleX(1);
+}
+
+.item.selected .icons icon {
+  background-image: linear-gradient(to right top, #99f, #FF9999);
+  box-shadow: 0 3px 8px rgba(94, 94, 218, 0.3);
+  color: #fff;
+  transform: rotate(-15deg) translateY(-8px) scale(1.1);
+}
+
+.item.selected .icons::after {
+  right: -2px;
+  top: -4px;
+  transform: scale(1);
+}
+
+.item.selected .title {
+  color: #333;
+}

@@ -1,0 +1,60 @@
+/* 全局 */
+.wrap {
+  background: #EBF1F3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 操作按钮 */
+.btn-handler {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 50%;
+  transition: all .2s ease;
+}
+
+.btn-handler icon {
+  color: #9999FF;
+  line-height: 44px;
+  text-align: center;
+  width: 44px;
+}
+
+.btn-handler-hover {
+  color: rgb(112, 112, 223);
+  transform: scale(0.9);
+}
+
+/* 主视图区域 */
+
+.main {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  right: 0;
+  bottom: 65px;
+}
+
+.main .view {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 选项卡栏 */
+
+.tabbar-base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
