@@ -1,5 +1,6 @@
 <!-- 搜索入口 start -->
-<search-handler placeholder="文章 / 媒体 / 书籍" />
+<search-handler placeholder="文章 / 媒体 / 书籍" input="{{ false }}" 
+    bindtap="pushToSearch" />
 <!-- 搜索入口 end -->
 
 <!-- 主轮播图 start -->
@@ -28,7 +29,7 @@
         title="为您推荐" title-sub="阅读好文"></section>
 
 <!-- 专题活动入口 start -->
-<special-topic cover="https://github.com/djyuning/OurWorldAssets/blob/master/ad/001.png?raw=true"></special-topic>
+<special-topic cover="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/ad/001.png?raw=true"></special-topic>
 <!-- 专题活动入口 end -->
 
 <section icon="desktop" title="为您推荐" title-sub="阅读好文"></section>

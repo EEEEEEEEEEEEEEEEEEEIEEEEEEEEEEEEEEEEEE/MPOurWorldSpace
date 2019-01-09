@@ -1,6 +1,11 @@
 <view class="search-handler">
   <view class="inner">
     <icon type="search" size="14" />
-    <text class="text">{{ placeholder }}</text>
+    <input class="text" wx:if="{{ input }}"
+          confirm-type="search"
+          value="{{ value }}"
+          bindinput="onInput"
+          placeholder="{{ placeholder }}" />
+    <text class="text" wx:if="{{ !input }}">{{ placeholder }}</text>
   </view>
 </view>

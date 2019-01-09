@@ -1,0 +1,11 @@
+<view class="wrap">
+
+  <!-- 搜索入口 start -->
+  <search-handler placeholder="文章 / 媒体 / 书籍" value="{{ keyword }}" bind:input="searchInput" />
+  <!-- 搜索入口 end -->
+
+  <complete icon="empty" title="搜索结果为空" remark="请更换一个关键字试试">
+    <button type="primary" size="mini">知道了</button>
+  </complete>
+
+</view>

@@ -1,5 +1,4 @@
 {
   "usingComponents": {
-    "search-handler": "../../components/searchHandler/index"
   }
 }

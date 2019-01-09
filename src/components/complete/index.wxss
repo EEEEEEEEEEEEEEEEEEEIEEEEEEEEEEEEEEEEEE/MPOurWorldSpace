@@ -1,0 +1,36 @@
+.complete {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 128rpx auto;
+  padding: 40rpx;
+  position: relative;
+}
+
+/* 图标 */
+.icon {
+  color: rgba(29, 69, 82, 0.2);
+  margin-bottom: 128rpx;
+  text-shadow: 1rpx 1rpx 0 #fff;
+}
+
+/* 标题 */
+.title {
+  font-size: 24px;
+  line-height: 64rpx;
+  margin-bottom: 40rpx;
+}
+
+/* 备注 */
+.remark {
+  color: #999;
+  font-size: 14px;
+  line-height: 48rpx;
+  margin-bottom: 40rpx;
+}
+
+/* 操作项 */
+.options {
+  position: relative;
+}

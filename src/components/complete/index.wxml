@@ -1,0 +1,10 @@
+<view class="complete">
+  <icon class="icon" type="{{ icon }}" size="96" wx:if="{{ icon }}" />
+  <text class="title" wx:if="{{ title }}">{{ title }}</text>
+  <text class="remark" wx:if="{{ remark }}">{{ remark }}</text>
+
+  <view class="options">
+    <slot></slot>
+  </view>
+  
+</view>

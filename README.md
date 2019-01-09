@@ -15,7 +15,9 @@
 ## API
 
 ## 速记和一些坑
-- 1rps = 0.5px，28px = (28*2)rpx = 56rpx；
+- 2rps = 1px，28px = (28*2)rpx = 56rpx；
+- 小程序不支持不认可的 URL 访问，所以，在使用 http/https 请求的内容时，需要登录到[小程序后台](https://mp.weixin.qq.com/)进行修改和备案；
+- 域名未备案的话，直接真机调试，图片可能不显示，需要在真机上切换到调试模式 —— 点击右上角的胶囊按钮三个点，在弹出的面板选择【打开调试】，重启小程序即可看到图片；
 - 小程序自动编译预览最大支持 2048 kb，所以，最好不要把图片等占空间资源打包在项目内；
 - 组件默认只有一个 `slot`，如果需要使用多个 `slot`，需要在组件的 `options` 中声明 `multipleSlots: true`，参考：https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html#%E7%BB%84%E4%BB%B6wxml%E7%9A%84slot
 - 使用 `wx.navigateTo` 跳转页面，可以使用 query 的形式传递参数，在目标页面使用 `options` 获取参数：

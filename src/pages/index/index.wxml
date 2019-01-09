@@ -12,16 +12,22 @@
 
   <view class="main">
 
-    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 0 }}">
+    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 0 }}">
       <page-home></page-home>
     </scroll-view>
 
-    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 1 }}">
-      <section icon="feed" title="Tips" title-sub="Comming soon~"></section>
+    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 1 }}">
+    
+      <complete icon="feed" title="Comming soon~" remark="努力开发测试中···">
+        <button type="primary" size="mini">加了个油~</button>
+      </complete>
+
     </scroll-view>
 
-    <scroll-view scroll-y class="view" id="home" wx:if="{{ tabSelected === 2 }}">
-      <section icon="feed" title="Tips" title-sub="Comming soon~"></section>
+    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 2 }}">
+     <complete icon="feed" title="Comming soon~" remark="努力开发测试中···">
+        <button type="primary" size="mini">加了个油~</button>
+      </complete>
     </scroll-view>
 
   </view>

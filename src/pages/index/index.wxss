@@ -31,7 +31,6 @@
 }
 
 /* 主视图区域 */
-
 .main {
   position: absolute;
   left: 0;
@@ -50,7 +49,6 @@
 }
 
 /* 选项卡栏 */
-
 .tabbar-base {
   position: absolute;
   left: 0;
