@@ -69,6 +69,59 @@ Page({
       badge: 0,
     }],
 
+    // 专栏文章
+    special: [{
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 1248,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 1248,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 1248,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 1248,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 1248,
+    }, ],
+
   },
 
   // 轮播图切换时调整选中的条目索引

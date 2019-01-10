@@ -1,12 +1,4 @@
 .section {
-  /*
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
-              0 4px 8px rgba(0, 0, 0, .05),
-              0 8px 16px rgba(0, 0, 0, .05);
-  border-radius: 24rpx;
-  */
-  margin: 40rpx;
   position: relative;
 }
 
@@ -15,7 +7,8 @@
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  padding: 20rpx;
+  margin: 40rpx;
+  padding: 20rpx 20rpx 0;
   position: relative;
 }
 
@@ -31,7 +24,7 @@
   line-height: 64rpx;
   margin-right: 8rpx;
   text-align: center;
-  width: 32px;
+  width: 64rpx;
 }
 
 .header .text text {
@@ -39,21 +32,21 @@
 }
 
 .header .base {
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: bold;
   line-height: 64rpx;
 }
 
 .header .sub {
   color: #999;
-  font-size: 12px;
+  font-size: 24rpx;
 }
 
 .header .more {
   color: #9999FF;
-  font-size: 12px;
+  font-size: 24rpx;
   font-weight: bold;
-  line-height: 32px;
+  line-height: 64rpx;
   padding: 0 16rpx;
 }
 

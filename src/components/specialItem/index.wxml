@@ -1,0 +1,34 @@
+<view class="special-item" hover-class="special-item-hover" wx:if="{{ item }}" bindtap="tapChange">
+
+  <!-- cover start -->
+  <view class="sub cover-wrap">
+    <view class="cover">
+      <image src="{{ item.cover }}" mode="scaleToFill" />
+    </view>
+  </view>
+  <!-- cover end -->
+
+  <!-- info start -->
+  <view class="sub info">
+
+    <text class="title">{{ item.title }}</text>
+
+    <!-- attr start -->
+    <view class="attr">
+
+      <view class="base">
+        <icon class="like" data-id="like" type="like" />
+        <text class="category" data-id="category" wx:if="{{ item.category }}">{{ item.category.name || "未分类" }}</text>
+      </view>
+
+      <!-- 阅读次数 start -->
+      <text class="badge">阅读 {{ item.readCount }} 次</text>
+      <!-- 阅读次数 end -->
+
+    </view>
+    <!-- attr end -->
+
+  </view>
+  <!-- info end -->
+
+</view>

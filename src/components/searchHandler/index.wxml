@@ -1,6 +1,6 @@
 <view class="search-handler">
   <view class="inner">
-    <icon type="search" size="14" />
+    <icon type="search" size="28" />
     <input class="text" wx:if="{{ input }}"
           confirm-type="search"
           value="{{ value }}"

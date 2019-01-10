@@ -1,0 +1,103 @@
+.special-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 40rpx;
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  position: relative;
+  margin: 40rpx;
+  transition: all .3s ease
+}
+
+.special-item-hover {
+  transform: scale(.9);
+}
+
+.sub {
+  flex: 1;
+  position: relative;
+}
+
+/* 封面 */
+.cover-wrap {
+  margin-right: 20rpx;
+}
+
+.cover {
+  height: 0;
+  padding-bottom: 75%;
+  position: relative;
+}
+
+.cover image {
+  border-radius: 20rpx;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 信息组 */
+.info {
+  width: 64%;
+}
+
+/* 标题 */
+.title {
+  display: block;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 附加属性 */
+.attr {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.attr text {
+  font-size: 20rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 基础信息 */
+.base {
+  align-items: center;
+  display: flex;
+  margin-right: 20rpx;
+}
+
+/* 喜欢 */
+icon.like {
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  width: 64rpx;
+}
+
+/* 分类名 */
+.category {
+  color: #999;
+}
+
+/* 阅读次数 */
+.badge {
+  background: linear-gradient(to right top, #f60, #fc0);
+  border-radius: 30rpx 10rpx 30rpx 10rpx;
+  color: #fff;
+  padding: 0 25rpx;
+}

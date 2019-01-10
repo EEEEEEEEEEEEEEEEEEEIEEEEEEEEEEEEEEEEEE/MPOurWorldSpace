@@ -1,1 +1,5 @@
 @import '/assets/iconfont/icons.wxss';
+
+.icon:before {
+  display: block;
+}

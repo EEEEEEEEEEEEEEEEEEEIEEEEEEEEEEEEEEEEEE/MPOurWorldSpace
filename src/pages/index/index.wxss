@@ -20,9 +20,9 @@
 
 .btn-handler icon {
   color: #9999FF;
-  line-height: 44px;
+  line-height: 88rpx;
   text-align: center;
-  width: 44px;
+  width: 88rpx;
 }
 
 .btn-handler-hover {
@@ -34,9 +34,9 @@
 .main {
   position: absolute;
   left: 0;
-  top: 75px;
+  top: 150rpx;
   right: 0;
-  bottom: 65px;
+  bottom: 130rpx;
 }
 
 .main .view {

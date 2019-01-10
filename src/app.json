@@ -6,6 +6,7 @@
     "complete": "/components/complete/index",
     "search-handler": "/components/searchHandler/index",
     "special-topic": "/components/specialTopic/index",
+    "special-item": "/components/specialItem/index",
     "entry-item": "/components/entryItem/index",
     "tabbar": "/components/tabbar/index",
     "tabbarItem": "/components/tabbarItem/index",

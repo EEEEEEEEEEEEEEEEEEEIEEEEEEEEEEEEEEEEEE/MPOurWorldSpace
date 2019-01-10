@@ -11,7 +11,7 @@ Component({
     // 图标大小
     size: {
       type: Number,
-      value: 16,
+      value: 32,
     },
 
   },

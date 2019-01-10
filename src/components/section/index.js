@@ -11,7 +11,7 @@ Component({
     // 图标尺寸
     iconSize: {
       type: Number,
-      value: 16,
+      value: 32,
     },
 
     // 图标颜色

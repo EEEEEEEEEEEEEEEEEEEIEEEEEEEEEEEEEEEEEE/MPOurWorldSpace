@@ -47,7 +47,7 @@
 .title {
   color: #999;
   display: block;
-  font-size: 10px;
+  font-size: 20rpx;
   line-height: 40rpx;
   margin-top: 20rpx;
   text-align: center;

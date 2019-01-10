@@ -17,7 +17,7 @@
 
 /* 标题 */
 .title {
-  font-size: 24px;
+  font-size: 48rpx;
   line-height: 64rpx;
   margin-bottom: 40rpx;
 }
@@ -25,7 +25,7 @@
 /* 备注 */
 .remark {
   color: #999;
-  font-size: 14px;
+  font-size: 24rpx;
   line-height: 48rpx;
   margin-bottom: 40rpx;
 }
