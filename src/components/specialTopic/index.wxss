@@ -1,10 +1,11 @@
 .special-topic {
   position: relative;
-  margin: 40rpx;
+  margin: 0 40rpx;
 }
 
 .cover {
   height: 0;
+  overflow: hidden;
   padding-bottom: 34.04%;
 }
 

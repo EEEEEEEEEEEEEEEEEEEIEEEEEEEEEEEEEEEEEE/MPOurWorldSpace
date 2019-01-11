@@ -1,0 +1,8 @@
+<view class="scientis-item" wx:if="{{ item }}">
+  <view class="avatar-wrap">
+    <view class="avatar">
+      <image src="{{ item.avatar }}" mode="scaleToFill" lazy-load="true" />
+    </view>
+  </view>
+  <text class="username">{{ item.username }}</text>
+</view>

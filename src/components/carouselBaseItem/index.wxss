@@ -1,7 +1,12 @@
 .item {
   position: relative;
   margin: 0 5px;
+  transition: all .3s ease;
   z-index: 1;
+}
+
+.item-hover {
+  transform: scale(0.98);
 }
 
 .image {

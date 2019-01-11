@@ -14,7 +14,8 @@
     "entry-item": "/components/entryItem/index",
     "carousel-base-item": "/components/carouselBaseItem/index",
     "media-list": "/components/mediaList/index",
-    "media-item": "/components/mediaItem/index"
+    "media-item": "/components/mediaItem/index",
+    "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
     "pages/index/index",

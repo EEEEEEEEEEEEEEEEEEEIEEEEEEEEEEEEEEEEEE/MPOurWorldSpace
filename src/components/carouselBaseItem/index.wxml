@@ -1,4 +1,4 @@
-<view class="item {{ current ? 'current' : '' }}" hidden="{{ !item }}">
+<view class="item {{ current ? 'current' : '' }}" hover-class="item-hover" wx:if="{{ item }}">
 
   <view class="image">
     <image src="{{ item.image }}" mode="scaleToFill" lazy-load="true"></image>

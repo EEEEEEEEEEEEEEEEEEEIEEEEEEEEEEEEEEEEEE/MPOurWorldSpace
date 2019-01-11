@@ -2,6 +2,8 @@ Component({
 
   data: {
 
+    pushed: false, // 是否需要暂停页面更新
+
     // 主轮播图
     carousel: [{
       image: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/images/carousel/001.png?raw=true",
@@ -79,7 +81,7 @@ Component({
         id: "12",
         name: "有声书",
       },
-      readCount: 1248,
+      readCount: 10,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
@@ -89,7 +91,7 @@ Component({
         id: "12",
         name: "有声书",
       },
-      readCount: 1248,
+      readCount: 33,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
@@ -99,7 +101,7 @@ Component({
         id: "12",
         name: "有声书",
       },
-      readCount: 1248,
+      readCount: 12,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
@@ -109,18 +111,130 @@ Component({
         id: "12",
         name: "有声书",
       },
-      readCount: 1248,
-    }, {
-      id: "12",
-      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
-      title: "昆虫4|分工明确的神秘蚂蚁帝国",
-      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
-      category: {
-        id: "12",
-        name: "有声书",
-      },
-      readCount: 1248,
+      readCount: 8,
     }, ],
+
+    // 多媒体
+    media: [{
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国 分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 48,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 0,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 120,
+    }, {
+      id: "12",
+      cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      title: "昆虫4|分工明确的神秘蚂蚁帝国",
+      remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+      category: {
+        id: "12",
+        name: "有声书",
+      },
+      readCount: 8,
+    },],
+
+    // 科学家
+    scientist: [
+      {
+        id: 1,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 2,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 3,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 1,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 2,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 3,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 1,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 2,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 3,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 1,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 2,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+      {
+        id: 3,
+        username: "斯蒂芬·威廉·霍金",
+        position: "物理学家，宇宙学家，数学家，思想家，哲学家",
+        avatar: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      },
+    ],
+
+    // 科学家轮播图尺寸
+    scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 4)) + 25,
 
   },
 
@@ -155,16 +269,31 @@ Component({
       });
     },
 
+    // 跳转到媒体页面
+    pushToMedia() {
+      wx.navigateTo({
+        url: "/pages/media/index",
+      });
+    },
+
     //////////////////////////////////////////////
 
     // 开始事件
     viewStart() {
+      if (!this.data.pushed) return;
       console.log('开始事件');
+      this.setData({
+        pushed: false,
+      });
     },
 
     // 暂停事件
     viewPush() {
+      if (this.data.pushed) return;
       console.log('暂停事件');
+      this.setData({
+        pushed: true,
+      });
     },
 
   },

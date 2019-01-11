@@ -10,11 +10,11 @@
   padding: 20rpx;
   position: relative;
   margin: 40rpx;
-  transition: all .3s ease
+  transition: all .3s ease;
 }
 
 .special-item-hover {
-  transform: scale(.9);
+  transform: scale(.98);
 }
 
 .sub {
@@ -98,7 +98,7 @@ icon.like {
 /* 阅读次数 */
 .badge {
   background: linear-gradient(to right top, #f60, #fc0);
-  border-radius: 30rpx 10rpx 30rpx 10rpx;
+  border-radius: 30rpx 10rpx 15rpx 10rpx;
   color: #fff;
   padding: 0 25rpx;
 }
