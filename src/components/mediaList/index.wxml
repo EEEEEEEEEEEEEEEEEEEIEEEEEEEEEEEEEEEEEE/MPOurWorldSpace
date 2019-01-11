@@ -1,0 +1,1 @@
+<view class="media-list"><slot></slot></view>

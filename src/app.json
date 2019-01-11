@@ -3,20 +3,21 @@
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
+    "tabbar": "/components/tabbar/index",
+    "tabbarItem": "/components/tabbarItem/index",
     "complete": "/components/complete/index",
+    "page-header": "/components/pageHeader/index",
+    "section": "/components/section/index",
     "search-handler": "/components/searchHandler/index",
     "special-topic": "/components/specialTopic/index",
     "special-item": "/components/specialItem/index",
     "entry-item": "/components/entryItem/index",
-    "tabbar": "/components/tabbar/index",
-    "tabbarItem": "/components/tabbarItem/index",
-    "page-header": "/components/pageHeader/index",
     "carousel-base-item": "/components/carouselBaseItem/index",
-    "section": "/components/section/index"
+    "media-list": "/components/mediaList/index",
+    "media-item": "/components/mediaItem/index"
   },
   "pages": [
     "pages/index/index",
-    "pages/home/index",
     "pages/search/index",
     "pages/special/index",
     "pages/media/index",

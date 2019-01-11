@@ -1,46 +1,45 @@
-// 获取应用实例
-const app = getApp();
-
-// tabbar 设置
-const tabbarSet = [{
-  title: "主页",
-  icon: "home",
-  theme: "blue",
-  slogan: "探索自然科学的奥秘",
-}, {
-  title: "探索",
-  icon: "earth",
-  theme: "green",
-  slogan: "发现未知 探索自然",
-}, {
-  title: "我",
-  icon: "user",
-  theme: "orange",
-  slogan: "看得见的成长",
-}, ];
+const app = getApp(); // 获取应用实例
+const query = wx.createSelectorQuery(); // 对象选择
 
 Page({
 
   data: {
-    tabSelected: 0, // 高亮页面
-    tabbarSet: tabbarSet, // tabbar 数据
-    tabbarSelected: tabbarSet[0], // 选择的 tabbar 页面
+    tabBarSet: app.globalData.tabBarSet,
+    tabBarKeySelected: 0, // 高亮页面索引
+    tabBarSelected: app.globalData.tabBarSet[0], // 高亮页面
+    mainHeight: 200,
+    mainWidth: 200,
   },
 
   ///////////////////////////////////////////////////////////
   // Tabbar 页面切换
   tabCheck(e) {
     let key = parseInt(e.target.dataset['id'], 10);
-    if (isNaN(key) || this.tabSelected === key) return;
-    this.setData({
-      tabSelected: key,
-      tabbarSelected: tabbarSet[key],
+    let item = this.data.tabBarSet[key];
+
+    if (isNaN(key) || this.tabBarKeySelected === key) return;
+
+    /**
+     * 触发子组件的事件
+     * 遍历所有视图，如果视图是显示的，则触发视图的 viewStart 自定义事件；
+     * 子组件的 viewStart 类似于普通页面的 onShow
+     * 子组件的 viewPush 类似于普通页面的 onHide
+     */
+    this.data.tabBarSet.forEach((s, i) => {
+      var sc = this.selectComponent(`#${s.name}`);
+      if(!sc) return;
+      if (i === key) {
+        sc.viewStart();
+      } else {
+        sc.viewPush();
+      }
     });
-  },
 
-  ///////////////////////////////////////////////////////////
-
-  onLoad: function() {
+    // 更新数据
+    this.setData({
+      tabBarKeySelected: key,
+      tabBarSelected: item,
+    });
 
   },
 

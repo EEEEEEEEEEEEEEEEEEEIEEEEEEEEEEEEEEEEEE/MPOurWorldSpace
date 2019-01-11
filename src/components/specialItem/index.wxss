@@ -3,7 +3,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
               0 4px 8px rgba(0, 0, 0, .05),
               0 8px 16px rgba(0, 0, 0, .05);
-  border-radius: 40rpx;
+  border-radius: 24rpx;
   align-items: flex-end;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,8 @@
 }
 
 .cover image {
-  border-radius: 20rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
   height: 100%;
   left: 0;
   position: absolute;

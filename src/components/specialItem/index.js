@@ -41,7 +41,11 @@ Component({
 
     // 喜欢或取消喜欢
     toggleLike() {
-      console.log('Ok');
+      wx.showToast({
+        title: '成功',
+        icon: 'success',
+        duration: 2000
+      });
     },
 
   },

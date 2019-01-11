@@ -1,4 +1,4 @@
-Page({
+Component({
 
   data: {
 
@@ -124,33 +124,49 @@ Page({
 
   },
 
-  // 轮播图切换时调整选中的条目索引
-  carouselChange(e) {
-    this.setData({
-      carouselCurrent: e.detail.current,
-    });
-  },
+  methods: {
 
-  // 入口条目选择
-  entryCheck(e) {
-    let item = e.target.dataset.item;
-    wx.navigateTo({
-      url: `/pages/${item.name}/index`,
-    });
-  },
+    // 轮播图切换时调整选中的条目索引
+    carouselChange(e) {
+      this.setData({
+        carouselCurrent: e.detail.current,
+      });
+    },
 
-  // 跳转到搜索页面
-  pushToSearch() {
-    wx.navigateTo({
-      url: "/pages/search/index",
-    });
-  },
+    // 入口条目选择
+    entryCheck(e) {
+      let item = e.target.dataset.item;
+      wx.navigateTo({
+        url: `/pages/${item.name}/index`,
+      });
+    },
 
-  // 跳转到专栏页面
-  pushToSpecial() {
-    wx.navigateTo({
-      url: "/pages/special/index",
-    });
+    // 跳转到搜索页面
+    pushToSearch() {
+      wx.navigateTo({
+        url: "/pages/search/index",
+      });
+    },
+
+    // 跳转到专栏页面
+    pushToSpecial() {
+      wx.navigateTo({
+        url: "/pages/special/index",
+      });
+    },
+
+    //////////////////////////////////////////////
+
+    // 开始事件
+    viewStart() {
+      console.log('开始事件');
+    },
+
+    // 暂停事件
+    viewPush() {
+      console.log('暂停事件');
+    },
+
   },
 
 });

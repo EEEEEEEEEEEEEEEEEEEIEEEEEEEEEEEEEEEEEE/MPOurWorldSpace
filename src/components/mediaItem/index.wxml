@@ -1,0 +1,11 @@
+<view class="media-item" wx:if="{{ item }}">
+
+  <!-- cover start -->
+  <view class="sub cover-wrap">
+    <view class="cover">
+      <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true" />
+    </view>
+  </view>
+  <!-- cover end -->
+
+</view>

@@ -1,0 +1,12 @@
+.media-list {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx;
+  position: relative;
+}
+
+.media-list media-item {
+  width: 50%;
+}

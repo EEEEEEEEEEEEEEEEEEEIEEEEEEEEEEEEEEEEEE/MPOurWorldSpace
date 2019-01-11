@@ -1,0 +1,31 @@
+{
+  "statusCode": "00000",
+  "statusMessage": "Success",
+  "data": [{
+      "id": "1",
+      "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      "title": "测试专栏",
+      "alias": "test",
+      "remark": "这是一个测试使用的专栏",
+      "contentCount": 324,
+      "status": {
+        "code": 1,
+        "value": "正常"
+      },
+      "childs": []
+    },
+    {
+      "id": "2",
+      "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/entry/005.png?raw=true",
+      "title": "测试专栏2",
+      "alias": "test2",
+      "remark": "这是另一个测试使用的专栏",
+      "contentCount": 324,
+      "status": {
+        "code": 1,
+        "value": "正常"
+      },
+      "childs": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+.media-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  position: relative;
+  padding: 20rpx;
+  margin: 20rpx;
+}
+
+/* 封面 */
+
+.cover {
+  height: 0;
+  padding-bottom: 75%;
+  position: relative;
+}
+
+.cover image {
+  background-color: #eee;
+  border-radius: 10rpx;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

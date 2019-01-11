@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "page-home": "../home"
+    "tab-home": "/components/tabHome/index"
   }
 }

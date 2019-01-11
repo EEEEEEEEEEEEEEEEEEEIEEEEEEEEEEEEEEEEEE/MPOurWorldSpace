@@ -10,6 +10,7 @@
 }
 
 .image image {
+  background-color: rgb(102, 116, 121);
   border-radius: 24rpx;
   height: 100%;
   left: 0;

@@ -1,18 +1,41 @@
-/**
- * 应用全局设置
- * 可以在当前页面请求公共资源
- */
 App({
+
+  /**
+   * 全局数据
+   * 在其他组件和页面中，可以使用 this.globalData[key] 进行访问
+   */
+  globalData: {
+    // 登录用户信息
+    userInfo: null,
+
+    // tabBar 数据
+    tabBarSet: [{
+      title: "主页",
+      name: "home",
+      icon: "home",
+      theme: "blue",
+      slogan: "探索自然科学的奥秘",
+    }, {
+      title: "探索",
+      name: "feed",
+      icon: "earth",
+      theme: "green",
+      slogan: "发现未知 探索自然",
+    }, {
+      title: "我",
+      name: "user",
+      icon: "user",
+      theme: "orange",
+      slogan: "看得见的成长",
+    }, ],
+  },
 
   // 应用运行时执行的内容
   onLaunch: function () {
-  
+
     // 请求用户登录
     wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res);
-      }
+      success: res => { }
     });
 
     // 获取用户信息
@@ -37,9 +60,11 @@ App({
 
   },
 
-  // 全局数据
-  globalData: {
-    userInfo: null, // 登录用户信息
-  },
+  // 页面未找到时执行
+  onPageNotFound() { },
+
+  onHide() {},
+
+  onShow() {},
 
 });

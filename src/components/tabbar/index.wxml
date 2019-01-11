@@ -1,9 +1,6 @@
 <view class="tabbar">
-
   <view class="border" hidden="{{ !border }}"></view>
-
   <view class="inner">
     <slot></slot>
   </view>
-
 </view>

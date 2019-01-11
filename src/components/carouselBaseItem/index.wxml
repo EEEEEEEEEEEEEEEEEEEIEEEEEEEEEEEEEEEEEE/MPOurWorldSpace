@@ -1,8 +1,8 @@
 <view class="item {{ current ? 'current' : '' }}" hidden="{{ !item }}">
 
   <view class="image">
-    <image src="{{ item.image }}" mode="scaleToFill"></image>
-    <image class="shadow" src="{{ item.image }}" mode="scaleToFill"></image>
+    <image src="{{ item.image }}" mode="scaleToFill" lazy-load="true"></image>
+    <image class="shadow" src="{{ item.image }}" mode="scaleToFill" lazy-load="true"></image>
   </view>
 
 </view>

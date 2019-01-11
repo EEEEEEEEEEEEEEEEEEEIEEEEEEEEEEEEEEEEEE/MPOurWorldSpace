@@ -1,39 +1,30 @@
 <view class="wrap">
 
-  <page-header class="header" title="{{ tabbarSelected.title }}" title-sub="{{ tabbarSelected.slogan }}">
+  <page-header class="header" 
+    title="{{ tabBarSelected.title }}" 
+    title-sub="{{ tabBarSelected.slogan }}">
 
     <icon-group wx:if="{{ tabSelected === 0 }}">
       <view class="btn-handler" hover-class="btn-handler-hover">
-      <icon type="box" />
+        <icon type="box" />
       </view>
     </icon-group>
 
   </page-header>
+  
 
   <view class="main">
 
-    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 0 }}" enable-back-to-top="true">
-      <page-home></page-home>
-    </scroll-view>
-
-    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 1 }}">
-
-      <complete icon="feed" title="Comming soon~" remark="努力开发测试中···">
-        <button type="primary" size="mini">加了个油~</button>
-      </complete>
-
-    </scroll-view>
-
-    <scroll-view scroll-y class="view" wx:if="{{ tabSelected === 2 }}">
-     <complete icon="feed" title="Comming soon~" remark="努力开发测试中···">
-        <button type="primary" size="mini">加了个油~</button>
-      </complete>
-    </scroll-view>
+    <tab-home id="home" style="display: {{ tabBarKeySelected === 0 ? 'block' : 'none' }};" />
 
   </view>
 
-  <tabbar class="tabbar-base">
-    <tabbarItem wx:for="{{ tabbarSet }}" title="{{ item.title }}" icon="{{ item.icon }}" selected="{{ tabSelected === index }}" data-id="{{ index }}" bindtap="tabCheck" wx:key="{{ index }}" theme="{{ item.theme }}" />
+  <tabbar class="tabbar-base" selected="{{ tabBarKeySelected }}">
+    <tabbarItem wx:for="{{ tabBarSet }}"
+      title="{{ item.title }}" icon="{{ item.icon }}" theme="{{ item.theme }}"
+      selected="{{ tabBarKeySelected === index }}"
+      data-id="{{ index }}" bindtap="tabCheck" 
+      wx:key="{{ index }}" />
   </tabbar>
 
 </view>
