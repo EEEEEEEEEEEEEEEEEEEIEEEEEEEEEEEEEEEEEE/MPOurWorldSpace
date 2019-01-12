@@ -1,0 +1,1 @@
+<view class="book-list" hover-class="book-list-hover"><slot></slot></view>

@@ -1,0 +1,12 @@
+.book-list {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.book-list book-item {
+  width: 33.333333%;
+}

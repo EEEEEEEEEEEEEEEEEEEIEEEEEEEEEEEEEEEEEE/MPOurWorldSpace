@@ -1,5 +1,6 @@
 .icon-group {
   align-items: center;
   display: flex;
+  flex-shrink: 0;
   justify-content: flex-end;
 }

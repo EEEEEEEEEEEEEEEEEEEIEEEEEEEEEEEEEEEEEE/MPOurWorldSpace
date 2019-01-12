@@ -133,7 +133,7 @@ Component({
       remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
       category: {
         id: "12",
-        name: "有声书",
+        name: "兔斯基聊科学",
       },
       like: 1,
       readCount: 0,
@@ -144,7 +144,7 @@ Component({
       remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
       category: {
         id: "12",
-        name: "有声书",
+        name: "走进科学",
       },
       readCount: 120,
     }, {
@@ -154,7 +154,7 @@ Component({
       remark: "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
       category: {
         id: "12",
-        name: "有声书",
+        name: "科普中国出版社科普中国出版社科普中国出版社科普中国出版社科普中国出版社",
       },
       readCount: 8,
     },],
@@ -225,6 +225,46 @@ Component({
 
     // 科学家轮播图尺寸
     scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 5)) + 25,
+
+    // 书籍
+    books: [
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/010.jpg?raw=true",
+      name: "昆虫",
+      popularity: 192045,
+      },
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/009.jpg?raw=true",
+      name: "昆虫4|分工明确的神秘蚂蚁帝国",
+      popularity: 34,
+      },
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/008.jpg?raw=true",
+      name: "昆虫4|分工明确的神秘蚂蚁帝国",
+      popularity: 1346,
+      },
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/007.jpg?raw=true",
+      name: "昆虫4|分工明确的神秘蚂蚁帝国",
+      popularity: 1280,
+      },
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/006.jpg?raw=true",
+      name: "宇宙",
+      popularity: 15,
+      },
+      {
+        id: 12,
+        cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/005.jpg?raw=true",
+      name: "昆虫4|分工明确的神秘蚂蚁帝国",
+      popularity: 21,
+      },
+    ],
 
   },
 
