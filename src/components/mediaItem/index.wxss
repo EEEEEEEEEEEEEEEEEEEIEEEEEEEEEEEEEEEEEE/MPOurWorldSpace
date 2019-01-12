@@ -7,7 +7,7 @@
   position: relative;
   padding: 20rpx;
   position: relative;
-  margin: 20rpx;
+  margin: 40rpx 20rpx 0;
   transition: all .3s ease;
 }
 
@@ -44,6 +44,10 @@
   text-shadow: 0 8rpx 16rpx rgba(0, 0, 0, .1);
   width: 88rpx;
   z-index: 4;
+}
+
+.like.current {
+  color: #FF9999;
 }
 
 /* 标题 */

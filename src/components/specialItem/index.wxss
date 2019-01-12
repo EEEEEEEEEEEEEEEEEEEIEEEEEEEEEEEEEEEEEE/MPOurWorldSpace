@@ -18,13 +18,13 @@
 }
 
 .sub {
-  flex: 1;
+  flex-shrink: 0;
   position: relative;
 }
 
 /* 封面 */
 .cover-wrap {
-  margin-right: 20rpx;
+  width: 36%;
 }
 
 .cover {
@@ -45,7 +45,9 @@
 
 /* 信息组 */
 .info {
-  width: 64%;
+  flex: 1;
+  overflow: hidden;
+  padding-left: 20rpx;
 }
 
 /* 标题 */
@@ -58,6 +60,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }
 
 /* 附加属性 */
@@ -84,10 +87,14 @@
 
 /* 喜欢 */
 icon.like {
-  color: #999;
+  color: #ccc;
   font-size: 28rpx;
   text-align: center;
   width: 64rpx;
+}
+
+icon.like.current {
+  color: #FF9999;
 }
 
 /* 分类名 */

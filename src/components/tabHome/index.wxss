@@ -15,20 +15,16 @@
 
 /* 快捷入口*/
 .entries {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
-              0 4px 8px rgba(0, 0, 0, .05),
-              0 8px 16px rgba(0, 0, 0, .05);
-  border-radius: 24rpx;
+  margin-bottom: -40rpx;
   position: relative;
-  margin: 40rpx 40rpx 0;
 }
 
-.entries .inner {
+.inner {
   align-items: center;
   display: flex;
-  justify-content: center;
-  padding: 10rpx;
+  justify-content: flex-start;
+  padding: 0 20rpx;
+  position: relative;
 }
 
 .entries .inner entry-item {
@@ -37,6 +33,6 @@
 
 /* 科学家 */
 .scientis-topic {
-  margin-bottom: 40rpx;
+  margin: 20rpx auto 40rpx;
   position: relative;
 }

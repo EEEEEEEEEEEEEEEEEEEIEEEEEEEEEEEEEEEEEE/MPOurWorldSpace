@@ -1,6 +1,6 @@
 .special-topic {
   position: relative;
-  margin: 0 40rpx;
+  margin: 40rpx;
 }
 
 .cover {

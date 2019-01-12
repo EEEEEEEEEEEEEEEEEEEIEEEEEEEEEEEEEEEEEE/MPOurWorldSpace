@@ -1,17 +1,17 @@
 <view class="wrap">
 
-  <page-header class="header" 
-    title="{{ tabBarSelected.title }}" 
+  <page-header class="header"
+    title="{{ tabBarSelected.title }}"
     title-sub="{{ tabBarSelected.slogan }}">
 
-    <icon-group wx:if="{{ tabSelected === 0 }}">
+    <icon-group wx:if="{{ tabBarKeySelected === 0 }}">
       <view class="btn-handler" hover-class="btn-handler-hover">
         <icon type="box" />
       </view>
     </icon-group>
 
   </page-header>
-  
+
 
   <view class="main">
 
@@ -23,7 +23,7 @@
     <tabbarItem wx:for="{{ tabBarSet }}"
       title="{{ item.title }}" icon="{{ item.icon }}" theme="{{ item.theme }}"
       selected="{{ tabBarKeySelected === index }}"
-      data-id="{{ index }}" bindtap="tabCheck" 
+      data-id="{{ index }}" bindtap="tabCheck"
       wx:key="{{ index }}" />
   </tabbar>
 

@@ -1,12 +1,14 @@
-<view class="entry-item" wx:if="{{ item }}">
+<view class="entry-item {{ color }}" wx:if="{{ item }}">
 
   <view class="cover-wrap">
+
     <view class="cover">
       <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true"></image>
-      <text class="badge" wx:if="{{ item.badge }}">{{ item.badge }}</text>
     </view>
-  </view>
 
-  <text class="title">{{ item.title }}</text>
-  
+    <view class="title-wrap">
+      <text class="title">{{ item.title }}</text>
+    </view>
+
+  </view>
 </view>

@@ -1,18 +1,21 @@
 .entry-item {
-  margin: 10rpx;
-  padding: 20rpx 10rpx 10rpx;
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+              0 8rpx 16rpx rgba(0, 0, 0, .05),
+              0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx 15rpx;
+  padding: 10rpx;
   position: relative;
-}
-
-.entry-item, .entry-item view, .entry-item text {
-  /* outline: 1px red solid; */
+  width: 160rpx;
 }
 
 /* 封面 */
 .cover-wrap {
+  border-radius: 16rpx;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
-  width: 80rpx;
 }
 
 .cover {
@@ -23,7 +26,6 @@
 
 .cover image {
   background-color: #eee;
-  border-radius: 50%;
   height: 100%;
   left: 0;
   position: absolute;
@@ -47,11 +49,24 @@
   z-index: 2;
 }
 
+/* 标题 */
+.title-wrap {
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, .05) 50%);
+  display: flex;
+  height: 100%;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
 .title {
-  color: #999;
+  color: #fff;
   display: block;
-  font-size: 20rpx;
-  line-height: 40rpx;
-  margin-top: 20rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
   text-align: center;
 }

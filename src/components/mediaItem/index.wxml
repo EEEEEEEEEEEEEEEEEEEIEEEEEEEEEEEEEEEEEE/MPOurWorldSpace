@@ -1,7 +1,7 @@
 <view class="media-item" hover-class="media-item-hover" wx:if="{{ item }}" bindtap="tapChange">
 
   <!-- 喜欢按钮 start -->
-  <icon class="like" data-id="like" type="like" />
+  <icon class="like {{ item.like === 1 ? 'current' : '' }}" data-id="like" type="like" />
   <!-- 喜欢按钮 end -->
 
   <!-- 封面 start -->
