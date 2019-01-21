@@ -157,11 +157,10 @@ Component({
         name: "科普中国出版社科普中国出版社科普中国出版社科普中国出版社科普中国出版社",
       },
       readCount: 8,
-    },],
+    }, ],
 
     // 科学家
-    scientist: [
-      {
+    scientist: [{
         id: 1,
         username: "爱因斯坦",
         position: "物理学家，宇宙学家，数学家，思想家，哲学家",
@@ -227,42 +226,41 @@ Component({
     scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 5)) + 25,
 
     // 书籍
-    books: [
-      {
+    books: [{
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/010.jpg?raw=true",
-      name: "昆虫",
-      popularity: 192045,
+        title: "昆虫",
+        popularity: 192045,
       },
       {
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/009.jpg?raw=true",
-      name: "昆虫4|分工明确的神秘蚂蚁帝国",
-      popularity: 34,
+        title: "昆虫4|分工明确的神秘蚂蚁帝国",
+        popularity: 34,
       },
       {
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/008.jpg?raw=true",
-      name: "昆虫4|分工明确的神秘蚂蚁帝国",
-      popularity: 1346,
+        title: "昆虫4|分工明确的神秘蚂蚁帝国",
+        popularity: 1346,
       },
       {
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/007.jpg?raw=true",
-      name: "昆虫4|分工明确的神秘蚂蚁帝国",
-      popularity: 1280,
+        title: "昆虫4|分工明确的神秘蚂蚁帝国",
+        popularity: 1280,
       },
       {
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/006.jpg?raw=true",
-      name: "宇宙",
-      popularity: 15,
+        title: "宇宙",
+        popularity: 15,
       },
       {
         id: 12,
         cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/005.jpg?raw=true",
-      name: "昆虫4|分工明确的神秘蚂蚁帝国",
-      popularity: 21,
+        title: "昆虫4|分工明确的神秘蚂蚁帝国",
+        popularity: 21,
       },
     ],
 
@@ -303,6 +301,13 @@ Component({
     pushToMedia() {
       wx.navigateTo({
         url: "/pages/media/index",
+      });
+    },
+
+    // 跳转到书籍页面
+    pushToBooks() {
+      wx.navigateTo({
+        url: "/pages/books/index",
       });
     },
 
