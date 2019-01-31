@@ -1,17 +1,15 @@
-<view class="page-wrap">
+<view class="wrap">
 
   <page-header class="header"
         title="科普书籍"
         title-sub="从书籍中获取更多知识">
   </page-header>
 
-  <!-- 书籍 start -->
   <book-list wx:if="{{ hasBooks }}">
     <block wx:for="{{ books }}" wx:key="{{ index }}">
       <book-item item="{{ item }}"></book-item>
     </block>
   </book-list>
-  <!-- 书籍 end -->
 
   <complete wx:if="{{ !isPending && !hasBooks }}" icon="feed" title="暂无数据" remark="没有科普数据可以展示"></complete>
 

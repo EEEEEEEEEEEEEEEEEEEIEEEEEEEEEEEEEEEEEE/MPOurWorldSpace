@@ -1,0 +1,13 @@
+<view class="book-topic-item" hover-class="book-topic-item-hover" wx:if="{{ item }}">
+
+  <view class="cover-wrap">
+    <view class="cover">
+      <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true" />
+    </view>
+  </view>
+
+  <text class="title">{{ item.title }}</text>
+
+  <text class="popularity">{{ item.popularity }} 人气</text>
+
+</view>

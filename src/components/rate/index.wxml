@@ -1,0 +1,7 @@
+<view class="star">
+  <icon class="icon {{ value >= 1 ? 'active' : '' }}" type="star" size="28" />
+  <icon class="icon {{ value >= 2 ? 'active' : '' }}" type="star" size="28" />
+  <icon class="icon {{ value >= 3 ? 'active' : '' }}" type="star" size="28" />
+  <icon class="icon {{ value >= 4 ? 'active' : '' }}" type="star" size="28" />
+  <icon class="icon {{ value >= 5 ? 'active' : '' }}" type="star" size="28" />
+</view>

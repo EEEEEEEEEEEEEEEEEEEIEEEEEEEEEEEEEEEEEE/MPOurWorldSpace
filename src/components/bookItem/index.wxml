@@ -1,13 +1,16 @@
 <view class="book-item" hover-class="book-item-hover" wx:if="{{ item }}">
-
   <view class="cover-wrap">
     <view class="cover">
       <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true" />
     </view>
   </view>
-
-  <text class="title">{{ item.title }}</text>
-
-  <text class="popularity">{{ item.popularity }} 人气</text>
-
+  <view class="info">
+    <text class="title">{{ item.title }}</text>
+    <text class="author">{{ item.author || '佚名' }}</text>
+    <view class="attr">
+      <rate value="{{ rate || 0 }}"></rate>
+      <text class="popularity">热度：{{ item.popularity || 0 }}℃</text>
+    </view>
+  </view>
+  <view class="collect" title="收藏切换"></view>
 </view>

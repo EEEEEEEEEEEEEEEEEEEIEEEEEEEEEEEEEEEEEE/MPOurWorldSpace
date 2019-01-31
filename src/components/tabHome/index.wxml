@@ -67,11 +67,11 @@
 
   <!-- 书籍 start -->
   <section title="科普书籍" title-sub="读万卷书，行万里路" bind:onMoreTap="pushToBooks">
-    <book-list>
+    <book-topic-list>
       <block wx:for="{{ books }}" wx:key="{{ index }}">
-        <book-item item="{{ item }}"></book-item>
+        <book-topic-item item="{{ item }}"></book-topic-item>
       </block>
-    </book-list>
+    </book-topic-list>
   </section>
   <!-- 书籍 end -->
 

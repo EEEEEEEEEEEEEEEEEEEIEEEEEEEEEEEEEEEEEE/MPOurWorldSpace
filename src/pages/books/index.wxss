@@ -1,1 +1,5 @@
-/* pages/books/index.wxss */
+/* 全局 */
+.wrap {
+  background: #EBF1F3;
+  padding-bottom: 40rpx;
+}

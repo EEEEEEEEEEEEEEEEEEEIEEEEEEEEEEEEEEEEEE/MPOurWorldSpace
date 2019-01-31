@@ -1,0 +1,15 @@
+.star {
+  align-items: center;
+  display: flex;
+}
+
+.star icon {
+  color: #ddd;
+  line-height: 48rpx;
+  margin-right: 16rpx;
+  text-align: center;
+}
+
+.star .active {
+  color: #f90;
+}

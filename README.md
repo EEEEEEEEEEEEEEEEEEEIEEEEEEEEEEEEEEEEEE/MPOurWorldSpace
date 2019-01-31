@@ -1,10 +1,13 @@
 # 小程序
+
 > 重新接触小程序开发，深入学习和研究小程序的表现力。
 
 ## 关于小程序
+
 微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。
 
 ## 目标
+
 - 熟悉小程序的常见工程结构，梳理出合适的工程规范；
 - 熟悉小程序常用资源和单位的使用，保证高品质还原设计效果；
 - 熟悉小程序开发语法和风格；
@@ -12,15 +15,43 @@
 - 熟悉外部接口的访问和管理；
 - 敏捷开发和经验积累；
 
+## 页面清单
+
+- [ ] 首页
+- [ ] 探索
+- [ ] 我
+- [ ] 搜索
+- [ ] 专题
+- [ ] 专题详情 - webview 展示 H5
+- [ ] 科学家
+- [ ] 科学家详情
+- [ ] 多媒体
+- [ ] 多媒体详情
+- [ ] 书籍
+- [ ] 书籍详情
+- [ ] 收藏管理
+- [ ] 我的足迹
+- [ ] 个人资料
+- [ ] 关于
+
 ## API
 
+- [ ] 首页
+- [ ] 用户信息
+- [ ] 获取指定类别的资源
+- [ ] 资源收藏
+- [ ] 搜索
+
 ## 速记和一些坑
+
 - 2rpx = 1px，28px = (28*2)rpx = 56rpx；
-- 小程序不支持不被认可的 URL，所以，在使用 http/https 请求的内容时，需要登录到[小程序后台](https://mp.weixin.qq.com/)进行设置和备案；
+- 小程序不支持不被认可的 URL，所以，在使用 http/https 请求的内容时，需要登录到 [小程序后台](https://mp.weixin.qq.com/) 进行设置和备案；
 - 小程序自动编译预览最大支持 2048 kb，所以，最好不要把图片等占空间资源打包在项目内；
-- 组件默认只有一个 `slot`，如果需要使用多个 `slot`，需要在组件的 `options` 中声明 `multipleSlots: true`，[官方参考(https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html#%E7%BB%84%E4%BB%B6wxml%E7%9A%84slot)
+- 组件默认只有一个 `slot`，如果需要使用多个 `slot`，需要在组件的 `options` 中声明 `multipleSlots: true`，[官方参考](https://dwz.cn/yFQYMDCC)
 - 使用 `wx.navigateTo` 跳转页面，可以使用 query 的形式传递参数，在目标页面使用 `options` 获取参数：
-- `web-view` 只能为认证的组织使用，**个人类型与海外类型的小程序暂不支持使用**，[参考](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html)。
+- `web-view` 只能为认证的组织使用，**个人类型与海外类型的小程序暂不支持使用**，[参考](https://dwz.cn/PvNgvoft)。
 
 ## 相关资源
+
+- [小程序管理后台](https://mp.weixin.qq.com/)
 - [官方教程](https://developers.weixin.qq.com/miniprogram/dev/)

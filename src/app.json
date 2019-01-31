@@ -3,6 +3,7 @@
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
+    "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",
     "tabbarItem": "/components/tabbarItem/index",
     "complete": "/components/complete/index",
@@ -15,6 +16,8 @@
     "carousel-base-item": "/components/carouselBaseItem/index",
     "media-list": "/components/mediaList/index",
     "media-item": "/components/mediaItem/index",
+    "book-topic-list": "/components/bookTopicList/index",
+    "book-topic-item": "/components/bookTopicItem/index",
     "book-list": "/components/bookList/index",
     "book-item": "/components/bookItem/index",
     "scientist-item": "/components/scientistItem/index"
