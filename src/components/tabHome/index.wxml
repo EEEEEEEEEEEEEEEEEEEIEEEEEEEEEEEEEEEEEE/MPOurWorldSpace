@@ -3,7 +3,7 @@
   visible="{{ visible }}">
 
   <!-- 搜索入口 start -->
-  <search-handler placeholder="专栏 / 媒体 / 书籍" input="{{ false }}" bindtap="pushToSearch" />
+  <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
   <!-- 搜索入口 end -->
 
   <!-- 主轮播图 start -->

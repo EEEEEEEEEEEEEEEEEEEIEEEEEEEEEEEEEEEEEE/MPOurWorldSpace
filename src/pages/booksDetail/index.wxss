@@ -1,13 +1,43 @@
 /* 封面 */
 .cover-wrap {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
   align-items: center;
   display: block;
   justify-content: center;
-  margin: 0 auto;
-  padding: 128rpx;
+  margin: 128rpx auto;
+  padding: 10px;
   position: relative;
   width: 320rpx;
   z-index: 1;
+}
+
+.cover-wrap::before, .cover-wrap::after {
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  border-radius: 0 8rpx 8rpx 0;
+  top: 50%;
+  width: 8rpx;
+}
+
+.cover-wrap::before {
+  opacity: .75;
+  top: 24rpx;
+  bottom: 24rpx;
+  right: -7rpx;
+  z-index: 1;
+}
+
+.cover-wrap::after {
+  opacity: .35;
+  top: 32rpx;
+  bottom: 32rpx;
+  right: -14rpx;
+  z-index: 0;
 }
 
 .cover {
@@ -18,9 +48,11 @@
 }
 
 .cover image {
+  background-color: #eee;
+  border-radius: 8rpx;
   height: 100%;
-  left: 0;
   position: absolute;
+  left: 0;
   top: 0;
   width: 100%;
 }
@@ -119,8 +151,15 @@
   display: none;
 }
 
-/* 操作 */
-.options {
-  margin: 80rpx;
-  position: relative;
+/* 喜欢按钮 */
+.digg {
+  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
+  box-shadow: 0 6rpx 16rpx rgba(14, 121, 80, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  line-height: 128rpx;
+  margin: 64rpx auto;
+  text-align: center;
+  width: 128rpx;
 }

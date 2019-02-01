@@ -1,1 +1,153 @@
-/* pages/scientistDetail/index.wxss */
+@import "../../lib/wxParse/wxParse.wxss";
+
+/* 头像 */
+.avatar-wrap {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+              0 8rpx 16rpx rgba(0, 0, 0, .05),
+              0 16rpx 32rpx rgba(0, 0, 0, .05);
+  padding: 16rpx;
+  margin: 64rpx auto;
+  width: 256rpx;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.avatar image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 基础信息 */
+.info {
+  margin: 40rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.info .username {
+  display: block;
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.info .attr {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.info .attr text {
+  color: #999;
+  font-size: 28rpx;
+  padding: 0 16rpx;
+}
+
+.info .occupation {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+
+.info .occupation text {
+  background-color: #333;
+  border-radius: 48rpx;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  padding: 0 32rpx;
+  margin: 8rpx;
+}
+
+/* 简介 */
+.summary {
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+              0 8rpx 16rpx rgba(0, 0, 0, .05),
+              0 16rpx 32rpx rgba(0, 0, 0, .05);
+  margin: 0 40rpx 40rpx;
+  overflow: visible;
+  padding: 200rpx 40rpx 40rpx;
+  position: relative;
+}
+
+.summary .title {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  position: absolute;
+  left: 60rpx;
+  top: 60rpx;
+  right: 40rpx;
+}
+
+.summary .title-sub {
+  color: #ccc;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  position: absolute;
+  left: 60rpx;
+  top: 120rpx;
+  right: 40rpx;
+}
+
+.summary .wxParse-p {
+  color: #888;
+  font-size: 32rpx;
+  margin: 20rpx;
+  line-height: 64rpx;
+  text-indent: 64rpx;
+  text-align: justify;
+}
+
+.achievements > text {
+  color: #888;
+  display: block;
+  line-height: 64rpx;
+  padding-left: 64rpx;
+  position: relative;
+  margin: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.achievements > text:before {
+  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
+  box-shadow: 0 6rpx 16rpx rgba(14, 121, 80, 0.3);
+  border-radius: 50%;
+  content: '';
+  height: 16rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  width: 16rpx;
+}
+
+/* 喜欢按钮 */
+.digg {
+  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
+  box-shadow: 0 6rpx 16rpx rgba(14, 121, 80, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  line-height: 128rpx;
+  margin: 64rpx auto;
+  text-align: center;
+  width: 128rpx;
+}

@@ -1,4 +1,6 @@
-<view class="scientis-item" wx:if="{{ item }}">
+<view class="scientis-item" wx:if="{{ item }}"
+      data-id="{{ item.id }}"
+      bindtap="tapChange">
   <view class="avatar-wrap">
     <view class="avatar">
       <image src="{{ item.avatar }}" mode="scaleToFill" lazy-load="true" />

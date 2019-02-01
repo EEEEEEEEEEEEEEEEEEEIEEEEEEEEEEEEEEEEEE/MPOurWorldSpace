@@ -83,3 +83,8 @@
 
 - [小程序管理后台](https://mp.weixin.qq.com/)
 - [官方教程](https://developers.weixin.qq.com/miniprogram/dev/)
+
+## 相关插件和开发库
+
+- [wepy](https://github.com/Tencent/wepy) WePY (发音: /'wepi/)是一款让小程序支持组件化开发的框架
+- [wxParse](https://github.com/icindy/wxParse) wxParse-微信小程序富文本解析自定义组件，支持 HTML 及 markdown 解析

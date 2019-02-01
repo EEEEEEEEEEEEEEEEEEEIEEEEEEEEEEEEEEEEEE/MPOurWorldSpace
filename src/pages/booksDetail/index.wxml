@@ -30,9 +30,4 @@
   <text class="section-toggle">展开</text>
 </view>
 
-<view class="options">
-
-  <button type="primary" open-type="share" bindtap="openShare">分享给好友</button>
-
-</view>
-
+<icon class="digg" type="like" size="48" />
