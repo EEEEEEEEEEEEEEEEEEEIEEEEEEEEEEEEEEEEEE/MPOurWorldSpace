@@ -7,7 +7,14 @@
   <!-- 搜索入口 end -->
 
   <!-- 主轮播图 start -->
-  <swiper class="carousel" autoplay="false" circular="true" interval="5000" duration="600" previous-margin="15px" next-margin="15px" bindchange="carouselChange" style="height: {{ carouselSize }}px">
+  <swiper class="carousel" autoplay="false" 
+          circular="true" 
+          interval="5000" 
+          duration="600" 
+          previous-margin="15px" 
+          next-margin="15px"
+          bindchange="carouselChange" 
+          style="height: {{ carouselSize }}px">
     <swiper-item item-id="{{ index }}" wx:for="{{ carousel }}" wx:key="{{ index }}">
       <carousel-base-item item="{{ item }}" current="{{ carouselCurrent === index }}" />
     </swiper-item>

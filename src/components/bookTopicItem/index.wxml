@@ -1,4 +1,6 @@
-<view class="book-topic-item" hover-class="book-topic-item-hover" wx:if="{{ item }}">
+<view class="book-topic-item" hover-class="book-topic-item-hover" 
+      wx:if="{{ item }}"
+      bindtap="tapChange">
 
   <view class="cover-wrap">
     <view class="cover">

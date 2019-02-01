@@ -3,6 +3,7 @@
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
+    "scroll-nav": "/components/scrollNav/index",
     "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",
     "tabbarItem": "/components/tabbarItem/index",
@@ -26,11 +27,16 @@
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",
+    "pages/specialDetail/index",
     "pages/media/index",
+    "pages/mediaDetail/index",
     "pages/books/index",
+    "pages/booksDetail/index",
     "pages/read/index",
     "pages/appreciate/index",
-    "pages/scientist/index"
+    "pages/scientist/index",
+    "pages/scientistDetail/index",
+    "pages/webView/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

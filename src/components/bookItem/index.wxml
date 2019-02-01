@@ -1,7 +1,9 @@
-<view class="book-item" hover-class="book-item-hover" wx:if="{{ item }}">
+<view class="book-item" hover-class="book-item-hover" 
+      wx:if="{{ item }}" 
+      bindtap="tapChange">
   <view class="cover-wrap">
     <view class="cover">
-      <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true" />
+      <image src="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/003.jpg?raw=true" mode="scaleToFill" lazy-load="true" />
     </view>
   </view>
   <view class="info">

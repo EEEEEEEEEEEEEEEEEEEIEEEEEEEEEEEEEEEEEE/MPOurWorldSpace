@@ -3,3 +3,11 @@
   background: #EBF1F3;
   padding-bottom: 40rpx;
 }
+
+.book-category {
+  margin-top: 40rpx;
+}
+
+book-list > view {
+  margin-top: -40rpx;
+}

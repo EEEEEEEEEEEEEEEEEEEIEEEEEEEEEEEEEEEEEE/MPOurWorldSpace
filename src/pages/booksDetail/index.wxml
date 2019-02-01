@@ -1,0 +1,38 @@
+<view class="cover-wrap">
+  <view class="cover">
+    <image src="../../assets/books/001/001.png" />
+  </view>
+</view>
+
+<icon class="collect" type="star" />
+
+<view class="rate">
+  <rate value="{{ rate || 0 }}"></rate>
+  <text>好评：4680</text>
+</view>
+
+<view class="info">
+
+  <text class="title">书名在此显示</text>
+
+  <text class="author">作者 著</text>
+
+  <view class="category">
+    <text>宇宙科学</text>
+    <text>人文社科</text>
+  </view>
+
+</view>
+
+<view class="section">
+  <text class="section-title">关于本书</text>
+  <text class="section-contents">这里会放置一些针对书籍的描述信息，甚至是一些创作历程、推荐序、原书序等，默认显示 4 行，可以展开查看更多</text>
+  <text class="section-toggle">展开</text>
+</view>
+
+<view class="options">
+
+  <button type="primary" open-type="share" bindtap="openShare">分享给好友</button>
+
+</view>
+

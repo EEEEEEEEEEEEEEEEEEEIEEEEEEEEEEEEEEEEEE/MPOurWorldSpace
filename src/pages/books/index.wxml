@@ -5,7 +5,9 @@
         title-sub="从书籍中获取更多知识">
   </page-header>
 
-  <book-list wx:if="{{ hasBooks }}">
+   <scroll-nav class="book-category" items="{{ ['全部', '人文社科', '宇宙天文', '历史典籍', '工具书'] }}"></scroll-nav>
+
+  <book-list class="book-list" wx:if="{{ hasBooks }}">
     <block wx:for="{{ books }}" wx:key="{{ index }}">
       <book-item item="{{ item }}"></book-item>
     </block>

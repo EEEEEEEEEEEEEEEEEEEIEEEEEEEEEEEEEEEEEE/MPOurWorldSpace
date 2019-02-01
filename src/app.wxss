@@ -4,9 +4,13 @@
   width: 0;
 }
 
+page {
+  background-color: #EBF1F3;
+}
+
 /* 全局 */
 .page-wrap {
-  background: #EBF1F3;
+  background-color: #EBF1F3;
   position: absolute;
   left: 0;
   top: 0;
