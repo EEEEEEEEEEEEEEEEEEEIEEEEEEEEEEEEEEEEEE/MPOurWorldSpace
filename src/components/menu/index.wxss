@@ -26,6 +26,7 @@
 
 .menu .header .title {
   font-size: 28rpx;
+  font-weight: bold;
   line-height: 48rpx;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .menu .footer {
-  border-top: 1px #EBF1F3 solid;
+  border-top: 1px rgba(235, 241, 243, 0.5) solid;
   color: #999;
   display: block;
   font-size: 20rpx;

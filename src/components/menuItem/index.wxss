@@ -1,16 +1,22 @@
 .menu-item {
   align-items: flex-start;
-  border-top: 1px #EBF1F3 solid;
+  border-top: 1px rgba(235, 241, 243, 0.5) solid;
   display: flex;
   padding: 10rpx;
   position: relative;
   justify-content: space-between;
+  transition: all .3s ease;
+}
+
+/* 划过 */
+.menu-item-hover {
+  background-color: rgba(235, 241, 243, 0.5);
 }
 
 /* 图标 */
 .menu-item .icon {
   line-height: 64rpx;
-  margin-right: 20rpx;
+  margin-right: 10rpx;
   text-align: center;
   width: 64rpx;
 }

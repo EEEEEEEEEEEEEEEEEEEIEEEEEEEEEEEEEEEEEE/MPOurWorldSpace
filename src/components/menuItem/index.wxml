@@ -1,4 +1,4 @@
-<view class="menu-item">
+<view class="menu-item" hover-class="menu-item-hover">
   <icon class="icon" type="{{ icon }}" style="color: {{color}};" />
   <view class="base">
     <text class="title">{{ title }}</text>

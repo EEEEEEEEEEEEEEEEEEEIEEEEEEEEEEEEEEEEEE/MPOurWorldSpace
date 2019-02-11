@@ -10,7 +10,6 @@ Component({
   methods: {
 
     //////////////////////////////////////////////
-
     // 开始事件
     viewStart() {
       if (!pushed) return;
@@ -22,6 +21,14 @@ Component({
       if (pushed) return;
       pushed = true;
     },
+
+    //////////////////////////////////////////////
+    // 跳转到关于我们
+    pushToAbout(e) {
+      wx.navigateTo({
+        url: "/pages/about/index"
+      });
+    }
 
   }
 })

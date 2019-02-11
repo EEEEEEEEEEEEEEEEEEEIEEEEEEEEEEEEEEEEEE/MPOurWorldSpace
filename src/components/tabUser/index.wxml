@@ -32,12 +32,14 @@
 
   </view>
 
-  <menu title="用户设置" remark="个性化您的信息" 
-        footer="版本 1.0.0">
+  <menu title="用户" remark="个性化您的信息">
     <menu-item icon="home" color="#f60" title="我的收藏" />
     <menu-item icon="history" color="#098" title="浏览历史" remark="快速回到上次阅读位置" />
     <menu-item icon="user" color="#09f" title="个人资料" />
-    <menu-item icon="about" color="#f90" title="关于" />
   </menu>
+
+    <menu title="应用" footer="兴趣 · 发现 · 探索 · 科学 · 智慧">
+      <menu-item icon="about" color="#f90" title="关于" bind:tap="pushToAbout" />
+    </menu>
 
 </scroll-view>
