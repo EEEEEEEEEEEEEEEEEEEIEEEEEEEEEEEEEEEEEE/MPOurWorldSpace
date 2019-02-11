@@ -68,8 +68,8 @@
   background-color: #333;
   border-radius: 48rpx;
   color: #fff;
-  font-size: 28rpx;
-  line-height: 60rpx;
+  font-size: 20rpx;
+  line-height: 48rpx;
   padding: 0 32rpx;
   margin: 8rpx;
 }

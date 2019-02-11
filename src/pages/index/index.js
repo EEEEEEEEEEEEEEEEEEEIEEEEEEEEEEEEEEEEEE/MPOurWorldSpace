@@ -14,10 +14,14 @@ Page({
   ///////////////////////////////////////////////////////////
   // Tabbar 页面切换
   tabCheck(e) {
-    let key = parseInt(e.target.dataset['id'], 10);
-    let item = this.data.tabBarSet[key];
+    this.tabFlip(parseInt(e.target.dataset['id'], 10));
+  },
 
+  tabFlip(key) {
     if (isNaN(key) || this.tabBarKeySelected === key) return;
+
+    // 获取当前条目对应的显示信息，在 app.js 中定义。
+    let item = this.data.tabBarSet[key];
 
     /**
      * 触发子组件的事件
@@ -41,6 +45,12 @@ Page({
       tabBarSelected: item,
     });
 
+  },
+
+  ///////////////////////////////////////////////////////////
+
+  onLoad: function (options) {
+    this.tabFlip(this.data.tabBarKeySelected);
   },
 
 });

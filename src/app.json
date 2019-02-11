@@ -1,12 +1,13 @@
 {
-  "component": true,
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
     "scroll-nav": "/components/scrollNav/index",
     "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",
-    "tabbarItem": "/components/tabbarItem/index",
+    "tabbar-item": "/components/tabbarItem/index",
+    "menu": "/components/menu/index",
+    "menu-item": "/components/menuItem/index",
     "complete": "/components/complete/index",
     "page-header": "/components/pageHeader/index",
     "section": "/components/section/index",
@@ -36,12 +37,24 @@
     "pages/appreciate/index",
     "pages/scientist/index",
     "pages/scientistDetail/index",
-    "pages/webView/index"
+    "pages/webView/index",
+    "pages/about/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EBF1F3",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

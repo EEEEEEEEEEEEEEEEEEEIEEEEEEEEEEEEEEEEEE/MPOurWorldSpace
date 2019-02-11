@@ -1,0 +1,160 @@
+.wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 用户基础信息卡片 */
+.user-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  position: relative;
+  margin: 40rpx;
+}
+
+/* 基础信息 */
+.user-card .base {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx;
+  position: relative;
+}
+
+/* 头像 */
+.avatar-wrap {
+  background-color: #EBF1F3;
+  border-radius: 50%;
+  padding: 8rpx;
+  width: 128rpx;
+}
+
+.avatar {
+  border-radius: inherit;
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.avatar image {
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.user-card .base .info {
+  flex: 1;
+  margin-left: 40rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.user-card .base .info .user {
+  align-items: center;
+  display: flex;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+
+.user-card .base .info .user .username {
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-card .base .info .user .sex {
+  background-color: #eee;
+  border-radius: 50%;
+  color: #fff;
+  flex-shrink: 0;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  width: 60rpx;
+}
+
+.user-card .base .info .user .sex.man {
+  background-image: linear-gradient(to right top, #09f, #99f3ff);
+  box-shadow: 0 6rpx 16rpx rgba(3, 157, 247, 0.3);
+}
+
+.user-card .base .info .user .sex.woman {
+  background-image: linear-gradient(to right top, #fa4848, #ff86c5);
+  box-shadow: 0 6rpx 16rpx rgba(247, 3, 3, 0.3);
+}
+
+.user-card .base .info .signature {
+  color: #999;
+  display: block;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-card .statistics {
+  align-items: flex-start;
+  border-top: 1px #EBF1F3 solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.user-card .statistics .item {
+  flex: 1;
+  margin: 20rpx;
+  position: relative;
+}
+
+.user-card .statistics .item text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.user-card .statistics .item .name {
+  color: #999;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.user-card .statistics .item .sum {
+  color: #666;
+  font-size: 40rpx;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 48rpx;
+}
+
+.user-card .statistics .item:after {
+  border-right: 1px #EBF1F3 solid;
+  content: '';
+  position: absolute;
+  right: -20rpx;
+  bottom: 0;
+  height: 48rpx;
+  width: 0;
+}
+
+.user-card .statistics .item:last-child:after {
+  content: unset;
+  display: none;
+}

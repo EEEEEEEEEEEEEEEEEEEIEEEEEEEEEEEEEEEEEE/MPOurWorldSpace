@@ -5,6 +5,10 @@
         title-sub="汇集名博专栏">
   </page-header>
 
+  <block wx:for="{{ special }}" wx:key="{{ index }}">
+      <special-item item="{{ item }}"></special-item>
+  </block>
+
   <complete icon="feed" title="专栏" remark="名博专栏"></complete>
 
 </view>

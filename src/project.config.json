@@ -14,7 +14,7 @@
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.2.0",
 	"appid": "wxca195473e9e2b8ae",
 	"projectname": "OurWorldSpace",
 	"debugOptions": {

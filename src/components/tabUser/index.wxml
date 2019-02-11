@@ -1,0 +1,43 @@
+<scroll-view class="wrap" enable-back-to-top="true" scroll-y="true">
+
+  <view class="user-card">
+
+    <view class="base">
+    
+      <view class="avatar-wrap">
+        <view class="avatar">
+          <image src="../../assets/scientistAvatar.png" />
+        </view>
+      </view>
+
+      <view class="info">
+      
+        <view class="user">
+          <text class="username">妈妈说名字取得太长会遭雷劈的妈妈说名字取得太长会遭雷劈的</text>
+          <icon class="sex man" type="man" />
+        </view>
+
+        <text class="signature">爱上宇宙爱上家园</text>
+
+      </view>
+
+    </view>
+
+    <view class="statistics">
+      <view wx:for="{{ [1,2,3] }}" class="item">
+        <text class="name">收藏</text>
+        <text class="sum">4542</text>
+      </view>
+    </view>
+
+  </view>
+
+  <menu title="用户设置" remark="个性化您的信息" 
+        footer="版本 1.0.0">
+    <menu-item icon="home" color="#f60" title="我的收藏" />
+    <menu-item icon="history" color="#098" title="浏览历史" remark="快速回到上次阅读位置" />
+    <menu-item icon="user" color="#09f" title="个人资料" />
+    <menu-item icon="about" color="#f90" title="关于" />
+  </menu>
+
+</scroll-view>

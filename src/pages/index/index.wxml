@@ -12,15 +12,13 @@
 
   </page-header>
 
-
   <view class="main">
-
     <tab-home id="home" style="display: {{ tabBarKeySelected === 0 ? 'block' : 'none' }};" />
-
+    <tab-user id="user" style="display: {{ tabBarKeySelected === 2 ? 'block' : 'none' }};" />
   </view>
 
   <tabbar class="tabbar-base" selected="{{ tabBarKeySelected }}">
-    <tabbarItem wx:for="{{ tabBarSet }}"
+    <tabbar-item wx:for="{{ tabBarSet }}"
       title="{{ item.title }}" icon="{{ item.icon }}" theme="{{ item.theme }}"
       selected="{{ tabBarKeySelected === index }}"
       data-id="{{ index }}" bindtap="tabCheck"

@@ -1,8 +1,9 @@
+// 是否需要暂停页面更新
+let pushed = false;
+
 Component({
 
   data: {
-
-    pushed: false, // 是否需要暂停页面更新
 
     // 主轮播图
     carousel: [{
@@ -321,20 +322,14 @@ Component({
 
     // 开始事件
     viewStart() {
-      if (!this.data.pushed) return;
-      console.log('开始事件');
-      this.setData({
-        pushed: false,
-      });
+      if (!pushed) return;
+      pushed = false;
     },
 
     // 暂停事件
     viewPush() {
-      if (this.data.pushed) return;
-      console.log('暂停事件');
-      this.setData({
-        pushed: true,
-      });
+      if (pushed) return;
+      pushed = true;
     },
 
   },

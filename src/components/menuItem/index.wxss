@@ -1,0 +1,49 @@
+.menu-item {
+  align-items: flex-start;
+  border-top: 1px #EBF1F3 solid;
+  display: flex;
+  padding: 10rpx;
+  position: relative;
+  justify-content: space-between;
+}
+
+/* 图标 */
+.menu-item .icon {
+  line-height: 64rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  width: 64rpx;
+}
+
+/* 指示箭头 */
+.menu-item .arrow {
+  color: #ddd;
+  line-height: 64rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  width: 64rpx;
+}
+
+/* 基础内容 */
+.menu-item .base {
+  flex: 1;
+  position: relative;
+}
+
+.menu-item .base text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-item .base .title {
+  font-size: 28rpx;
+  line-height: 64rpx;
+}
+
+.menu-item .base .remark {
+  color: #999;
+  font-size: 20rpx;
+  line-height: 40rpx;
+}

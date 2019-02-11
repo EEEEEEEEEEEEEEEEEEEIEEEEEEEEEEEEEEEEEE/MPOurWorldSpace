@@ -1,0 +1,9 @@
+<view class="menu-item">
+  <icon class="icon" type="{{ icon }}" style="color: {{color}};" />
+  <view class="base">
+    <text class="title">{{ title }}</text>
+    <text class="remark">{{ remark }}</text>
+  </view>
+  <slot name="append"></slot>
+  <icon class="arrow" type="arrow-line-right-copy" />
+</view>

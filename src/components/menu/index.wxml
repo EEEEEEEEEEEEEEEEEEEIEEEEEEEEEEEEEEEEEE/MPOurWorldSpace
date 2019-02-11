@@ -1,0 +1,8 @@
+<view class="menu">
+  <view class="header">
+    <text class="title">{{ title }}</text>
+    <text class="remark">{{ remark }}</text>
+  </view>
+  <view class="list"><slot></slot></view>
+  <text class="footer">{{ footer }}</text>
+</view>

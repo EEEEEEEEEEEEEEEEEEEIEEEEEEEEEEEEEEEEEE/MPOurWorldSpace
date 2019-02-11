@@ -1,0 +1,46 @@
+.menu {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  position: relative;
+  padding: 0.1rpx 0;
+  margin: 40rpx;
+}
+
+.menu .header {
+  align-items: center;
+  display: flex;
+  padding: 20rpx 40rpx;
+  position: relative;
+}
+
+.menu .header text {
+  display: block;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu .header .title {
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+
+.menu .header .remark {
+  color: #999;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  margin-left: 40rpx;
+}
+
+.menu .footer {
+  border-top: 1px #EBF1F3 solid;
+  color: #999;
+  display: block;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  padding: 20rpx 40rpx;
+}

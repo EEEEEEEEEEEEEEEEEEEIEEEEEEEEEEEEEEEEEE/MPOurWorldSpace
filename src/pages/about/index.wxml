@@ -1,0 +1,39 @@
+
+<view class="wrap">
+
+  <page-header class="header" title="关于" title-sub="关于我们"></page-header>
+  
+  <scroll-view class="body" scroll-y="{{true}}">
+
+    <view class="logo-wrap">
+      <view class="logo">
+        <image src="../../assets/logo.png" />
+      </view>
+    </view>
+
+    <text class="name">我们的世界空间</text>
+
+    <text class="sloga">兴趣 · 发现 · 探索 · 科学 · 智慧</text>
+
+    <text class="version">版本 0.0.1</text>
+
+    <text class="quotes">科学的灵感。决不是坐等可以等来的。如果说。科学上的发现有什么偶然的机遇的话。那么这种[偶然的机遇"只能给那些学有素养的人。给那些善于独立思考的人。给那些具有锲而不舍的精神的人。而不会给懒汉。——华罗庚</text>
+
+
+    <view class="thanks">
+      <text>感谢</text>
+      <view class="brands">
+        <view class="image">
+          <image src="../../assets/brands.png" />
+        </view>
+      </view>
+    </view>
+
+    <view class="copyright">
+      <text>版权所有 © 2019</text>
+      <text>部分资源来源于网络，如有侵权请联系我们</text>
+    </view>
+
+  </scroll-view>
+
+</view>
