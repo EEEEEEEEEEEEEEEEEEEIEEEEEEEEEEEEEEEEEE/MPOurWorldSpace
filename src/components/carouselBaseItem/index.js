@@ -15,15 +15,5 @@ Component({
     },
 
   },
-
-  data: {
-
-  },
-
-
-
-  methods: {
-
-  }
-
+  
 });

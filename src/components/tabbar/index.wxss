@@ -1,6 +1,6 @@
 .tabbar {
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 -20rpx 20rpx rgba(0, 0, 0, .05);
+  box-shadow: 0 -20rpx 20rpx rgba(0, 0, 0, .02);
   position: relative;
 }
 

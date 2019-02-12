@@ -1,0 +1,26 @@
+{
+  "statusCode": "000000",
+  "statusMessage": "Success",
+  "data": [
+    {
+      "name": "人文社科",
+      "key": 1
+    },
+    {
+      "name": "宇宙天文",
+      "key": 2
+    },
+    {
+      "name": "历史典籍",
+      "key": 3
+    },
+    {
+      "name": "生物科学",
+      "key": 4
+    },
+    {
+      "name": "工具书",
+      "key": 5
+    }
+  ]
+}

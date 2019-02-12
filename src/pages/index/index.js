@@ -6,9 +6,7 @@ Page({
   data: {
     tabBarSet: app.globalData.tabBarSet,
     tabBarKeySelected: 0, // 高亮页面索引
-    tabBarSelected: app.globalData.tabBarSet[0], // 高亮页面
-    mainHeight: 200,
-    mainWidth: 200,
+    tabBarSelected: 0, // 高亮页面
   },
 
   ///////////////////////////////////////////////////////////
@@ -18,7 +16,7 @@ Page({
   },
 
   tabFlip(key) {
-    if (isNaN(key) || this.tabBarKeySelected === key) return;
+    if (isNaN(key)) return;
 
     // 获取当前条目对应的显示信息，在 app.js 中定义。
     let item = this.data.tabBarSet[key];
@@ -50,7 +48,7 @@ Page({
   ///////////////////////////////////////////////////////////
 
   onLoad: function (options) {
-    this.tabFlip(this.data.tabBarKeySelected);
+    this.tabFlip(1);
   },
 
 });

@@ -1,0 +1,1 @@
+<scroll-nav items="{{ nav }}" />

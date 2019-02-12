@@ -1,3 +1,6 @@
+// AppID(小程序ID)        wxca195473e9e2b8ae
+// AppSecret(小程序密钥)  4839e69581f92e9be08d7e1d6075fa31
+
 App({
 
   /**
@@ -6,7 +9,15 @@ App({
    */
   globalData: {
     // 登录用户信息
-    userInfo: null,
+    user: null,
+
+    // API 地址
+    api: 'https://raw.githubusercontent.com/djyuning/MPOurWorldSpace/master/data',
+
+    // HTTP 请求头
+    httpHeader: {
+      appId: '12312312',
+    },
 
     // tabBar 数据
     tabBarSet: [{
@@ -17,7 +28,7 @@ App({
       slogan: "探索自然科学的奥秘",
     }, {
       title: "探索",
-      name: "feed",
+      name: "explore",
       icon: "earth",
       theme: "green",
       slogan: "发现未知 探索自然",
@@ -30,41 +41,27 @@ App({
     }, ],
   },
 
+  checkLogin: function () {
+    // 检测用户是否已授权
+    let user = wx.getStorageSync('user');
+    if (user !== '') {
+      user = JSON.parse(user);
+      this.globalData.user = user;
+    } else {
+      wx.redirectTo({
+        url: `/pages/authLogin/index`,
+      });
+    }
+  },
+
   // 应用运行时执行的内容
   onLaunch: function () {
-
-    // 请求用户登录
-    wx.login({
-      success: res => { }
-    });
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          });
-        }
-      }
-    });
+    // 授权检测
+    this.checkLogin();
 
   },
 
   // 页面未找到时执行
-  onPageNotFound() { },
-
-  onHide() {},
-
-  onShow() {},
+  onPageNotFound() {},
 
 });

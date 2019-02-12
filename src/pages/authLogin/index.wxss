@@ -1,0 +1,47 @@
+.cover-wrap {
+  margin: 128rpx auto;
+  position: relative;
+  width: 300rpx;
+}
+
+.cover {
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.cover image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 提示消息 */
+.remark {
+  display: block;
+  font-size: 40rpx;
+  line-height: 64rpx;
+  margin: 40rpx;
+  text-align: center;
+}
+
+/* 操作 */
+.options {
+  bottom: 0;
+  left: 0;
+  padding: 40rpx;
+  position: absolute;
+  right: 0;
+}
+
+.tips {
+  color: #999;
+  display: block;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  margin: 40rpx;
+  text-align: center;
+}

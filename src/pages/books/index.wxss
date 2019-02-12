@@ -1,13 +1,8 @@
-/* 全局 */
-.wrap {
-  background: #EBF1F3;
-  padding-bottom: 40rpx;
-}
-
-.book-category {
-  margin-top: 40rpx;
-}
-
-book-list > view {
-  margin-top: -40rpx;
+/* 内容 */
+.contents {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 270rpx;
 }

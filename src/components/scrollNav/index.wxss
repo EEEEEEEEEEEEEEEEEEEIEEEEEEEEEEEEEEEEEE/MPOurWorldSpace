@@ -1,27 +1,33 @@
 .scroll-nav {
   height: 96rpx;
+  padding-top: 30rpx;
+  width: 100%;
 }
 
 .scroll-nav .inner {
   align-items: center;
-  display: flex;
-  justify-content: flex-start;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
   position: relative;
-  padding: 0 32rpx;
+  width: auto;
 }
 
 .scroll-nav text {
   border-radius: 40rpx;
   display: block;
   font-size: 28rpx;
+  flex-shrink: 0;
   line-height: 64rpx;
-  margin: 0 4px;
+  margin: 0 8rpx;
   padding: 0 32rpx;
   position: relative;
   text-align: center;
   max-width: 400rpx;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: all .6s ease;
   z-index: 1;
 }
 

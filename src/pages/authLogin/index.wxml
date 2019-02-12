@@ -1,0 +1,26 @@
+<view class="wrap">
+
+  <view class="cover-wrap">
+    <view class="cover">
+      <image src="../../assets/logo.png" />
+    </view>
+  </view>
+
+  <text class="remark">使用您的微信账号登录</text>
+
+  <text class="tips">我们需要获取您的昵称等公开信息</text>
+
+  <view class="options">
+    
+    <button type="primary" loading="{{ pending }}"
+            open-type="getUserInfo"
+            bindgetuserinfo="onGotUserInfo">
+    立即登录
+    </button>
+
+    <text class="tips">我们承诺您的公开信息仅用于当前小程序，同时您可以随时注销当前账号相关的所有信息。</text>
+
+  </view>
+
+  
+</view>

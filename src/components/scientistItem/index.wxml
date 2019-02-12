@@ -3,7 +3,7 @@
       bindtap="tapChange">
   <view class="avatar-wrap">
     <view class="avatar">
-      <image src="{{ item.avatar }}" mode="scaleToFill" lazy-load="true" />
+      <image src="{{ item.avatar }}" mode="scaleToFill" lazy-load />
     </view>
   </view>
   <text class="username">{{ item.username }}</text>

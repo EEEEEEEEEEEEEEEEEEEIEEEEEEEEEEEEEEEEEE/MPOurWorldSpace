@@ -1,4 +1,3 @@
-// components/scrollNav/index.js
 Component({
 
   properties: {

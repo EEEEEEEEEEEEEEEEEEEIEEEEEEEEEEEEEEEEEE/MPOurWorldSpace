@@ -1,8 +1,8 @@
 <view class="item {{ current ? 'current' : '' }}" hover-class="item-hover" wx:if="{{ item }}">
 
   <view class="image">
-    <image src="{{ item.image }}" mode="scaleToFill" lazy-load="true"></image>
-    <image class="shadow" src="{{ item.image }}" mode="scaleToFill" lazy-load="true"></image>
+    <image src="{{ item.image }}" mode="scaleToFill" lazy-load />
+    <image class="shadow" src="{{ item.image }}" mode="scaleToFill" lazy-load />
   </view>
 
 </view>

@@ -38,7 +38,8 @@
     "pages/scientist/index",
     "pages/scientistDetail/index",
     "pages/webView/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/authLogin/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -17,22 +17,23 @@
 
 ## 页面清单
 
-- [x] 首页
-- [ ] 探索
-- [ ] 我
-- [x] 搜索
-- [ ] 专题
-- [ ] 专题详情 - webview 展示 H5
-- [x] 科学家
-- [x] 科学家详情
-- [ ] 多媒体
-- [ ] 多媒体详情
-- [x] 书籍
-- [x] 书籍详情
-- [ ] 收藏管理
-- [ ] 我的足迹
-- [ ] 个人资料
-- [x] 关于
+- [x] 首页（组件 tabHome）
+- [ ] 探索（组件 tabExplore）
+- [ ] user            我（组件 tabUser）
+- [x] search          搜索
+- [ ] special         专题
+- [ ] specialDetail   专题详情
+- [x] scientist       科学家
+- [x] scientistDetail 科学家详情
+- [ ] media           多媒体
+- [ ] mediaDetail     多媒体详情
+- [x] books           书籍
+- [x] booksDetail     书籍详情
+- [ ] collect         收藏管理
+- [ ] history         我的足迹
+- [ ] userProfile     个人资料
+- [x] about           关于
+- [ ] authLogin       获取微信用户信息
 
 ## 组件清单
 
@@ -82,9 +83,10 @@
 - 在 `app.json` 中的 `pages` 中直接输入页面路径，开发工具会自动创建对应的页面和目录；
 - 小程序不支持不被认可的 URL，所以，在使用 http/https 请求的内容时，需要登录到 [小程序后台](https://mp.weixin.qq.com/) 进行设置和备案；
 - 小程序自动编译预览最大支持 2048 kb，所以，最好不要把图片等占空间资源打包在项目内；
-- 组件默认只有一个 `slot`，如果需要使用多个 `slot`，需要在组件的 `options` 中声明 `multipleSlots: true`，[官方参考](https://dwz.cn/yFQYMDCC)
+- 组件默认只有一个 `slot`，如果需要使用多个 `slot`，需要在**组件的 `options` 中**声明 `multipleSlots: true`，[官方参考](https://dwz.cn/yFQYMDCC)
 - 使用 `wx.navigateTo` 跳转页面，可以使用 query 的形式传递参数，在目标页面使用 `options` 获取参数：
 - `web-view` 只能为认证的组织使用，**个人类型与海外类型的小程序暂不支持使用**，[参考](https://dwz.cn/PvNgvoft)。
+- 需要使用一个单独的页面获取用户信息，参考官方公告《[小程序与小游戏获取用户信息接口调整，请开发者注意升级。](https://developers.weixin.qq.com/community/develop/doc/0000a26e1aca6012e896a517556c01)》
 
 ## 相关资源
 

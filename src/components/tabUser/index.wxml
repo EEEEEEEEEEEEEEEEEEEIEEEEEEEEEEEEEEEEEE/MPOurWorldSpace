@@ -1,30 +1,31 @@
 <scroll-view class="wrap" enable-back-to-top="true" scroll-y="true">
 
-  <view class="user-card">
+  <view class="user-card" wx:if="{{user}}">
 
     <view class="base">
     
       <view class="avatar-wrap">
         <view class="avatar">
-          <image src="../../assets/scientistAvatar.png" />
+          <image src="{{ user.avatarUrl || '../../assets/scientistAvatar.png' }}" lazy-load />
         </view>
       </view>
 
       <view class="info">
       
         <view class="user">
-          <text class="username">妈妈说名字取得太长会遭雷劈的妈妈说名字取得太长会遭雷劈的</text>
-          <icon class="sex man" type="man" />
+          <text class="username">{{ user.nickName }}</text>
+          <icon wx:if="{{ user.gender === 1 }}" class="sex man" type="man" size="20" />
+          <icon wx:if="{{ user.gender === 2 }}" class="sex man" type="woman" size="20" />
         </view>
 
-        <text class="signature">爱上宇宙爱上家园</text>
+        <text class="signature">{{ user.province +' · '+ user.city }}</text>
 
       </view>
 
     </view>
 
     <view class="statistics">
-      <view wx:for="{{ [1,2,3] }}" class="item">
+      <view wx:for="{{ [1,2,3] }}" wx:key="{{index}}" class="item">
         <text class="name">收藏</text>
         <text class="sum">4542</text>
       </view>
@@ -40,6 +41,7 @@
 
     <menu title="应用" footer="兴趣 · 发现 · 探索 · 科学 · 智慧">
       <menu-item icon="about" color="#f90" title="关于" bind:tap="pushToAbout" />
+      <menu-item icon="coffee" color="#966" title="赠予咖啡" bind:tap="pushToAbout" />
     </menu>
 
 </scroll-view>
