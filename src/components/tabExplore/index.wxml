@@ -1,1 +1,5 @@
-<scroll-nav items="{{ nav }}" />
+<view class="wrap" hidden="{{hidden}}">
+
+  <scroll-nav items="{{ nav }}" />
+
+</view>

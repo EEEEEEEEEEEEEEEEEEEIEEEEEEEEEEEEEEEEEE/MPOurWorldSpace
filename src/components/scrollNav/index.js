@@ -10,7 +10,8 @@ Component({
   },
 
   data: {
-    current: 0,
+    currentIndex: 0,
+    current: '',
   },
 
   hasItems() {
@@ -21,9 +22,17 @@ Component({
   methods: {
 
     itemChange(e) {
-      this.setData({
-        current: e.target.dataset.id,
-      });
+      let data = {
+        current: e.target.dataset.item,
+        currentIndex: e.target.dataset.index,
+      };
+
+      // 更新数据
+      this.setData(data);
+
+      // 事件回调
+      this.triggerEvent('onChange', data);
+
     },
 
   }

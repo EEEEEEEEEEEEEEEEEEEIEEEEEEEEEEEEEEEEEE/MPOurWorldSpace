@@ -12,11 +12,12 @@ App({
     user: null,
 
     // API 地址
-    api: 'https://raw.githubusercontent.com/djyuning/MPOurWorldSpace/master/data',
+    api: 'https://22aea742-7278-464c-989e-dd4cfd6f40db.mock.pstmn.io',
 
     // HTTP 请求头
     httpHeader: {
       appId: '12312312',
+      'x-api-key': '93dadbe63be14463aff5cd969940b942',
     },
 
     // tabBar 数据

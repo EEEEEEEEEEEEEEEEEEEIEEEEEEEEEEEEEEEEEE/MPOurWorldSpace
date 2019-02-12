@@ -6,6 +6,16 @@ let pushed = false;
 
 Component({
 
+  properties: {
+
+    // 是否隐藏页面
+    hidden: {
+      type: Boolean,
+      value: false,
+    },
+
+  },
+
   data: {
     user: null,
   },

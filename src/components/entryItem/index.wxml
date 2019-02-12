@@ -3,7 +3,7 @@
   <view class="cover-wrap">
 
     <view class="cover">
-      <image src="{{ item.cover }}" mode="scaleToFill" lazy-load="true"></image>
+      <image src="{{ item.cover }}" mode="scaleToFill" lazy-load />
     </view>
 
     <view class="title-wrap">

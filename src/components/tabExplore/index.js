@@ -13,6 +13,16 @@ const nav = [
 
 Component({
 
+  properties: {
+
+    // 是否隐藏页面
+    hidden: {
+      type: Boolean,
+      value: false,
+    },
+
+  },
+
   data: {
     nav: nav.map(n => n.name),
   },

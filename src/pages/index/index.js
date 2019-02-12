@@ -48,7 +48,7 @@ Page({
   ///////////////////////////////////////////////////////////
 
   onLoad: function (options) {
-    this.tabFlip(1);
+    this.tabFlip(0);
   },
 
 });

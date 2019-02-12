@@ -1,4 +1,5 @@
-const app = getApp(); // 获取应用实例
+// 获取应用实例
+const app = getApp();
 
 Page({
 
@@ -7,7 +8,10 @@ Page({
       name: '全部',
       key: 0,
     }], // 可用分类
+    books: {},
+    currentIndex: 0, // 高亮的索引
     currentCategory: 0, // 高亮分类
+    currentCategoryPage: 0,
     isPending: false, // 是否正在加载数据
     hasBooks: false, // 是否存在数据
   },
@@ -26,18 +30,9 @@ Page({
     });
 
     wx.request({
-      url: `${app.globalData.api}/booksCategories.json`,
+      url: `${app.globalData.api}/books/category`,
       methods: 'GET',
       header: app.globalData.httpHeader,
-      complete() {
-        wx.hideNavigationBarLoading();
-        wx.hideLoading();
-
-        _self.setData({
-          isPending: false,
-        });
-
-      },
       success(res) {
         let resData = res.data;
 
@@ -47,25 +42,19 @@ Page({
           return;
         }
 
-        // 设置数据
-        let _books;
-        if (_self.data.pageNow === 1) {
-          _books = resData.data;
-        } else {
-          _books = [..._self.data.books, ...resData.data];
-        }
-
         // 初始化分类
         let categories = [..._self.data.categories, ...resData.data];
 
+        // 设置数据
         _self.setData({
           categories: categories,
           categoriesName: categories.map(i => i.name),
+          currentCategory: categories[0].key,
         });
 
-      },
-      error(err) {
-        // 显示错误信息
+        // 加载对应的书籍数据
+        _self.getBooks();
+
       },
     });
 
@@ -74,6 +63,8 @@ Page({
   // 获取书籍列表
   getBooks() {
     let _self = this;
+    let current = _self.data.currentCategory;
+    let _cache = this.data.books[current];
 
     wx.showNavigationBarLoading();
     wx.showLoading();
@@ -83,11 +74,10 @@ Page({
     });
 
     wx.request({
-      url: `${app.globalData.api}/books.json`,
+      url: `${app.globalData.api}/books/index`,
       methods: 'GET',
       data: {
         category: _self.data.currentCategory,
-        page: _self.data.pageNow,
       },
       header: app.globalData.httpHeader,
       complete() {
@@ -111,33 +101,49 @@ Page({
         }
 
         // 设置数据
-        let _books;
-        if (_self.data.pageNow === 1) {
-          _books = resData.data;
+        if (_cache) {
+          _cache = [..._cache, ...resData.data];
         } else {
-          _books = [..._self.data.books, ...resData.data];
+          _cache = resData.data;
         }
 
+        // 设置数据
         _self.setData({
-          books: _books,
-          hasBooks: _books.length > 0,
+          books: Object.assign({}, _self.data.books, {
+            [current]: _cache,
+          }),
         });
 
-      },
-      error(err) {
-        // 显示错误信息
       },
     });
 
   },
 
-  //////////////////////////////////
+  // 分类切换
+  categoryChange(e) {
+    let detail = e.detail;
+    let index = detail.currentIndex;
+    let current = this.data.categories.find(c => c.name === detail.current).key;
 
+    // 更新数据
+    this.setData({
+      currentIndex: index,
+      currentCategory: current,
+    });
+
+    // 获取书籍列表
+    let _cache = this.data.books[current];
+    if (!_cache) {
+      this.getBooks();
+    }
+
+  },
+
+  //////////////////////////////////
+  // 页面初始化完成
   onLoad: function () {
     // 获取书籍分类
     this.getCategories();
-
-    console.log(app.globalData.user);
   },
 
 })

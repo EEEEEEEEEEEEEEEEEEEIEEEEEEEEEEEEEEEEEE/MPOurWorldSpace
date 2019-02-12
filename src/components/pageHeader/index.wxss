@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-size: 48rpx;
+  font-size: 44rpx;
   font-weight: bold;
   line-height: 64rpx;
   overflow: hidden;

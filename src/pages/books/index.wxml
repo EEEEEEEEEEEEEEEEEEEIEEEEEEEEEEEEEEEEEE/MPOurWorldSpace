@@ -5,18 +5,24 @@
         title-sub="从书籍中获取更多知识">
   </page-header>
 
-   <scroll-nav class="book-category" items="{{ categoriesName }}" />
-   
-   <scroll-view class="contents" scroll-y="{{true}}">
+  <scroll-nav class="book-category" 
+              items="{{ categoriesName }}" 
+              bind:onChange="categoryChange" />
 
-    <book-list class="book-list" wx:if="{{ !isPending && hasBooks }}">
-      <block wx:for="{{ books }}" wx:key="{{ index }}">
-        <book-item item="{{ item }}"></book-item>
+  <scroll-view class="contents" 
+                wx:for="{{ categories }}"
+                wx:for-index="categoryIndex" wx:for-item="category" 
+                wx:key="{{ categoryIndex }}"
+                hidden="{{ categoryIndex !== currentIndex }}" scroll-y>
+
+    <book-list>
+      <block wx:for="{{ books[category.key] }}" 
+              wx:for-index="bookIndex" wx:for-item="book" 
+              wx:key="{{ bookIndex }}">
+        <book-item item="{{ book }}"></book-item>
       </block>
     </book-list>
 
-    <complete wx:if="{{ !isPending && !hasBooks }}" icon="feed" title="暂无数据" remark="没有科普数据可以展示"></complete>
-
-   </scroll-view>
+  </scroll-view>
 
 </view>

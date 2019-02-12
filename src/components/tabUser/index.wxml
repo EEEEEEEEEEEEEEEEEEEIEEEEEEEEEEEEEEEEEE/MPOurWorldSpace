@@ -1,4 +1,4 @@
-<scroll-view class="wrap" enable-back-to-top="true" scroll-y="true">
+<scroll-view class="wrap" enable-back-to-top="true" hidden="{{hidden}}" scroll-y>
 
   <view class="user-card" wx:if="{{user}}">
 

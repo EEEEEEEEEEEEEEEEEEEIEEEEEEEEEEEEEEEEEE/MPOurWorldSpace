@@ -13,9 +13,9 @@
   </page-header>
 
   <view class="main">
-    <tab-home id="home" style="display: {{ tabBarKeySelected === 0 ? 'block' : 'none' }};" />
-    <tab-explore id="explore" style="display: {{ tabBarKeySelected === 1 ? 'block' : 'none' }};" />
-    <tab-user id="user" style="display: {{ tabBarKeySelected === 2 ? 'block' : 'none' }};" />
+    <tab-home id="home" hidden="{{ tabBarKeySelected !== 0 }}" />
+    <tab-explore id="explore" hidden="{{ tabBarKeySelected !== 1 }}" />
+    <tab-user id="user" hidden="{{ tabBarKeySelected !== 2 }}" />
   </view>
 
   <tabbar class="tabbar-base" selected="{{ tabBarKeySelected }}">

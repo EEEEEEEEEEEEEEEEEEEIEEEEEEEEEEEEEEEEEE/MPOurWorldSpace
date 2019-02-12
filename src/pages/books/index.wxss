@@ -6,3 +6,15 @@
   right: 0;
   top: 270rpx;
 }
+
+.contents-0 {
+  background-color: blue;
+}
+
+.contents-1 {
+  background-color: green;
+}
+
+.contents-2 {
+  background-color: orange;
+}

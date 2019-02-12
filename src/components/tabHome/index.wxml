@@ -1,4 +1,4 @@
-<scroll-view class="wrap" enable-back-to-top="true" scroll-y="true">
+<scroll-view class="wrap" enable-back-to-top="true" hidden="{{hidden}}" scroll-y>
 
   <!-- 搜索入口 start -->
   <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
