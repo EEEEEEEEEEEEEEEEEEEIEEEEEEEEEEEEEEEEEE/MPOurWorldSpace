@@ -1,44 +1,32 @@
-<import src="../../lib/wxParse/wxParse.wxml"/>
+<import src="../../lib/wxParse/wxParse.wxml" />
 
-<view class="avatar-wrap">
-  <view class="avatar">
-    <image src="../../assets/scientistAvatar.png" />
+<view class="contents" wx:if="{{ scientist }}">
+  <view class="avatar-wrap">
+    <view class="avatar">
+      <image src="{{ scientist.avatar || '../../assets/scientistAvatar.png' }}" />
+    </view>
   </view>
-</view>
-
-<view class="info">
-
-  <text class="username">祖冲之</text>
-
-  <view class="attr">
-    <text class="nationality">中国(南北朝)</text>
-    <text class="birth_and_death">(公元 429 ~ 500 年)</text>
+  <view class="info">
+    <text class="username">{{ scientist.username }}</text>
+    <view class="attr">
+      <text class="nationality">{{ scientist.nationality }}</text>
+      <text class="birth_and_death">({{ scientist.birth_and_death }})</text>
+    </view>
+    <view class="occupation">
+      <text wx:for="{{ scientist.occupation }}" wx:key="{{ index }}">{{ item }}</text>
+    </view>
   </view>
-
-  <view class="occupation">
-    <text>数学家</text>
-    <text>天文学家</text>
+  <view class="summary">
+    <text class="title">简介</text>
+    <text class="title-sub">Brief Introductions</text>
+    <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
   </view>
-
-</view>
-
-<view class="summary">
-  <text class="title">简介</text>
-  <text class="title-sub">Brief Introductions</text>
-  <template is="wxParse" data="{{wxParseData:summary.nodes}}"/>
-</view>
-
-<view class="summary">
-  <text class="title">主要成就</text>
-  <text class="title-sub">Achievements</text>
-  
-  <view class="achievements">
-    <text>编撰天文历法《大明历》</text>
-    <text>圆周率推算到小数点后七位</text>
-    <text>发明水碓磨、指南车、千里船、定时器</text>
-    <text>编撰《缀术》《述异记》《安边论》等书籍</text>
+  <view class="summary">
+    <text class="title">主要成就</text>
+    <text class="title-sub">Achievements</text>
+    <view class="achievements">
+      <text wx:for="{{ scientist.achievements }}" wx:key="{{ index }}">{{ item }}</text>
+    </view>
   </view>
-
+  <icon class="digg" type="like" size="48" />
 </view>
-
-<icon class="digg" type="like" size="48" />

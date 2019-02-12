@@ -19,7 +19,7 @@
 
 - [x] 首页（组件 tabHome）
 - [ ] 探索（组件 tabExplore）
-- [ ] user            我（组件 tabUser）
+- [ ] 我（组件 tabUser）
 - [x] search          搜索
 - [ ] special         专题
 - [ ] specialDetail   专题详情
@@ -34,6 +34,7 @@
 - [ ] userProfile     个人资料
 - [x] about           关于
 - [ ] authLogin       获取微信用户信息
+- [ ] coffee          赠与咖啡
 
 ## 组件清单
 
@@ -41,16 +42,14 @@
 - [x] complete 操作完成
 - [x] icon 图标
 - [x] iconGroup 图标组
-- [x] rate 评分星级
+- [ ] rate 评分星级
 - [x] searchHandler 搜索条
-- [ ] segment 分栏选项切换
-- [ ] scrollNav 滚动导航
+- [x] scrollNav 滚动导航
 - [x] tabbar 底部选项导航
 - [x] tabbarItem 底部选项导航条目
 - [x] pageHeader 页面标题头
 - [x] bookList 常规书籍列表
 - [x] bookItem 常规书籍列表条目
-- [ ] bookDetail 书籍展示详情
 - [x] bookTopicList 置顶书籍列表
 - [x] bookTopicItem 置顶书籍列表条目
 - [x] entryItem 首页快捷入口条目
@@ -60,7 +59,7 @@
 - [x] section 页面栏目分块
 - [x] specialItem 专栏条目
 - [x] specialTopic 专栏专题 banner
-- [x] mallEnter 资源购买入口
+- [ ] mallEnter 资源购买入口
 
 ## API
 
