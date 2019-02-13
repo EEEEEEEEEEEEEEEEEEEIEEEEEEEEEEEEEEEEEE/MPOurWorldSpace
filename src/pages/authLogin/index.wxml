@@ -13,7 +13,7 @@
   <view class="options">
     
     <button type="primary" loading="{{ pending }}"
-            open-type="getUserInfo"
+            open-type="getUserInfo" lang="zh_CN"
             bindgetuserinfo="onGotUserInfo">
     立即登录
     </button>

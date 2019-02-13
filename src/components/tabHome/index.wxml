@@ -1,4 +1,14 @@
-<scroll-view class="wrap" enable-back-to-top="true" hidden="{{hidden}}" scroll-y>
+<view class="wrap" hidden="{{hidden}}">
+
+  <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}">
+
+    <icon-group>
+      
+      <btn-handler type="box" bind:tap="pushToSpecial" />
+     
+    </icon-group>
+
+  </page-header>
 
   <!-- 搜索入口 start -->
   <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
@@ -21,8 +31,8 @@
 
   <!-- 快捷入口 start -->
   <section title="我们的世界" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
-    <scroll-view class="entries" scroll-x="{{true}}">
-    <view class="inner" style="width: {{ entries.length * 200 }}rpx;">
+    <scroll-view class="entries" scroll-x>
+    <view class="inner">
       <block wx:for="{{ entries }}" wx:key="index">
         <entry-item item="{{ item }}"
           color="{{ ['blue', 'red', 'blue', 'cyan', 'cyan', 'blue', 'violet', 'pink'][index] }}"
@@ -80,4 +90,4 @@
   </section>
   <!-- 书籍 end -->
 
-</scroll-view>
+</view>

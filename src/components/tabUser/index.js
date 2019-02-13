@@ -17,7 +17,12 @@ Component({
   },
 
   data: {
+
+    // 页面信息
+    page: app.globalData.tabBarSet[2],
+
     user: null,
+
   },
 
   methods: {
@@ -30,7 +35,7 @@ Component({
       let user = wx.getStorageSync('user');
       if (user !== '') {
         this.setData({
-          user: JSON.parse(user),
+          user: user,
         });
       } else {
         wx.redirectTo({

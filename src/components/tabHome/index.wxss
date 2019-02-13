@@ -22,12 +22,12 @@
   position: relative;
 }
 
-.inner {
+.entries .inner {
   align-items: center;
-  display: flex;
-  justify-content: flex-start;
+  display: inline-flex;
   padding: 0 20rpx;
   position: relative;
+  width: auto;
 }
 
 .entries .inner entry-item {

@@ -1,0 +1,5 @@
+<view class="footer-mark-wrap">
+  <view class="footer-mark">
+    <image src="../../assets/logo-footer.png" />
+  </view>
+</view>

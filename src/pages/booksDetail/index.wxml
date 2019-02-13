@@ -1,33 +1,38 @@
-<view class="cover-wrap">
-  <view class="cover">
-    <image src="../../assets/books/001/001.png" />
-  </view>
-</view>
+<import src="../../lib/wxParse/wxParse.wxml" />
 
-<icon class="collect" type="star" />
+<view class="wrap">
 
-<view class="rate">
-  <rate value="{{ rate || 0 }}"></rate>
-  <text>好评：4680</text>
-</view>
+  <page-header title="书籍" title-sub="求学将以致用 读书先在虚心" />
 
-<view class="info">
-
-  <text class="title">书名在此显示</text>
-
-  <text class="author">作者 著</text>
-
-  <view class="category">
-    <text>宇宙科学</text>
-    <text>人文社科</text>
+  <view hidden="{{ pending }}"></view>
+  <view class="cover-wrap">
+    <view class="cover">
+      <image src="{{ book.cover || '../../assets/books/001/001.png' }}" />
+    </view>
   </view>
 
-</view>
+  <view class="rate">
+    <rate value="{{ rate || 0 }}"></rate>
+    <text>好评：4680</text>
+  </view>
 
-<view class="section">
-  <text class="section-title">关于本书</text>
-  <text class="section-contents">这里会放置一些针对书籍的描述信息，甚至是一些创作历程、推荐序、原书序等，默认显示 4 行，可以展开查看更多</text>
-  <text class="section-toggle">展开</text>
-</view>
+  <view class="info">
 
-<icon class="digg" type="like" size="48" />
+    <text class="title">{{ book.name }}</text>
+
+    <text class="author">{{ book.author }} 著</text>
+
+    <view class="category">
+      <text wx:for="{{ book.category }}">{{ item.name }}</text>
+    </view>
+
+  </view>
+
+  <view class="section">
+    <text class="section-title">关于本书</text>
+    <template class="section-contents" is="wxParse" data="{{wxParseData:detail.nodes}}" />
+  </view>
+
+  <icon class="digg" type="like" size="48" />
+
+</view>

@@ -1,5 +1,7 @@
 <view class="wrap" hidden="{{hidden}}">
 
+  <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
+
   <scroll-nav items="{{ nav }}" />
 
 </view>

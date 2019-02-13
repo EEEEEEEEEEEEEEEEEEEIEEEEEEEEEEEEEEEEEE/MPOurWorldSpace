@@ -1,6 +1,9 @@
 <import src="../../lib/wxParse/wxParse.wxml" />
 
 <view class="contents" wx:if="{{ scientist }}">
+
+  <page-header title="科学家" title-sub="铭记他们的丰功伟绩" />
+
   <view class="avatar-wrap">
     <view class="avatar">
       <image src="{{ scientist.avatar || '../../assets/scientistAvatar.png' }}" />

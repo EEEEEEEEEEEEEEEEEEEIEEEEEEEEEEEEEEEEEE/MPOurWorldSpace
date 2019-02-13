@@ -1,0 +1,18 @@
+/* 操作按钮 */
+.btn-handler {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05),
+              0 4px 8px rgba(0, 0, 0, .05),
+              0 8px 16px rgba(0, 0, 0, .05);
+  border-radius: 50%;
+  color: #9999FF;
+  line-height: 88rpx;
+  text-align: center;
+  transition: all .2s ease;
+  width: 88rpx;
+}
+
+.btn-handler-hover {
+  color: rgb(112, 112, 223);
+  transform: scale(0.9);
+}

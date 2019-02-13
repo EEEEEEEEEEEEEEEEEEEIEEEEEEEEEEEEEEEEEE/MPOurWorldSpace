@@ -1,6 +1,9 @@
 // 是否需要暂停页面更新
 let pushed = false;
 
+// 页面是否已完成初始化
+let inited = false;
+
 // 获取应用实例
 const app = getApp();
 
@@ -17,6 +20,9 @@ Component({
   },
 
   data: {
+
+    // 页面信息
+    page: app.globalData.tabBarSet[0],
 
     // 主轮播图
     carousel: [],
@@ -64,6 +70,8 @@ Component({
       });
     },
 
+    //////////////////////////////////////////////
+
     // 跳转到搜索页面
     pushToSearch() {
       wx.navigateTo({
@@ -98,12 +106,17 @@ Component({
     pageInit() {
       let _self = this;
 
+      if (inited) {
+        this.setData(wx.getStorageSync('_chache_index'));
+        return;
+      };
+
       wx.showNavigationBarLoading();
       wx.showLoading();
 
       wx.request({
+        method: 'GET',
         url: `${app.globalData.api}/index`,
-        methods: 'GET',
         header: app.globalData.httpHeader,
         complete() {
           wx.hideNavigationBarLoading();
@@ -112,15 +125,20 @@ Component({
         success(res) {
           let data = res.data;
 
-          // 失败
           if (data.statusCode !== '000000') {
             console.error('数据加载失败', data.statusMessage);
             return;
           }
 
+          // 数据写入本地缓存
+          wx.setStorageSync('_chache_index', data.data);
+
           // 更新数据
           _self.setData(data.data);
-          
+
+          // 标记页面已完成初始化
+          inited = true;
+
         },
       });
 

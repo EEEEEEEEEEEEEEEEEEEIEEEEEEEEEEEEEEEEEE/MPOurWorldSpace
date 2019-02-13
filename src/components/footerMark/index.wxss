@@ -1,0 +1,18 @@
+.footer-mark-wrap {
+  margin: 96rpx auto;
+  width: 280rpx;
+}
+
+.footer-mark {
+  height: 0;
+  padding-bottom: 46.875%;
+  position: relative;
+}
+
+.footer-mark  image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

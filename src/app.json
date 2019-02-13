@@ -2,6 +2,7 @@
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
+    "btn-handler": "/components/btnHandler/index",
     "scroll-nav": "/components/scrollNav/index",
     "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",
@@ -9,6 +10,7 @@
     "menu": "/components/menu/index",
     "menu-item": "/components/menuItem/index",
     "complete": "/components/complete/index",
+    "footer-mark": "/components/footerMark/index",
     "page-header": "/components/pageHeader/index",
     "section": "/components/section/index",
     "search-handler": "/components/searchHandler/index",
@@ -39,7 +41,8 @@
     "pages/scientistDetail/index",
     "pages/webView/index",
     "pages/about/index",
-    "pages/authLogin/index"
+    "pages/authLogin/index",
+    "pages/readDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

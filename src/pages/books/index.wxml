@@ -1,9 +1,6 @@
 <view class="wrap">
 
-  <page-header class="header"
-        title="科普书籍"
-        title-sub="从书籍中获取更多知识">
-  </page-header>
+  <page-header title="科普书籍" title-sub="从书籍中获取更多知识" />
 
   <scroll-nav class="book-category" 
               items="{{ categoriesName }}" 

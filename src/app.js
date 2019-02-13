@@ -1,13 +1,17 @@
-// AppID(小程序ID)        wxca195473e9e2b8ae
-// AppSecret(小程序密钥)  4839e69581f92e9be08d7e1d6075fa31
-
 App({
 
   /**
    * 全局数据
-   * 在其他组件和页面中，可以使用 this.globalData[key] 进行访问
+   * 在其他组件和页面中，可以使用 getApp().globalData[key] 进行访问
    */
   globalData: {
+
+    // 开发者信息，具体内容请前往小程序后台进行申请和更新
+    app: {
+      id: 'wxca195473e9e2b8ae', // 小程序ID
+      secret: '4839e69581f92e9be08d7e1d6075fa31', // 小程序密钥
+    },
+
     // 登录用户信息
     user: null,
 
@@ -20,7 +24,7 @@ App({
       'x-api-key': '93dadbe63be14463aff5cd969940b942',
     },
 
-    // tabBar 数据
+    // tabBar 预设
     tabBarSet: [{
       title: "主页",
       name: "home",
@@ -40,13 +44,13 @@ App({
       theme: "orange",
       slogan: "看得见的成长",
     }, ],
+
   },
 
   checkLogin: function () {
     // 检测用户是否已授权
     let user = wx.getStorageSync('user');
     if (user !== '') {
-      user = JSON.parse(user);
       this.globalData.user = user;
     } else {
       wx.redirectTo({

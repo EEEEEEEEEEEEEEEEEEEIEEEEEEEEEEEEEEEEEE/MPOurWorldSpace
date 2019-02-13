@@ -1,22 +1,10 @@
 <view class="wrap">
 
-  <page-header class="header"
-    title="{{ tabBarSelected.title }}"
-    title-sub="{{ tabBarSelected.slogan }}">
-
-    <icon-group wx:if="{{ tabBarKeySelected === 0 }}">
-      <view class="btn-handler" hover-class="btn-handler-hover">
-        <icon type="box" />
-      </view>
-    </icon-group>
-
-  </page-header>
-
-  <view class="main">
+  <scroll-view class="main" scroll-y>
     <tab-home id="home" hidden="{{ tabBarKeySelected !== 0 }}" />
     <tab-explore id="explore" hidden="{{ tabBarKeySelected !== 1 }}" />
     <tab-user id="user" hidden="{{ tabBarKeySelected !== 2 }}" />
-  </view>
+  </scroll-view>
 
   <tabbar class="tabbar-base" selected="{{ tabBarKeySelected }}">
     <tabbar-item wx:for="{{ tabBarSet }}"

@@ -31,7 +31,6 @@
 - [x] booksDetail     书籍详情
 - [ ] collect         收藏管理
 - [ ] history         我的足迹
-- [ ] userProfile     个人资料
 - [x] about           关于
 - [ ] authLogin       获取微信用户信息
 - [ ] coffee          赠与咖啡

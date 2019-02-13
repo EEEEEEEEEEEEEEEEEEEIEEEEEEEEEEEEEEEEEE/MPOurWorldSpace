@@ -1,6 +1,9 @@
 // 是否需要暂停页面更新
 let pushed = false;
 
+// 获取应用实例
+const app = getApp();
+
 const nav = [
   { key: 0, name: '热度榜' },
   { key: 1, name: '专题' },
@@ -24,7 +27,11 @@ Component({
   },
 
   data: {
+    // 页面信息
+    page: app.globalData.tabBarSet[1],
+
     nav: nav.map(n => n.name),
+
   },
 
   methods: {

@@ -1,0 +1,1 @@
+<icon class="btn-handler" hover-class="btn-handler-hover" type="{{ type }}" />

@@ -30,8 +30,8 @@ Page({
     });
 
     wx.request({
+      method: 'GET',
       url: `${app.globalData.api}/books/category`,
-      methods: 'GET',
       header: app.globalData.httpHeader,
       success(res) {
         let resData = res.data;
@@ -74,12 +74,12 @@ Page({
     });
 
     wx.request({
+      method: 'GET',
       url: `${app.globalData.api}/books/index`,
-      methods: 'GET',
+      header: app.globalData.httpHeader,
       data: {
         category: _self.data.currentCategory,
       },
-      header: app.globalData.httpHeader,
       complete() {
         wx.hideNavigationBarLoading();
         wx.hideLoading();
