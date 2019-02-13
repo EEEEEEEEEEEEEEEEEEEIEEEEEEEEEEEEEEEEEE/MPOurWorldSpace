@@ -20,6 +20,8 @@ Component({
   },
 
   data: {
+    // 页面是否正在加载数据
+    pending: false,
 
     // 页面信息
     page: app.globalData.tabBarSet[0],
@@ -79,6 +81,13 @@ Component({
       });
     },
 
+    // 跳转到科学家页面
+    pushToScientist() {
+      wx.navigateTo({
+        url: "/pages/scientist/index",
+      });
+    },
+
     // 跳转到专栏页面
     pushToSpecial() {
       wx.navigateTo({
@@ -106,13 +115,21 @@ Component({
     pageInit() {
       let _self = this;
 
+      this.setData({
+        pending: true,
+      });
+
       if (inited) {
-        this.setData(wx.getStorageSync('_chache_index'));
+        this.setData(Object.assign({}, {
+          pending: false,
+        }, wx.getStorageSync('_chache_index')));
         return;
       };
 
       wx.showNavigationBarLoading();
-      wx.showLoading();
+      wx.showLoading({
+        title: '加载中',
+      });
 
       wx.request({
         method: 'GET',
@@ -134,7 +151,9 @@ Component({
           wx.setStorageSync('_chache_index', data.data);
 
           // 更新数据
-          _self.setData(data.data);
+          _self.setData(Object.assign({}, {
+            pending: false,
+          }, data.data));
 
           // 标记页面已完成初始化
           inited = true;

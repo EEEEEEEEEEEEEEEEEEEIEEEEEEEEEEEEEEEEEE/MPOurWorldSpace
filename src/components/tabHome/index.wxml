@@ -5,7 +5,7 @@
     <icon-group>
       
       <btn-handler type="box" bind:tap="pushToSpecial" />
-     
+    
     </icon-group>
 
   </page-header>
@@ -14,80 +14,84 @@
   <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
   <!-- 搜索入口 end -->
 
-  <!-- 主轮播图 start -->
-  <swiper class="carousel" autoplay="false" 
-          circular="true" 
-          interval="5000" 
-          duration="600" 
-          previous-margin="15px" 
-          next-margin="15px"
-          bindchange="carouselChange" 
-          style="height: {{ carouselSize }}px">
-    <swiper-item item-id="{{ index }}" wx:for="{{ carousel }}" wx:key="{{ index }}">
-      <carousel-base-item item="{{ item }}" current="{{ carouselCurrent === index }}" />
-    </swiper-item>
-  </swiper>
-  <!-- 主轮播图 end -->
+  <view hidden="{{ pending }}">
 
-  <!-- 快捷入口 start -->
-  <section title="我们的世界" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
-    <scroll-view class="entries" scroll-x>
-    <view class="inner">
-      <block wx:for="{{ entries }}" wx:key="index">
-        <entry-item item="{{ item }}"
-          color="{{ ['blue', 'red', 'blue', 'cyan', 'cyan', 'blue', 'violet', 'pink'][index] }}"
-          data-item="{{ item }}"
-          bindtap="entryCheck"></entry-item>
-      </block>
-    </view>
-  </scroll-view>
-  </section>
-  <!-- 快捷入口 end -->
-
-  <!-- 专栏 start -->
-  <section title="专栏" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
-    <block wx:for="{{ special }}" wx:key="{{ index }}">
-      <special-item item="{{ item }}"></special-item>
-    </block>
-  </section>
-  <!-- 专栏 end -->
-
-  <!-- 科学家 start -->
-  <section title="科学家" title-sub="有趣又有料的科普知识" bind:onMoreTap="pushToMedia">
-    <swiper class="scientis-topic" display-multiple-items="5"
-      previous-margin="20rpx" next-margin="20rpx"
-      style="height: {{ scientistSize }}px;">
-      <block wx:for="{{ scientist }}" wx:key="{{ index }}">
-        <swiper-item>
-          <scientist-item item="{{ item }}" />
-        </swiper-item>
-      </block>
+    <!-- 主轮播图 start -->
+    <swiper class="carousel" autoplay="false" 
+            circular="true" 
+            interval="5000" 
+            duration="600" 
+            previous-margin="15px" 
+            next-margin="15px"
+            bindchange="carouselChange" 
+            style="height: {{ carouselSize }}px">
+      <swiper-item item-id="{{ index }}" wx:for="{{ carousel }}" wx:key="{{ index }}">
+        <carousel-base-item item="{{ item }}" current="{{ carouselCurrent === index }}" />
+      </swiper-item>
     </swiper>
-  </section>
-  <!-- 科学家 end -->
+    <!-- 主轮播图 end -->
 
-  <!-- 多媒体 start -->
-  <section title="听·看·学" title-sub="有趣又有料的科普知识" bind:onMoreTap="pushToMedia">
-    <media-list class="media-list">
-      <block wx:for="{{ media }}" wx:key="{{ index }}">
-        <media-item item="{{ item }}" />
+    <!-- 快捷入口 start -->
+    <section title="我们的世界" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
+      <scroll-view class="entries" scroll-x>
+      <view class="inner">
+        <block wx:for="{{ entries }}" wx:key="index">
+          <entry-item item="{{ item }}"
+            color="{{ ['blue', 'red', 'blue', 'cyan', 'cyan', 'blue', 'violet', 'pink'][index] }}"
+            data-item="{{ item }}"
+            bindtap="entryCheck"></entry-item>
+        </block>
+      </view>
+    </scroll-view>
+    </section>
+    <!-- 快捷入口 end -->
+
+    <!-- 专栏 start -->
+    <section title="专栏" title-sub="汇集名博专栏" bind:onMoreTap="pushToSpecial">
+      <block wx:for="{{ special }}" wx:key="{{ index }}">
+        <special-item item="{{ item }}"></special-item>
       </block>
-    </media-list>
-  </section>
-  <!-- 多媒体 end -->
+    </section>
+    <!-- 专栏 end -->
 
-  <!-- 专题活动入口 start -->
-  <special-topic cover="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/ad/001.png?raw=true"></special-topic>
-  <!-- 专题活动入口 end -->
+    <!-- 科学家 start -->
+    <section title="科学家" title-sub="有趣又有料的科普知识" bind:onMoreTap="pushToScientist">
+      <swiper class="scientis-topic" display-multiple-items="5"
+        previous-margin="20rpx" next-margin="20rpx"
+        style="height: {{ scientistSize }}px;">
+        <block wx:for="{{ scientist }}" wx:key="{{ index }}">
+          <swiper-item>
+            <scientist-item item="{{ item }}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </section>
+    <!-- 科学家 end -->
 
-  <!-- 书籍 start -->
-  <section title="科普书籍" title-sub="读万卷书，行万里路" bind:onMoreTap="pushToBooks">
-    <book-topic-list>
-      <block wx:for="{{ books }}" wx:key="{{ index }}">
-        <book-topic-item item="{{ item }}"></book-topic-item>
-      </block>
-    </book-topic-list>
-  </section>
-  <!-- 书籍 end -->
+    <!-- 多媒体 start -->
+    <section title="听·看·学" title-sub="有趣又有料的科普知识" bind:onMoreTap="pushToMedia">
+      <media-list class="media-list">
+        <block wx:for="{{ media }}" wx:key="{{ index }}">
+          <media-item item="{{ item }}" />
+        </block>
+      </media-list>
+    </section>
+    <!-- 多媒体 end -->
 
+    <!-- 专题活动入口 start -->
+    <special-topic cover="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/ad/001.png?raw=true"></special-topic>
+    <!-- 专题活动入口 end -->
+
+    <!-- 书籍 start -->
+    <section title="科普书籍" title-sub="读万卷书，行万里路" bind:onMoreTap="pushToBooks">
+      <book-topic-list>
+        <block wx:for="{{ books }}" wx:key="{{ index }}">
+          <book-topic-item item="{{ item }}"></book-topic-item>
+        </block>
+      </book-topic-list>
+    </section>
+    <!-- 书籍 end -->
+
+  </view>
+  
 </view>

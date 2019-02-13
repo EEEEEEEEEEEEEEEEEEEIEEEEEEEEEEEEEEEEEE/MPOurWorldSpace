@@ -92,7 +92,7 @@
 
 /* 主题配色 */
 .item.selected .icons.blue icon {
-  background-image: linear-gradient(to right top, #09f, rgb(153, 243, 255));
+  background-image: linear-gradient(to right top, #09f, #99f3ff);
   box-shadow: 0 6rpx 16rpx rgba(3, 157, 247, 0.3);
 }
 
@@ -107,6 +107,6 @@
 }
 
 .item.selected .icons.green icon {
-  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
-  box-shadow: 0 6rpx 16rpx rgba(14, 121, 80, 0.3);
+  background-image: linear-gradient(to right top, #28bd98, #a8cf5b);
+  box-shadow: 0 6rpx 16rpx rgba(1, 165, 102, 0.3);
 }

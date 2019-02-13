@@ -1,0 +1,4 @@
+<view class="collect-handler">
+  <button open-type='share'></button>
+  <icon type="star" size="48" />
+</view>

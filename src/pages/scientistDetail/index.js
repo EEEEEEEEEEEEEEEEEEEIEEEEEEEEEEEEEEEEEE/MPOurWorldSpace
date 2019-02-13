@@ -14,7 +14,9 @@ Page({
     let _self = this;
 
     wx.showNavigationBarLoading();
-    wx.showLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
 
     wx.request({
       url: `${app.globalData.api}/scientist/detail`,

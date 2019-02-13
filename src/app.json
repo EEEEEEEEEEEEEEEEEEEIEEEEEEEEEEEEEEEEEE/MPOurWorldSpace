@@ -3,6 +3,7 @@
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
     "btn-handler": "/components/btnHandler/index",
+    "collect-handler": "/components/collectHandler/index",
     "scroll-nav": "/components/scrollNav/index",
     "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",

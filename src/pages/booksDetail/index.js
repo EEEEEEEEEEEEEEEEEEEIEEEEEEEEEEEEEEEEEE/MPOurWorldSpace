@@ -10,31 +10,14 @@ Page({
     book: null,
   },
 
-  // 打开分享菜单
-  openShare() {
-    wx.showShareMenu({
-      withShareTicket: true,
-    });
-  },
-
-  onShareAppMessage(res) {
-    if (res.from === 'button') {
-      console.log(res.target)
-    }
-
-    return {
-      title: '自定义转发标题',
-      path: '/page/user?id=123'
-    }
-
-  },
-
   onLoad(options) {
     let _self = this;
     let id = options.id || 0;
 
     wx.showNavigationBarLoading();
-    wx.showLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
 
     this.setData({
       pending: true,

@@ -1,1 +1,87 @@
-/* pages/specialDetail/index.wxss */
+
+/* 封面 */
+.cover-wrap {
+  margin: 40rpx;
+}
+
+.cover {
+  height: 0;
+  padding-bottom: 54.47619%;
+  position: relative;
+}
+
+.cover image {
+  background-color: rgba(102, 116, 121, 0.1);
+  border-radius: 24rpx;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.cover .shadow {
+  opacity: .3;
+  filter: blur(6px);
+  transform: scale(1) translateY(8px);
+  z-index: 1;
+}
+
+/* 分栏 */
+.section {
+  margin: 80rpx 0;
+}
+
+.section-title {
+  margin: 0 40rpx 20rpx;
+  padding-left: 64rpx;
+  position: relative;
+}
+
+.section-title:before {
+  background-image: linear-gradient(to right top, #09f, #99f3ff);
+  box-shadow: 0 6rpx 16rpx rgba(3, 157, 247, 0.3);
+  border-radius: 50%;
+  content: '';
+  height: 20rpx;
+  position: absolute;
+  top: 22rpx;
+  left: 22rpx;
+  width: 20rpx;
+}
+
+.section-title text {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+}
+
+/* 内容 */
+
+.detail .wxParse-p {
+  color: #666;
+  font-size: 32rpx;
+  margin: 20rpx 60rpx;
+  line-height: 64rpx;
+  text-align: justify;
+}
+
+.detail .wxParse-p image {
+  max-width: 100%;
+}
+
+.scientist-list {
+  position: relative;
+}
+
+.scientist-list .inner {
+  display: inline-flex;
+  padding: 0 40rpx;
+  width: auto;
+}
+
+.scientist-list .inner scientist-item {
+  width: 180rpx;
+}

@@ -23,7 +23,9 @@ Page({
     let _self = this;
 
     wx.showNavigationBarLoading();
-    wx.showLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
 
     this.setData({
       isPending: true,
@@ -67,7 +69,9 @@ Page({
     let _cache = this.data.books[current];
 
     wx.showNavigationBarLoading();
-    wx.showLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
 
     this.setData({
       isPending: true,

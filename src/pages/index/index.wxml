@@ -1,6 +1,6 @@
 <view class="wrap">
 
-  <scroll-view class="main" scroll-y>
+  <scroll-view class="main" enable-back-to-top scroll-y>
     <tab-home id="home" hidden="{{ tabBarKeySelected !== 0 }}" />
     <tab-explore id="explore" hidden="{{ tabBarKeySelected !== 1 }}" />
     <tab-user id="user" hidden="{{ tabBarKeySelected !== 2 }}" />

@@ -4,35 +4,34 @@
 
   <page-header title="书籍" title-sub="求学将以致用 读书先在虚心" />
 
-  <view hidden="{{ pending }}"></view>
-  <view class="cover-wrap">
-    <view class="cover">
-      <image src="{{ book.cover || '../../assets/books/001/001.png' }}" />
-    </view>
-  </view>
+  <view hidden="{{ pending }}">
 
-  <view class="rate">
-    <rate value="{{ rate || 0 }}"></rate>
-    <text>好评：4680</text>
-  </view>
-
-  <view class="info">
-
-    <text class="title">{{ book.name }}</text>
-
-    <text class="author">{{ book.author }} 著</text>
-
-    <view class="category">
-      <text wx:for="{{ book.category }}">{{ item.name }}</text>
+    <view class="cover-wrap">
+      <view class="cover">
+        <image src="{{ book.cover || '../../assets/books/001/001.png' }}" />
+      </view>
     </view>
 
+    <view class="rate">
+      <rate value="{{ book.rate || 0 }}"></rate>
+      <text>好评：{{ book.popularity  }}</text>
+    </view>
+
+    <view class="info">
+      <text class="title">{{ book.name }}</text>
+      <text class="author">{{ book.author }} 著</text>
+      <view class="category">
+        <text wx:for="{{ book.category }}" 
+              wx:key="{{ index }}">{{ item.name }}</text>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">关于本书</text>
+      <template class="section-contents" is="wxParse" data="{{wxParseData:detail.nodes}}" />
+    </view>
+
+    <collect-handler />
+
   </view>
-
-  <view class="section">
-    <text class="section-title">关于本书</text>
-    <template class="section-contents" is="wxParse" data="{{wxParseData:detail.nodes}}" />
-  </view>
-
-  <icon class="digg" type="like" size="48" />
-
 </view>
