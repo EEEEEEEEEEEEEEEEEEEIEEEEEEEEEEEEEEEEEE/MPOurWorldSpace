@@ -27,7 +27,7 @@ Component({
 
       // 转到详情页
       wx.navigateTo({
-        url: "/pages/search/index",
+        url: "/pages/specialDetail/index",
       });
 
     },

@@ -138,16 +138,3 @@
   left: 24rpx;
   width: 16rpx;
 }
-
-/* 喜欢按钮 */
-.digg {
-  background-image: linear-gradient(to right top, rgb(40, 189, 152), rgb(168, 207, 91));
-  box-shadow: 0 6rpx 16rpx rgba(14, 121, 80, 0.3);
-  border-radius: 50%;
-  color: #fff;
-  display: block;
-  line-height: 128rpx;
-  margin: 64rpx auto;
-  text-align: center;
-  width: 128rpx;
-}

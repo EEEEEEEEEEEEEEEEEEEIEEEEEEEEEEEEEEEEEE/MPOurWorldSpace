@@ -1,7 +1,7 @@
-<view class="wrap" hidden="{{hidden}}">
+<scroll-view class="wrap" hidden="{{hidden}}" enable-back-to-top scroll-y>
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
   <scroll-nav items="{{ nav }}" />
 
-</view>
+</scroll-view>

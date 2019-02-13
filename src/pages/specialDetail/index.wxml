@@ -12,13 +12,7 @@
   </view>
 
   <view class="section detail">
-
-    <view class="section-title">
-      <text>读一读</text>
-    </view>
-
     <template class="section-contents" is="wxParse" data="{{wxParseData:detail.nodes}}" />
-
   </view>
 
   <view class="section scientist">
@@ -27,13 +21,13 @@
       <text>相关的科学家</text>
     </view>
 
-    <scroll-view class="scientist-list" scroll-x>
-      <view class="inner">
-        <block wx:for="{{ content.scientist }}" wx:key="{{ index }}">
+    <view class="scientist-list" scroll-x>
+      <block wx:for="{{ content.scientist }}" wx:key="{{ index }}">
+        <view class="col">
           <scientist-item item="{{ item }}" />
-        </block>
-      </view>
-    </scroll-view>
+        </view>
+      </block>
+    </view>
 
   </view>
 
@@ -42,6 +36,12 @@
     <view class="section-title">
       <text>相关的书籍</text>
     </view>
+
+      <book-topic-list>
+        <block wx:for="{{  content.books }}" wx:key="{{ index }}">
+          <book-topic-item item="{{ item }}" />
+        </block>
+      </book-topic-list>
 
   </view>
   

@@ -31,6 +31,7 @@
 /* 分栏 */
 .section {
   margin: 80rpx 0;
+  position: relative;
 }
 
 .section-title {
@@ -60,10 +61,20 @@
 
 /* 内容 */
 
+.detail {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+              0 8rpx 16rpx rgba(0, 0, 0, .05),
+              0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  overflow: hidden;
+}
+
 .detail .wxParse-p {
   color: #666;
   font-size: 32rpx;
-  margin: 20rpx 60rpx;
+  margin: 40rpx;
   line-height: 64rpx;
   text-align: justify;
 }
@@ -72,16 +83,20 @@
   max-width: 100%;
 }
 
+/* 相关科学家 */
+
 .scientist-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40rpx;
   position: relative;
 }
 
-.scientist-list .inner {
-  display: inline-flex;
-  padding: 0 40rpx;
-  width: auto;
+.scientist-list .col {
+  position: relative;
+  width: 25%;
 }
 
 .scientist-list .inner scientist-item {
-  width: 180rpx;
+  
 }

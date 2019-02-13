@@ -9,6 +9,7 @@
       <image src="{{ scientist.avatar || '../../assets/scientistAvatar.png' }}" />
     </view>
   </view>
+  
   <view class="info">
     <text class="username">{{ scientist.username }}</text>
     <view class="attr">
@@ -19,11 +20,13 @@
       <text wx:for="{{ scientist.occupation }}" wx:key="{{ index }}">{{ item }}</text>
     </view>
   </view>
+
   <view class="summary">
     <text class="title">简介</text>
     <text class="title-sub">Brief Introductions</text>
     <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
   </view>
+
   <view class="summary">
     <text class="title">主要成就</text>
     <text class="title-sub">Achievements</text>
@@ -31,5 +34,7 @@
       <text wx:for="{{ scientist.achievements }}" wx:key="{{ index }}">{{ item }}</text>
     </view>
   </view>
-  <icon class="digg" type="like" size="48" />
+
+  <collect-handler />
+
 </view>

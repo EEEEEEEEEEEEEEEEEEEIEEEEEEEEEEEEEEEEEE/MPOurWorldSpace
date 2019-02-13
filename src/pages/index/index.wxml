@@ -1,10 +1,10 @@
 <view class="wrap">
 
-  <scroll-view class="main" enable-back-to-top scroll-y>
+  <view class="main">
     <tab-home id="home" hidden="{{ tabBarKeySelected !== 0 }}" />
     <tab-explore id="explore" hidden="{{ tabBarKeySelected !== 1 }}" />
     <tab-user id="user" hidden="{{ tabBarKeySelected !== 2 }}" />
-  </scroll-view>
+  </view>
 
   <tabbar class="tabbar-base" selected="{{ tabBarKeySelected }}">
     <tabbar-item wx:for="{{ tabBarSet }}"

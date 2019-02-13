@@ -1,4 +1,4 @@
-<view class="wrap" hidden="{{hidden}}">
+<scroll-view class="wrap" hidden="{{hidden}}" enable-back-to-top scroll-y>
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
@@ -47,4 +47,4 @@
 
   <footer-mark />
 
-</view>
+</scroll-view>
