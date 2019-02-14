@@ -1,0 +1,64 @@
+.gallery-item {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+    0 8rpx 16rpx rgba(0, 0, 0, .05),
+    0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.gallery-item > .inner {
+  position: relative;
+}
+
+/* 封面 */
+.cover-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.cover-wrap .cover {
+  border-radius: 14rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.cover-wrap .cover image {
+  background-color: rgba(0, 0, 0, .02);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 信息 */
+.info {
+  padding: 20rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.info text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  margin-bottom: 10rpx;
+}
+
+.info .remark {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}

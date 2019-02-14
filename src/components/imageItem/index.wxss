@@ -1,0 +1,27 @@
+.image-item {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+    0 8rpx 16rpx rgba(0, 0, 0, .05),
+    0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 20rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.image-item .inner {
+  border-radius: 14rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 75%;
+  position: relative;
+}
+
+.image-item .inner image {
+  background-color: rgba(0, 0, 0, .02);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

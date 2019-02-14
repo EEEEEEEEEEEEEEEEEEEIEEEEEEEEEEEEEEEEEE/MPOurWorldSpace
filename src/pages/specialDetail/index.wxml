@@ -6,8 +6,8 @@
 
   <view class="cover-wrap">
     <view class="cover">
-      <image src="{{ content.cover }}" mode="scaleToFill" lazy-load />
-      <image class="shadow" src="{{ content.cover }}" mode="scaleToFill" lazy-load />
+      <image src="{{ content.cover }}" mode="aspectFill" lazy-load />
+      <image class="shadow" src="{{ content.cover }}" mode="aspectFill" lazy-load />
     </view>
   </view>
 

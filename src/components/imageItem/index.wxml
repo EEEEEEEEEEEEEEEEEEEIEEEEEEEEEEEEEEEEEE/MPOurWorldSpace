@@ -1,0 +1,5 @@
+<view class="image-item">
+  <view class="inner">
+    <image src="{{ src }}" mode="{{ mode }}" lazy-load />
+  </view>
+</view>

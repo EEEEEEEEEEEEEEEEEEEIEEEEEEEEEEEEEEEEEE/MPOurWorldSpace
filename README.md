@@ -8,25 +8,27 @@
 
 ## 目标
 
-- 熟悉小程序的常见工程结构，梳理出合适的工程规范；
-- 熟悉小程序常用资源和单位的使用，保证高品质还原设计效果；
-- 熟悉小程序开发语法和风格；
-- 熟悉系统 API 的应用和处理；
-- 熟悉外部接口的访问和管理；
-- 敏捷开发和经验积累；
+- [x] 熟悉小程序的常见工程结构，梳理出合适的工程规范；
+- [x] 熟悉小程序常用资源和单位的使用，保证高品质还原设计效果；
+- [x] 熟悉小程序开发语法和风格；
+- [ ] 探索系统 API 的应用和处理；
+- [ ] 探索外部接口的访问和管理；
+- [ ] 敏捷开发和经验积累；
 
 ## 页面清单
 
-- [x] 首页（组件 tabHome）
-- [ ] 探索（组件 tabExplore）
-- [ ] 我（组件 tabUser）
-- [x] search          搜索
+- [x] tabHome         首页（组件）
+- [ ] tabExplore      探索（组件）
+- [ ] tabUser         我（组件）
+- [ ] search          搜索
 - [ ] special         专题
 - [ ] specialDetail   专题详情
-- [x] scientist       科学家
-- [x] scientistDetail 科学家详情
+- [x] gallery         画廊
+- [ ] galleryDetail   画廊详情
 - [ ] media           多媒体
 - [ ] mediaDetail     多媒体详情
+- [x] scientist       科学家
+- [x] scientistDetail 科学家详情
 - [x] books           书籍
 - [x] booksDetail     书籍详情
 - [ ] collect         收藏管理
@@ -37,36 +39,36 @@
 
 ## 组件清单
 
-- [x] carouselBaseItem 主轮播图
-- [x] complete 操作完成
-- [x] icon 图标
-- [x] iconGroup 图标组
-- [ ] rate 评分星级
-- [x] searchHandler 搜索条
-- [x] scrollNav 滚动导航
-- [x] tabbar 底部选项导航
-- [x] tabbarItem 底部选项导航条目
-- [x] pageHeader 页面标题头
-- [x] bookList 常规书籍列表
-- [x] bookItem 常规书籍列表条目
-- [x] bookTopicList 置顶书籍列表
-- [x] bookTopicItem 置顶书籍列表条目
-- [x] entryItem 首页快捷入口条目
-- [x] mediaList 多媒体列表
-- [x] mediaItem 多媒体列表条目
-- [x] scientistItem 科学家条目
-- [x] section 页面栏目分块
-- [x] specialItem 专栏条目
-- [x] specialTopic 专栏专题 banner
-- [ ] mallEnter 资源购买入口
+- [x] carouselBaseItem  主轮播图
+- [x] complete          操作完成
+- [x] icon              图标
+- [x] iconGroup         图标组
+- [x] rate              评分星级
+- [x] searchHandler     搜索条
+- [x] scrollNav         滚动导航
+- [x] tabbar            底部选项导航
+- [x] tabbarItem        底部选项导航条目
+- [x] pageHeader        页面标题头
+- [x] bookList          常规书籍列表
+- [x] bookItem          常规书籍列表条目
+- [x] bookTopicList     置顶书籍列表
+- [x] bookTopicItem     置顶书籍列表条目
+- [x] entryItem         首页快捷入口条目
+- [x] mediaList         多媒体列表
+- [x] mediaItem         多媒体列表条目
+- [x] scientistItem     科学家条目
+- [x] section           页面栏目分块
+- [x] specialItem       专栏条目
+- [x] specialTopic      专栏专题 banner
+- [ ] mallEnter         资源购买入口
 
 ## API
 
-- [ ] 首页
-- [ ] 用户信息
+- [ ] /public/index     首页
+- [ ] /user/login       用户初始化
 - [ ] 获取指定类别的资源
 - [ ] 资源收藏
-- [ ] 搜索
+- [ ] /public/search    搜索
 
 ## 参数
 

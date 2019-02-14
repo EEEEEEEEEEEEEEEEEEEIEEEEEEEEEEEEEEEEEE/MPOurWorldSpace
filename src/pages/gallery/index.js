@@ -1,5 +1,3 @@
-const WxParse = require('../../lib/wxParse/wxParse.js');
-
 // 获取应用实例
 const app = getApp();
 
@@ -7,11 +5,12 @@ Page({
 
   data: {
     pending: false,
-    content: null,
+    gallery: [],
   },
 
-  getDetail(id) {
+  getList() {
     let _self = this;
+    let _cache = this.data.gallery;
 
     wx.showNavigationBarLoading();
     wx.showLoading({
@@ -24,11 +23,8 @@ Page({
 
     wx.request({
       method: 'GET',
-      url: `${app.globalData.api}/special/detail`,
+      url: `${app.globalData.api}/gallery/index`,
       header: app.globalData.httpHeader,
-      data: {
-        id: id,
-      },
       complete() {
         wx.hideNavigationBarLoading();
         wx.hideLoading();
@@ -36,20 +32,24 @@ Page({
         _self.setData({
           pending: false,
         });
-        
+
       },
       success(res) {
         let data = res.data;
 
         if (data.statusCode !== '000000') {
-          console.error('数据加载失败', data.statusMessage);
+          console.error(data.statusMessage);
           return;
         }
 
-        WxParse.wxParse('detail', 'html', data.data.detail, _self);
+        if (_cache) {
+          _cache = [..._cache, ...data.data];
+        } else {
+          _cache = data.data;
+        }
 
         _self.setData({
-          content: data.data,
+          gallery: _cache,
         });
 
       },
@@ -58,11 +58,7 @@ Page({
   },
 
   onLoad: function (options) {
-    options.id = 12;
-
-    this.getDetail(options.id);
-
-    //WxParse.wxParse('detail', 'html', this.data.content.detail, this);
+    this.getList();
   },
 
 })

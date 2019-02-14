@@ -1,0 +1,28 @@
+<import src="../../lib/wxParse/wxParse.wxml" />
+
+<view class="wrap">
+
+  <page-header title="{{ gallery.title }}" title-sub="{{ gallery.title_sub }}" />
+
+  <view class="cover-wrap">
+    <view class="cover">
+      <image src="{{ gallery.cover }}" mode="aspectFill" lazy-load />
+      <image class="shadow" src="{{ gallery.cover }}" mode="aspectFill" lazy-load />
+    </view>
+  </view>
+
+  <view class="detail">
+    <text>{{ gallery.detail }}</text>
+  </view>
+
+  <view class="gallery-list">
+    <block wx:for="{{ gallery.images }}" wx:key="{{ index }}">
+      <view class="col">
+        <image-item src="{{ item }}" data-src="{{ item }}" bind:tap="imageChange" />
+      </view>
+    </block>
+  </view>
+  
+  <collect-handler />
+  
+</view>

@@ -1,0 +1,9 @@
+<view class="wrap">
+
+  <page-header title="图库" title-sub="从书籍中获取更多知识" />
+
+  <block wx:for="{{ gallery }}" wx:key="{{ index }}">
+    <gallery-item item="{{ item }}" />
+  </block>
+
+</view>

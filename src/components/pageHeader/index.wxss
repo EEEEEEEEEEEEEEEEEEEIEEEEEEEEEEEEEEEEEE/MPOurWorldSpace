@@ -1,7 +1,7 @@
 .page-header {
   align-items: center;
   display: flex;
-  height: 140rpx;
+  min-height: 140rpx;
   justify-content: space-between;
   padding: 0 40rpx;
 }

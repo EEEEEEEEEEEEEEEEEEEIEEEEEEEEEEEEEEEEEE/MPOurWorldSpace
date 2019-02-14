@@ -2,7 +2,6 @@ Component({
 
   properties: {
 
-    // 条目
     item: {
       type: Object,
       value: null,
@@ -12,15 +11,13 @@ Component({
 
   methods: {
 
-    // 跳转到详情页
     tapChange(e) {
-      let target = e.target;
-      let dataId = target.dataset.id;
+      let gallery = this.data.item;
       wx.navigateTo({
-        url: '/pages/booksDetail/index',
+        url: `/pages/galleryDetail/index?id=${gallery.id}`,
       });
-    },
+    }
 
   },
 
-});
+})

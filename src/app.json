@@ -19,6 +19,8 @@
     "special-item": "/components/specialItem/index",
     "entry-item": "/components/entryItem/index",
     "carousel-base-item": "/components/carouselBaseItem/index",
+    "gallery-item": "/components/galleryItem/index",
+    "image-item": "/components/imageItem/index",
     "media-list": "/components/mediaList/index",
     "media-item": "/components/mediaItem/index",
     "book-topic-list": "/components/bookTopicList/index",
@@ -28,19 +30,19 @@
     "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
+    "pages/galleryDetail/index",
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",
     "pages/specialDetail/index",
+    "pages/gallery/index",
+    
     "pages/media/index",
     "pages/mediaDetail/index",
     "pages/books/index",
     "pages/booksDetail/index",
-    "pages/read/index",
-    "pages/appreciate/index",
     "pages/scientist/index",
     "pages/scientistDetail/index",
-    "pages/webView/index",
     "pages/about/index",
     "pages/authLogin/index",
     "pages/readDetail/index"

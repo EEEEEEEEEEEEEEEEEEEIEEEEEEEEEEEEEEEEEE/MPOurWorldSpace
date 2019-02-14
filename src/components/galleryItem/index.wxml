@@ -1,0 +1,16 @@
+<view class="gallery-item" wx:if="{{ item }}" bind:tap="tapChange">
+  <view class="inner">
+
+    <view class="cover-wrap">
+      <view class="cover">
+        <image src="{{ item.cover }}" mode="aspectFill" lazy-load />
+      </view>
+    </view>
+
+    <view class="info">
+      <text class="title">{{ item.title }}</text>
+      <text class="remark">{{ item.detail }}</text>
+    </view>
+
+  </view>
+</view>
