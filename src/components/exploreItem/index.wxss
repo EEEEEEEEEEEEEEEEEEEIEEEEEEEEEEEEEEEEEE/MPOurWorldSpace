@@ -1,0 +1,81 @@
+.explore-item {
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+              0 8rpx 16rpx rgba(0, 0, 0, .05),
+              0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  display: flex;
+  margin: 40rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+/* 封面 */
+.cover-wrap {
+  position: relative;
+  width: 280rpx;
+  z-index: 2;
+}
+
+.cover {
+  border-radius: 14rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.cover image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 信息 */
+.info {
+  display: flex;
+  flex: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-left: 40rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.info .base {
+  flex: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.info .base text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info .base .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  margin-bottom: 10rpx;
+}
+
+.info .base .remark {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+
+.info .arrow {
+  color: #999;
+  line-height: 64rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  width: 64rpx;
+}

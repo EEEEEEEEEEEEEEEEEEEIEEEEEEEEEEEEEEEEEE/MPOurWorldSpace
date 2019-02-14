@@ -1,7 +1,11 @@
-<scroll-view class="wrap" hidden="{{hidden}}" enable-back-to-top scroll-y>
+<scroll-view class="wrap" hidden="{{hidden}}"
+    bindscrolltolower="lower"
+    enable-back-to-top scroll-with-animation scroll-y>
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
-  <scroll-nav items="{{ nav }}" />
+  <block wx:for="{{ explores }}" wx:key="{{ index }}">
+    <explore-item item="{{ item }}" />
+  </block>
 
 </scroll-view>

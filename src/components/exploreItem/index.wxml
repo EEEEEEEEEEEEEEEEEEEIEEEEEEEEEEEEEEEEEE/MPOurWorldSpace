@@ -1,0 +1,17 @@
+<view class="explore-item" wx:if="{{ item }}">
+
+  <view class="cover-wrap">
+    <view class="cover">
+      <image src="{{ item.cover }}" mode="aspectFill" lazy-load />
+    </view>
+  </view>
+
+  <view class="info">
+    <view class="base">
+      <text class="title">{{ item.title }}</text>
+      <text class="remark">{{ item.remark }}</text>
+    </view>
+    <icon class="arrow" type="arrow-line-right-copy" />
+  </view>
+
+</view>

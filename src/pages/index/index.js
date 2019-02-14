@@ -1,5 +1,8 @@
-const app = getApp(); // 获取应用实例
-const query = wx.createSelectorQuery(); // 对象选择
+// 获取应用实例
+const app = getApp();
+
+// 对象选择
+const query = wx.createSelectorQuery();
 
 Page({
 

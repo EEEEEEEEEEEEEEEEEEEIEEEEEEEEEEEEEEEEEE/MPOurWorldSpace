@@ -5,7 +5,7 @@
     0 16rpx 32rpx rgba(0, 0, 0, .05);
   border-radius: 24rpx;
   margin: 20rpx;
-  padding: 20rpx;
+  padding: 16rpx;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   border-radius: 14rpx;
   height: 0;
   overflow: hidden;
-  padding-bottom: 75%;
+  padding-bottom: 56.25%;
   position: relative;
 }
 

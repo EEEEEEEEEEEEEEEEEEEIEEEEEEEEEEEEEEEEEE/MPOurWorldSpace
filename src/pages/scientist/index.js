@@ -24,10 +24,6 @@ Page({
         method: 'GET',
         url: `${app.globalData.api}/scientist/types`,
         header: app.globalData.httpHeader,
-        complete() {
-          wx.hideNavigationBarLoading();
-          wx.hideLoading();
-        },
         success(res) {
           let data = res.data;
 
@@ -69,10 +65,6 @@ Page({
         header: app.globalData.httpHeader,
         data: {
           type: currentType.id,
-        },
-        complete() {
-          wx.hideNavigationBarLoading();
-          wx.hideLoading();
         },
         success(res) {
           let data = res.data;

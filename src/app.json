@@ -27,16 +27,16 @@
     "book-topic-item": "/components/bookTopicItem/index",
     "book-list": "/components/bookList/index",
     "book-item": "/components/bookItem/index",
+    "explore-item": "/components/exploreItem/index",
     "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
-    "pages/galleryDetail/index",
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",
     "pages/specialDetail/index",
     "pages/gallery/index",
-    
+    "pages/galleryDetail/index",
     "pages/media/index",
     "pages/mediaDetail/index",
     "pages/books/index",
