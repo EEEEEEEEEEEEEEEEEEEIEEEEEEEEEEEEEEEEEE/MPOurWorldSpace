@@ -28,6 +28,7 @@
     "book-list": "/components/bookList/index",
     "book-item": "/components/bookItem/index",
     "explore-item": "/components/exploreItem/index",
+    "player-audio": "/components/playerAudio/index",
     "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
@@ -59,6 +60,7 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
+  "requiredBackgroundModes": ["audio"],
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"

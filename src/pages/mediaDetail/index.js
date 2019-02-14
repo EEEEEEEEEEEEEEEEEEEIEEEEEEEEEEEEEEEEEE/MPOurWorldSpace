@@ -1,66 +1,21 @@
-// pages/mediaDetail/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
 
-  },
+    item: {
+      src: "http://play.hcdj.com:1120//2018/userdj/hc154574795813/20181227/bb03d29c9347e99dd8c61578e0d3f555.mp3",
+      cover: "http://img22.mtime.cn/up/2010/05/17/192853.58385398_500.jpg",
+      title: "兔子镇的火狐狸",
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  },
+  
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
