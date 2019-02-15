@@ -1,0 +1,21 @@
+[{
+    "include": "api/public.json"
+  },
+  {
+    "include": "api/user.json"
+  }, {
+    "include": "api/media.json"
+  },
+  {
+    "include": "api/explore.json"
+  },
+  {
+    "include": "api/scientist.json"
+  },
+  {
+    "include": "api/books.json"
+  },
+  {
+    "include": "api/special.json"
+  }
+]

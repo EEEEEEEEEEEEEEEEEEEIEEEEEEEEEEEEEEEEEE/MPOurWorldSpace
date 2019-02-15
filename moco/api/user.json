@@ -1,0 +1,13 @@
+[{
+  "description": "用户登录",
+  "request": {
+    "method": "post",
+    "uri": "/user/login"
+  },
+  "response": {
+    "json": {
+      "statusCode": "000000",
+      "statusMessage": "Success"
+    }
+  }
+}]

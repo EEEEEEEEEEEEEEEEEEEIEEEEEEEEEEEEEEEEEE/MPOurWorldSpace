@@ -10,7 +10,7 @@ Component({
 
     // 图标大小
     size: {
-      type: Number,
+      type: [Number, String],
       value: 32,
     },
 

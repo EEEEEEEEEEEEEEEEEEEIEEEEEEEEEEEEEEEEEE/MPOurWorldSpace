@@ -1,0 +1,255 @@
+[{
+    "description": "科学家列表",
+    "request": {
+      "method": "get",
+      "uri": "/scientist/index"
+    },
+    "response": {
+      "json": {
+        "statusCode": "000000",
+        "statusMessage": "Success",
+        "data": [{
+            "id": 1,
+            "username": "爱因斯坦",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/001.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "哥白尼",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/002.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "布鲁诺",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/003.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "霍金",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/004.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "张衡",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/005.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "伽利略",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/006.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "郭守敬",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/007.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "牛顿",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/008.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "哈雷",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/009.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "开普勒",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/010.jpg?raw=true"
+          }, {
+            "id": 1,
+            "username": "爱因斯坦",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/001.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "哥白尼",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/002.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "布鲁诺",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/003.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "霍金",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/004.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "张衡",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/005.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "伽利略",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/006.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "郭守敬",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/007.jpg?raw=true"
+          },
+          {
+            "id": 2,
+            "username": "牛顿",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/008.jpg?raw=true"
+          },
+          {
+            "id": 3,
+            "username": "哈雷",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/009.jpg?raw=true"
+          },
+          {
+            "id": 1,
+            "username": "开普勒",
+            "position": "物理学家，宇宙学家，数学家，思想家，哲学家",
+            "avatar": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/scientist/010.jpg?raw=true"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "科学家详情",
+    "request": {
+      "method": "get",
+      "uri": "/scientist/detail"
+    },
+    "response": {
+      "json": {
+        "statusCode": "000000",
+        "statusMessage": "Success",
+        "data": {
+          "like": 1450,
+          "username": "祖冲之",
+          "avatar": "",
+          "sex": {
+            "key": 1,
+            "name": "男"
+          },
+          "nationality": "中国(南北朝)",
+          "date_of_birth": "429",
+          "death_of_birth": "500",
+          "birth_and_death": "公元 429 ~ 500 年",
+          "occupation": [
+            "数学家",
+            "天文学家"
+          ],
+          "detail": "<p>祖冲之（429-500），字文远。出生于建康（今南京），祖籍范阳郡遒县（今河北涞水县），中国南北朝时期杰出的数学家、天文学家。</p><p>祖冲之一生钻研自然科学，其主要贡献在数学、天文历法和机械制造三方面。他在刘徽开创的探索圆周率的精确方法的基础上，首次将“圆周率”精算到小数第七位，即在3.1415926和3.1415927之间，他提出的“祖率”对数学的研究有重大贡献。直到 16 世纪，阿拉伯数学家阿尔·卡西才打破了这一纪录。</p><p>由他撰写的《大明历》是当时最科学最进步的历法，对后世的天文研究提供了正确的方法。其主要著作有《安边论》《缀术》《述异记》《历议》等。</p>",
+          "achievements": [
+            "编撰天文历法《大明历》",
+            "圆周率推算到小数点后七位",
+            "发明水碓磨、指南车、千里船、定时器",
+            "编撰《缀术》《述异记》《安边论》等书籍"
+          ],
+          "status": {
+            "key": 1,
+            "name": "正常"
+          },
+          "created_at": "2019-2-12 16:51:34",
+          "update_at": "2019-2-12 16:51:34"
+        }
+      }
+    }
+  },
+  {
+    "description": "科学家分类",
+    "request": {
+      "method": "get",
+      "uri": "/scientist/category"
+    },
+    "response": {
+      "json": {
+        "statusCode": "000000",
+        "statusMessage": "Success",
+        "data": [{
+            "id": 12,
+            "name": "科学家"
+          },
+          {
+            "id": 13,
+            "name": "天文学家"
+          },
+          {
+            "id": 14,
+            "name": "数学家"
+          },
+          {
+            "id": 15,
+            "name": "医学家"
+          },
+          {
+            "id": 12,
+            "name": "化学家"
+          },
+          {
+            "id": 13,
+            "name": "生物学家"
+          },
+          {
+            "id": 14,
+            "name": "发明家"
+          },
+          {
+            "id": 15,
+            "name": "教育家"
+          },
+          {
+            "id": 12,
+            "name": "画家"
+          },
+          {
+            "id": 13,
+            "name": "社会学家"
+          },
+          {
+            "id": 14,
+            "name": "作家"
+          },
+          {
+            "id": 15,
+            "name": "医药学家"
+          },
+          {
+            "id": 12,
+            "name": "水利工程专家"
+          },
+          {
+            "id": 13,
+            "name": "易学家"
+          },
+          {
+            "id": 14,
+            "name": "物理学家"
+          },
+          {
+            "id": 15,
+            "name": "机械工程师"
+          }
+        ]
+      }
+    }
+  }
+]

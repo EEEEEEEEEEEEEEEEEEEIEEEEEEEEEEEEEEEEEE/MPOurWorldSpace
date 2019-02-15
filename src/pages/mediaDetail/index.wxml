@@ -1,2 +1,15 @@
+<view class="wrap" wx:if="{{item}}">
 
-<player-audio item="{{ item }}" />
+  <page-header title="{{ item.title }}" title-sub="{{ item.artist }}" />
+
+  <player-video item="{{ item }}" />
+  
+  <player-audio item="{{ item }}" />
+
+  <view class="remark">
+    <text>{{ item.remark }}</text>
+  </view>
+  
+  <collect-handler />
+
+</view>

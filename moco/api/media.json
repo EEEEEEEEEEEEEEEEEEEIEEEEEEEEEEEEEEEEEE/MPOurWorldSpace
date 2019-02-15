@@ -1,0 +1,91 @@
+[{
+    "description": "主页",
+    "request": {
+      "uri": "/media"
+    },
+    "redirectTo": "/media/index"
+  },
+  {
+    "description": "媒体视听列表",
+    "request": {
+      "uri": "/media/index"
+    },
+    "response": {
+      "json": {
+        "statusCode": "000000",
+        "statusMessage": "Success",
+        "data": [{
+            "id": "12",
+            "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/001.jpg?raw=true",
+            "title": "昆虫4|分工明确的神秘蚂蚁帝国 分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国分工明确的神秘蚂蚁帝国",
+            "remark": "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+            "category": {
+              "id": "12",
+              "name": "有声书"
+            },
+            "popularity": 48
+          },
+          {
+            "id": "12",
+            "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/002.jpg?raw=true",
+            "title": "昆虫4|分工明确的神秘蚂蚁帝国",
+            "remark": "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+            "category": {
+              "id": "12",
+              "name": "兔斯基聊科学"
+            },
+            "like": 1,
+            "popularity": 0
+          },
+          {
+            "id": "12",
+            "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/003.jpg?raw=true",
+            "title": "昆虫4|分工明确的神秘蚂蚁帝国",
+            "remark": "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+            "category": {
+              "id": "12",
+              "name": "走进科学"
+            },
+            "popularity": 120
+          },
+          {
+            "id": "12",
+            "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/004.jpg?raw=true",
+            "title": "昆虫4|分工明确的神秘蚂蚁帝国",
+            "remark": "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+            "category": {
+              "id": "12",
+              "name": "科普中国出版社"
+            },
+            "popularity": 8
+          }
+        ]
+      }
+    }
+  },
+  {
+    "description": "媒体视听详情",
+    "request": {
+      "uri": "/media/detail"
+    },
+    "response": {
+      "json": {
+        "statusCode": "000000",
+        "statusMessage": "Success",
+        "data": {
+          "id": "12",
+          "cover": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/media/004.jpg?raw=true",
+          "title": "昆虫4|分工明确的神秘蚂蚁帝国",
+          "artist": ["德国战车"],
+          "remark": "它们用这些叶子来种植真菌。这些真菌对于切叶蚁来说，是非常有营养的食物，是切叶蚁的最爱。",
+          "src": "http://play.hcdj.com:1120//2018/userdj/hc154574795813/20181227/bb03d29c9347e99dd8c61578e0d3f555.mp3",
+          "category": {
+            "id": "12",
+            "name": "科普中国出版社"
+          },
+          "popularity": 8
+        }
+      }
+    }
+  }
+]

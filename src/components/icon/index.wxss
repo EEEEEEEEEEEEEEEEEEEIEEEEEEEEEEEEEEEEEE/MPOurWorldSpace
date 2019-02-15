@@ -2,4 +2,7 @@
 
 .icon:before {
   display: block;
+  height: 100%;
+  line-height: inherit;
+  width: 100%;
 }

@@ -23,7 +23,7 @@
       </view>
 
       <!-- 阅读次数 start -->
-      <text class="badge">阅读 {{ item.readCount }} 次</text>
+      <text class="badge">阅读 {{ item.popularity }} 次</text>
       <!-- 阅读次数 end -->
 
     </view>

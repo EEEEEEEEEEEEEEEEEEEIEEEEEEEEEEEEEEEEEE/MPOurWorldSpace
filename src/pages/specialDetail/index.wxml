@@ -1,6 +1,6 @@
 <import src="../../lib/wxParse/wxParse.wxml" />
 
-<view class="wrap">
+<view class="wrap" wx:if="{{content}}">
 
   <page-header title="{{ content.title }}" title-sub="{{ content.title_sub }}" />
 

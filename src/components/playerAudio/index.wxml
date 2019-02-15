@@ -1,5 +1,31 @@
-<text>{{ currentTime }}</text> / 
-<text>{{ duration }}</text>
+<view class="player" wx:if="{{item}}">
 
-<button bind:tap="play">播放</button>
-<button bind:tap="pause">暂停</button>
+  <view class="header">
+    <view class="cover-wrap">
+      <view class="cover">
+        <image src="{{ item.cover }}" mode="scaleToFill" lazy-load />
+      </view>
+    </view>
+    <view class="info">
+      <text class="title">{{ item.title }}</text>
+      <text class="artist">{{ item.artist }}</text>
+    </view>
+  </view>
+
+  <progress percent="{{ progress }}" stroke-width="2" />
+
+  <view class="control">
+    <icon class="btn" hover-class="btn-hover" type="player-prev" size="60" />
+    <view class="toggle" bind:tap="playToggle">
+      <icon class="play" type="player-play" size="64" wx:if="{{ !playing }}" />
+      <icon class="pause" type="player-pause" size="60" wx:if="{{ playing }}" />
+    </view>
+    <icon class="btn" type="player-next" size="60" />
+  </view>
+
+  <view class="attr">
+    <text class="category">{{ item.category.name }}</text>
+    <text class="popularity">热度：{{ item.popularity }}</text>
+  </view>
+
+</view>

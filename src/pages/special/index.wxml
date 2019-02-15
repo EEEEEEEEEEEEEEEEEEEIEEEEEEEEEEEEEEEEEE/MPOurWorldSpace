@@ -1,14 +1,9 @@
 <view class="wrap">
 
-  <page-header class="header"
-        title="专栏"
-        title-sub="汇集名博专栏">
-  </page-header>
+  <page-header title="专栏" title-sub="汇集名博专栏" />
 
   <block wx:for="{{ special }}" wx:key="{{ index }}">
       <special-item item="{{ item }}"></special-item>
   </block>
-
-  <complete icon="feed" title="专栏" remark="名博专栏"></complete>
 
 </view>

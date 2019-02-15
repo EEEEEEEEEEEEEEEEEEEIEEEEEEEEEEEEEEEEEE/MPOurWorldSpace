@@ -1,1 +1,159 @@
-/* components/playerAudio/index.wxss */
+/* 播放器 */
+.player {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+    0 8rpx 16rpx rgba(0, 0, 0, .05),
+    0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  overflow: hidden;
+  padding-top: 0.1rpx;
+  position: relative;
+}
+
+.player>.header {
+  align-items: center;
+  display: flex;
+  padding: 20rpx;
+  position: relative;
+}
+
+/* 基础信息 */
+.info {
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.info text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info .title {
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  margin-bottom: 10rpx;
+}
+
+.info .artist {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+
+/* 封面 */
+.cover-wrap {
+  position: relative;
+  width: 128rpx;
+  z-index: 1;
+}
+
+.cover-wrap .cover {
+  border-radius: 10rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.cover-wrap .cover image {
+  background-color: rgba(235, 241, 243, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 播放时间 */
+.time {
+  position: relative;
+}
+
+/* 控制条 */
+.control {
+  align-items: center;
+  border-top: 1px rgba(235, 241, 243, 0.5) solid;
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx;
+  position: relative;
+}
+
+.control icon {
+  outline: 1px transparent solid;
+}
+
+.control .btn {
+  background-image: linear-gradient(to right top, #28bd98, #a8cf5b);
+  border-radius: 50%;
+  color: transparent;
+  line-height: 96rpx;
+  text-align: center;
+  text-shadow: 0 6rpx 12rpx rgba(1, 165, 102, 0.3);
+  transition: all .3s ease;
+  width: 96rpx;
+  -webkit-background-clip: text;
+}
+
+.control .btn-hover {
+  background-color: #eee;
+}
+
+.control .toggle {
+  background-image: linear-gradient(to right top, #28bd98, #a8cf5b);
+  box-shadow: 0 12rpx 32rpx rgba(1, 165, 102, 0.3);
+  border-radius: 50%;
+  height: 128rpx;
+  position: relative;
+  width: 128rpx;
+}
+
+.control .toggle icon {
+  color: #fff;
+  display: block;
+  height: 64rpx;
+  line-height: 64rpx;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -32rpx;
+  margin-top: -32rpx;
+  top: 50%;
+  text-align: center;
+  text-shadow: 0 6rpx 12rpx rgba(139, 10, 10, 0.1);
+  width: 64rpx;
+}
+
+.control .toggle .play {
+  margin-left: -28rpx;
+  margin-top: -32rpx;
+}
+
+/* 附加属性 */
+.attr {
+  background-color: rgba(235, 241, 243, 0.2);
+  align-items: center;
+  border-top: 1px rgba(235, 241, 243, 0.5) solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx;
+  position: relative;
+}
+
+.attr text {
+  font-size: 24rpx;
+}
+
+.attr .category {
+  color: #999;
+}
+
+.attr .popularity {
+  color: #666;
+}

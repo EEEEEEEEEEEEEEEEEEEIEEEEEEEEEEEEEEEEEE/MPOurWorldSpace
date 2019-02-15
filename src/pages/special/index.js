@@ -17,7 +17,7 @@ Page({
         name: "外星探索网",
       },
       like: 1,
-      readCount: 10,
+      popularity: 10,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/special/002.jpg?raw=true",
@@ -27,7 +27,7 @@ Page({
         id: "12",
         name: "蚂蚁科学",
       },
-      readCount: 33,
+      popularity: 33,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/special/003.jpg?raw=true",
@@ -37,7 +37,7 @@ Page({
         id: "12",
         name: "兔斯基聊科学",
       },
-      readCount: 12,
+      popularity: 12,
     }, {
       id: "12",
       cover: "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/special/004.jpg?raw=true",
@@ -47,7 +47,7 @@ Page({
         id: "12",
         name: "百家号",
       },
-      readCount: 8,
+      popularity: 8,
     }, ],
 
   },

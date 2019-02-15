@@ -12,6 +12,7 @@ Component({
   },
 
   data: {
+    playing: false, // 是否正在播放
     currentTime: 0, // 已播放时长
     duration: 0, //总时长
     progress: 0, // 播放进度
@@ -27,9 +28,14 @@ Component({
       audio.pause();
     },
 
+    playToggle() {
+      this[this.data.playing ? 'pause' : 'play']();
+    },
+
     onTimeUpdate() {
       this.setData({
         currentTime: this._format(audio.currentTime),
+        progress: (audio.currentTime / audio.duration) * 1000,
       });
     },
 
@@ -42,7 +48,7 @@ Component({
     _format(s) {
       s = parseInt(s);
       if (s === 0) return 0;
-      
+
       let m = 0;
       let h = 0;
       if (s > 60) {
@@ -68,19 +74,31 @@ Component({
   ready() {
     let item = this.data.item;
 
-    // 创建内部 audio 上下文 InnerAudioContext 对象。
-    audio = wx.getBackgroundAudioManager();
-
-    // 设置音频信息
+    audio = wx.createInnerAudioContext();
     audio.title = item.title;
     audio.src = item.src;
     audio.coverImgUrl = item.cover;
+
     audio.onCanplay(() => {
       this.onCanplay();
     });
+
+    audio.onPlay(() => {
+      this.setData({
+        playing: true,
+      });
+    });
+
+    audio.onPause(() => {
+      this.setData({
+        playing: false,
+      });
+    });
+
     audio.onTimeUpdate(() => {
       this.onTimeUpdate();
     });
+
   },
 
 })

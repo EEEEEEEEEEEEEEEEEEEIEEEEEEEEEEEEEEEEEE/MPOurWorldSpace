@@ -29,9 +29,11 @@
     "book-item": "/components/bookItem/index",
     "explore-item": "/components/exploreItem/index",
     "player-audio": "/components/playerAudio/index",
+    "player-video": "/components/playerVideo/index",
     "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
+    
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",

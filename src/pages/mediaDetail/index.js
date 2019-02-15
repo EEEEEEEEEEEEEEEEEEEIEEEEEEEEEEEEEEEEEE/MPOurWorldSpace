@@ -1,17 +1,56 @@
+// 获取应用实例
+const app = getApp();
+
 Page({
 
   data: {
+    item: null,
+    playing: false, // 是否正在播放
+    progress: 0, // 播放进度
+    currentTime: 0,
+    duration: 0,
+  },
 
-    item: {
-      src: "http://play.hcdj.com:1120//2018/userdj/hc154574795813/20181227/bb03d29c9347e99dd8c61578e0d3f555.mp3",
-      cover: "http://img22.mtime.cn/up/2010/05/17/192853.58385398_500.jpg",
-      title: "兔子镇的火狐狸",
-    },
+  // 加载媒体数据
+  getMedia(options) {
+    let _self = this;
+    let id = options.id || 0;
+
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
+
+    wx.request({
+      method: 'GET',
+      url: `${app.globalData.api}/media/detail`,
+      header: app.globalData.httpHeader,
+      data: {
+        id: id,
+      },
+      complete() {
+        wx.hideNavigationBarLoading();
+        wx.hideLoading();
+      },
+      success(res) {
+        let data = res.data;
+
+        if (data.statusCode !== '000000') {
+          console.error('数据加载失败', data.statusMessage);
+          return;
+        }
+
+        _self.setData({
+          item: data.data,
+        });
+
+      },
+    });
 
   },
-  
-  onLoad: function (options) {
 
+  onLoad: function (options) {
+    this.getMedia(options);
   },
 
   onHide: function () {

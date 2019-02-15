@@ -1,1 +1,18 @@
-/* pages/mediaDetail/index.wxss */
+/* 备注 */
+.remark {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+    0 8rpx 16rpx rgba(0, 0, 0, .05),
+    0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  padding: 40rpx;
+  position: relative;
+}
+
+.remark text {
+  color: #888;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  text-align: justify;
+}

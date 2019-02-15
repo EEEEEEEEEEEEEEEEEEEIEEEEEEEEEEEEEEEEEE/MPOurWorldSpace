@@ -1,0 +1,115 @@
+.player {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .05),
+    0 8rpx 16rpx rgba(0, 0, 0, .05),
+    0 16rpx 32rpx rgba(0, 0, 0, .05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  overflow: hidden;
+  padding-top: 0.1rpx;
+  position: relative;
+}
+
+.player>.header {
+  align-items: center;
+  display: flex;
+  padding: 20rpx;
+  position: relative;
+}
+
+/* 基础信息 */
+.info {
+  flex: 1;
+  margin-left: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.info text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info .title {
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+  margin-bottom: 10rpx;
+}
+
+.info .artist {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+
+/* 封面 */
+.cover-wrap {
+  position: relative;
+  width: 128rpx;
+  z-index: 1;
+}
+
+.cover-wrap .cover {
+  border-radius: 10rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.cover-wrap .cover image {
+  background-color: rgba(235, 241, 243, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 封面 */
+.video-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.video video {
+  background-color: rgba(235, 241, 243, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 附加属性 */
+.attr {
+  background-color: rgba(235, 241, 243, 0.2);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx;
+  position: relative;
+}
+
+.attr text {
+  font-size: 24rpx;
+}
+
+.attr .category {
+  color: #999;
+}
+
+.attr .popularity {
+  color: #666;
+}
+

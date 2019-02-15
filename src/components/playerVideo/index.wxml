@@ -1,0 +1,26 @@
+<view class="player">
+
+  <view class="header">
+    <view class="cover-wrap">
+      <view class="cover">
+        <image src="{{ item.cover }}" mode="scaleToFill" lazy-load />
+      </view>
+    </view>
+    <view class="info">
+      <text class="title">{{ item.title }}</text>
+      <text class="artist">{{ item.artist }}</text>
+    </view>
+  </view>
+
+  <view class="video-wrap">
+    <view class="video">
+      <video src="https://static.zcool.cn/v45.08.17.12-v18-07-24-15/special-resource/time-lapse//video/video3.mp4" loop controls />
+    </view>
+  </view>
+
+  <view class="attr">
+    <text class="category">{{ item.category.name }}</text>
+    <text class="popularity">热度：{{ item.popularity }}</text>
+  </view>
+
+</view>

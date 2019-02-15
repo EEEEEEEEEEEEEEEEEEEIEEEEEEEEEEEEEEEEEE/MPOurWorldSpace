@@ -113,7 +113,6 @@
   font-size: 32rpx;
   margin: 20rpx;
   line-height: 64rpx;
-  text-indent: 64rpx;
   text-align: justify;
 }
 
