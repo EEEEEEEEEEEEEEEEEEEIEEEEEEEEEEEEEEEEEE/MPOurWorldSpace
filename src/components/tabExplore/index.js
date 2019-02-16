@@ -32,7 +32,7 @@ Component({
     //////////////////////////////////////////////
 
     // 获取探索内容列表
-    getList() {
+    loadList() {
       let _self = this;
       let _cache = this.data.explores;
 
@@ -76,18 +76,11 @@ Component({
 
     },
 
-    // 滚动到底部时加载更多数据
-    lower(e) {
-      if (pending) return;
-      pending = true;
-      this.getList();
-    },
-
     //////////////////////////////////////////////
     // 开始事件
     viewStart() {
       if (!inited) {
-        this.getList();
+        this.loadList();
       }
     },
 

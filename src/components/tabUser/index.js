@@ -51,13 +51,17 @@ Component({
       pushed = true;
     },
 
-    //////////////////////////////////////////////
-    // 跳转到关于我们
     pushToAbout(e) {
       wx.navigateTo({
         url: "/pages/about/index"
       });
-    }
+    },
+
+    pushToCoffee(e) {
+      wx.navigateTo({
+        url: "/pages/coffee/index"
+      });
+    },
 
   },
 

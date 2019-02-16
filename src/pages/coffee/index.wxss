@@ -1,0 +1,67 @@
+.wrap {
+  position: relative;
+}
+
+.contents {
+  overflow: hidden;
+}
+
+/* 封面 */
+.cover-wrap {
+  margin: 64rpx;
+  position: relative;
+}
+
+.cover {
+  display: block;
+  height: 0;
+  padding-bottom: 70.588%;
+  position: relative;
+}
+
+.cover image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 赞赏码 */
+.code-wrap {
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.05), 
+    0 8rpx 16rpx rgba(0, 0, 0, 0.05),
+    0 16rpx 32rpx rgba(0, 0, 0, 0.05);
+  border-radius: 24rpx;
+  margin: 40rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.code {
+  box-shadow: 0 0 0 2rpx #fafafa;
+  border-radius: 10rpx;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.code image {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* 提示文本 */
+.tips {
+  color: #999;
+  display: block;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  margin: 40rpx 80rpx;
+}
+

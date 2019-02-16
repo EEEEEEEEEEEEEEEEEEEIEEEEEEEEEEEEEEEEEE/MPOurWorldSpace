@@ -37,16 +37,6 @@ Component({
       });
     },
 
-    // 喜欢或取消喜欢
-    toggleLike() {
-      wx.showToast({
-        title: '成功',
-        icon: 'success',
-        duration: 2000
-      });
-    },
-
-
   },
 
 });

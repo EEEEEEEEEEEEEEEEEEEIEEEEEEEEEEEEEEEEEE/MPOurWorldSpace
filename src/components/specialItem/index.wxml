@@ -17,7 +17,7 @@
     <view class="attr">
 
       <view class="base">
-        <icon class="like {{ item.like === 1 ? 'current' : '' }}"
+        <icon class="like {{  collected ? 'current' : '' }}"
             data-id="like" type="like" />
         <text class="category" data-id="category" wx:if="{{ item.category }}">{{ item.category.name || "未分类" }}</text>
       </view>

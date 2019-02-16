@@ -42,7 +42,7 @@
 
   <menu title="应用" footer="兴趣 · 发现 · 探索 · 科学 · 智慧">
     <menu-item icon="about" color="#f90" title="关于" bind:tap="pushToAbout" />
-    <menu-item icon="coffee" color="#966" title="赠予咖啡" bind:tap="pushToAbout" />
+    <menu-item icon="coffee" color="#966" title="赠予咖啡" bind:tap="pushToCoffee" />
   </menu>
 
   <footer-mark />

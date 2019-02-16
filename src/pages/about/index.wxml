@@ -1,7 +1,6 @@
-
 <view class="wrap">
 
-  <page-header class="header" title="关于" title-sub="关于我们"></page-header>
+  <page-header title="关于" title-sub="关于我们" />
   
   <scroll-view class="body" scroll-y="{{true}}">
 

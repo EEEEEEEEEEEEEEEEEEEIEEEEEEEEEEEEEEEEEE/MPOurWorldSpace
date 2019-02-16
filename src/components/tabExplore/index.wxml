@@ -1,5 +1,4 @@
 <scroll-view class="wrap" hidden="{{hidden}}"
-    bindscrolltolower="lower"
     enable-back-to-top scroll-with-animation scroll-y>
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
@@ -7,5 +6,7 @@
   <block wx:for="{{ explores }}" wx:key="{{ index }}">
     <explore-item item="{{ item }}" />
   </block>
+
+  <load-handler bind:tap="loadList" />
 
 </scroll-view>

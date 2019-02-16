@@ -78,10 +78,6 @@
     </section>
     <!-- 多媒体 end -->
 
-    <!-- 专题活动入口 start -->
-    <special-topic cover="https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/ad/001.png?raw=true"></special-topic>
-    <!-- 专题活动入口 end -->
-
     <!-- 书籍 start -->
     <section title="科普书籍" title-sub="读万卷书，行万里路" bind:onMoreTap="pushToBooks">
       <book-topic-list>

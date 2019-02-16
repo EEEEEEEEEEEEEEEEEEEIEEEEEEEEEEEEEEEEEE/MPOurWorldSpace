@@ -2,8 +2,6 @@
   "usingComponents": {
     "icon": "/components/icon/index",
     "icon-group": "/components/iconGroup/index",
-    "btn-handler": "/components/btnHandler/index",
-    "collect-handler": "/components/collectHandler/index",
     "scroll-nav": "/components/scrollNav/index",
     "rate": "/components/rate/index",
     "tabbar": "/components/tabbar/index",
@@ -14,7 +12,10 @@
     "footer-mark": "/components/footerMark/index",
     "page-header": "/components/pageHeader/index",
     "section": "/components/section/index",
+    "btn-handler": "/components/btnHandler/index",
     "search-handler": "/components/searchHandler/index",
+    "load-handler": "/components/loadHandler/index",
+    "collect-handler": "/components/collectHandler/index",
     "special-topic": "/components/specialTopic/index",
     "special-item": "/components/specialItem/index",
     "entry-item": "/components/entryItem/index",
@@ -33,7 +34,6 @@
     "scientist-item": "/components/scientistItem/index"
   },
   "pages": [
-    
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",
@@ -47,6 +47,7 @@
     "pages/scientist/index",
     "pages/scientistDetail/index",
     "pages/about/index",
+    "pages/coffee/index",
     "pages/authLogin/index",
     "pages/readDetail/index"
   ],
@@ -62,10 +63,5 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "requiredBackgroundModes": ["audio"],
-  "permission": {
-    "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的效果展示"
-    }
-  }
+  "requiredBackgroundModes": ["audio"]
 }

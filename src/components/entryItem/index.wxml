@@ -1,5 +1,4 @@
 <view class="entry-item {{ color }}" wx:if="{{ item }}">
-
   <view class="cover-wrap">
 
     <view class="cover">

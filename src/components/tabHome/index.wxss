@@ -7,11 +7,6 @@
   z-index: 1;
 }
 
-/* 主轮播图 */
-.carousel  {
-  margin-bottom: -40rpx; /* 不要和底部的栏目距离过大 */
-}
-
 .carousel swiper-item {
   overflow: visible;
 }

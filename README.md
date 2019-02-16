@@ -21,12 +21,12 @@
 - [ ] tabExplore      探索（组件）
 - [ ] tabUser         我（组件）
 - [ ] search          搜索
-- [ ] special         专题
-- [ ] specialDetail   专题详情
+- [x] special         专题
+- [x] specialDetail   专题详情
 - [x] gallery         画廊
-- [ ] galleryDetail   画廊详情
-- [ ] media           多媒体
-- [ ] mediaDetail     多媒体详情
+- [x] galleryDetail   画廊详情
+- [x] media           多媒体
+- [x] mediaDetail     多媒体详情
 - [x] scientist       科学家
 - [x] scientistDetail 科学家详情
 - [x] books           书籍
@@ -35,7 +35,7 @@
 - [ ] history         我的足迹
 - [x] about           关于
 - [ ] authLogin       获取微信用户信息
-- [ ] coffee          赠与咖啡
+- [x] coffee          赠与咖啡
 
 ## 组件清单
 

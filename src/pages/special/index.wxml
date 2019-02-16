@@ -6,4 +6,6 @@
       <special-item item="{{ item }}"></special-item>
   </block>
 
+  <load-handler bind:tap="loadList" />
+
 </view>

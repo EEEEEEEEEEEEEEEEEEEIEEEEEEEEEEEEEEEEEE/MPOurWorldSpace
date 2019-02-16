@@ -1,5 +1,5 @@
 .book-topic-item {
-  margin: 40rpx 20rpx 0;
+  margin: 20rpx;
   transition: all .3s ease;
 }
 

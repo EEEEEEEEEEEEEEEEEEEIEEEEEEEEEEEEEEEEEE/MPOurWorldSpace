@@ -178,7 +178,7 @@
     "description": "科学家分类",
     "request": {
       "method": "get",
-      "uri": "/scientist/category"
+      "uri": "/scientist/types"
     },
     "response": {
       "json": {

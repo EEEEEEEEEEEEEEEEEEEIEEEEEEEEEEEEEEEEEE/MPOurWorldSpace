@@ -7,7 +7,7 @@
   position: relative;
   padding: 20rpx;
   position: relative;
-  margin: 40rpx 20rpx 0;
+  margin: 20rpx;
   transition: all .3s ease;
 }
 
@@ -18,7 +18,7 @@
 /* 封面 */
 .cover {
   height: 0;
-  padding-bottom: 133.3333%;
+  padding-bottom: 56.25%;
   position: relative;
   z-index: 1;
 }
@@ -31,23 +31,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-}
-
-/* 喜欢按钮 */
-.like {
-  color: #fff;
-  position: absolute;
-  right: 20rpx;
-  top: 20rpx;
-  line-height: 88rpx;
-  text-align: center;
-  text-shadow: 0 8rpx 16rpx rgba(0, 0, 0, .1);
-  width: 88rpx;
-  z-index: 4;
-}
-
-.like.current {
-  color: #FF9999;
 }
 
 /* 标题 */

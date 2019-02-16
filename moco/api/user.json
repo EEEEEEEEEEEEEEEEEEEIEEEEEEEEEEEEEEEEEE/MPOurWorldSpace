@@ -7,7 +7,23 @@
   "response": {
     "json": {
       "statusCode": "000000",
-      "statusMessage": "Success"
+      "statusMessage": "Success",
+      "data": {
+        "statistics": [
+          {
+            "name": "收藏",
+            "value": 1233
+          },
+          {
+            "name": "喜欢",
+            "value": 12323
+          },
+          {
+            "name": "积分",
+            "value": 1322
+          }
+        ]
+      }
     }
   }
 }]

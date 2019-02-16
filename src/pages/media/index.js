@@ -1,66 +1,60 @@
-// pages/special/index.js
+// 获取应用实例
+const app = getApp();
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    pending: false,
+    media: [],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  getlist() {
+    let _self = this;
+
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
+
+    this.setData({
+      isPending: true,
+    });
+
+    wx.request({
+      method: 'GET',
+      url: `${app.globalData.api}/media/index`,
+      header: app.globalData.httpHeader,
+      complete() {
+        wx.hideNavigationBarLoading();
+        wx.hideLoading();
+
+        _self.setData({
+          pending: false,
+        });
+
+      },
+      success(res) {
+        let data = res.data;
+        
+        if (data.statusCode !== '000000') {
+          console.error(data.statusMessage);
+          return;
+        }
+
+        // 初始化分类
+        let _cahce = [..._self.data.media, ...data.data];
+
+        // 设置数据
+        _self.setData({
+          media: _cahce,
+        });
+
+      },
+    });
+  },
+
   onLoad: function (options) {
-
+    this.getlist();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   position: relative;
-  padding: 0 20rpx;
+  padding: 20rpx;
 }
 
 .book-topic-list book-topic-item {

@@ -1,0 +1,17 @@
+.load-handler {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 40rpx;
+  position: relative;
+}
+
+.load-handler text {
+  background-color: #666;
+  border-radius: 40rpx;
+  color: #ccc;
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  padding: 0 24rpx;
+}

@@ -17,5 +17,8 @@
   },
   {
     "include": "api/special.json"
+  },
+  {
+    "include": "api/gallery.json"
   }
 ]
