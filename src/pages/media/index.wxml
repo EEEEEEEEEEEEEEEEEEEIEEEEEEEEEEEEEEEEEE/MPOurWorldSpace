@@ -11,4 +11,7 @@
     </block>
   </media-list>
 
+  <load-handler bind:tap="loadMore" 
+      loading="{{ pending }}" />
+
 </view>

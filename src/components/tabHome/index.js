@@ -20,39 +20,18 @@ Component({
   },
 
   data: {
-    // 页面是否正在加载数据
-    pending: false,
-
-    // 页面信息
-    page: app.globalData.tabBarSet[0],
-
-    // 主轮播图
-    carousel: [],
-
-    // 主轮播图尺寸
-    carouselSize: Math.floor((wx.getSystemInfoSync().windowWidth - 40) * (368 / 672)) + 20,
-
-    // 主轮播图选中索引
-    carouselCurrent: 0,
-
-    // 内容入口
-    entries: [],
-
-    // 专栏文章
-    special: [],
-
-    // 多媒体
-    media: [],
-
-    // 科学家
-    scientist: [],
-
-    // 科学家轮播图尺寸
-    scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 5)) + 25,
-
-    // 书籍
-    books: [],
-
+    pending: false, // 页面是否正在加载数据
+    networkError: false, // 请求是否出现错误
+    page: app.globalData.tabBarSet[0], // 页面信息
+    carousel: [], // 主轮播图
+    carouselSize: Math.floor((wx.getSystemInfoSync().windowWidth - 40) * (368 / 672)) + 20, // 主轮播图尺寸
+    carouselCurrent: 0, // 主轮播图选中索引
+    entries: [], // 内容入口
+    special: [], // 专栏文章
+    media: [], // 多媒体
+    scientist: [], // 科学家
+    scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 5)) + 25, // 科学家轮播图尺寸
+    books: [], // 书籍
   },
 
   methods: {
@@ -117,6 +96,7 @@ Component({
 
       this.setData({
         pending: true,
+        networkError: false,
       });
 
       if (inited) {
@@ -135,9 +115,17 @@ Component({
         method: 'GET',
         url: `${app.globalData.api}/index`,
         header: app.globalData.httpHeader,
-        complete() {
+        complete(res) {
           wx.hideNavigationBarLoading();
           wx.hideLoading();
+
+          if(res.errMsg === 'request:fail timeout'){
+            _self.setData({
+              pending: false,
+              networkError: true,
+            });
+          }
+
         },
         success(res) {
           let data = res.data;
@@ -151,13 +139,17 @@ Component({
           wx.setStorageSync('_chache_index', data.data);
 
           // 更新数据
-          _self.setData(Object.assign({}, {
-            pending: false,
-          }, data.data));
+          _self.setData(data.data);
 
           // 标记页面已完成初始化
           inited = true;
 
+        },
+        error(error) {
+          _self.setData({
+            pending: false,
+            networkError: true,
+          });
         },
       });
 

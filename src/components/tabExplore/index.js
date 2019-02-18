@@ -7,9 +7,6 @@ let pushed = false;
 // 页面是否已完成初始化
 let inited = false;
 
-// 是否正在加载数据
-let pending = false;
-
 Component({
 
   properties: {
@@ -24,6 +21,7 @@ Component({
 
   data: {
     page: app.globalData.tabBarSet[1], // 页面信息
+    pending: false,
     explores: [],
   },
 
@@ -35,6 +33,10 @@ Component({
     loadList() {
       let _self = this;
       let _cache = this.data.explores;
+
+      this.setData({
+        pending: true,
+      });
 
       wx.showNavigationBarLoading();
       wx.showLoading({
@@ -48,6 +50,11 @@ Component({
         complete() {
           wx.hideNavigationBarLoading();
           wx.hideLoading();
+
+          _self.setData({
+            pending: false,
+          });
+
         },
         success(res) {
           let data = res.data;
@@ -69,7 +76,6 @@ Component({
 
           // 标记状态
           inited = true;
-          pending = false;
 
         },
       });

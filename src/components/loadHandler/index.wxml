@@ -1,3 +1,5 @@
 <view class="load-handler">
-  <text>点击加载更多</text>
+  <text wx:if="{{ !loading && !disabled }}">{{ text }}</text>
+  <text wx:if="{{ loading }}">{{ loadingText }}</text>
+  <text wx:if="{{ disabled }}">{{ disabledText }}</text>
 </view>

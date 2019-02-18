@@ -1,20 +1,12 @@
 <scroll-view class="wrap" hidden="{{hidden}}" enable-back-to-top scroll-y>
 
-  <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}">
-
-    <icon-group>
-      
-      <btn-handler type="box" bind:tap="pushToSpecial" />
-    
-    </icon-group>
-
-  </page-header>
+  <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
   <!-- 搜索入口 start -->
   <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
   <!-- 搜索入口 end -->
 
-  <view hidden="{{ pending }}">
+  <view hidden="{{ pending || networkError }}">
 
     <!-- 主轮播图 start -->
     <swiper class="carousel" autoplay="false" 
@@ -89,5 +81,11 @@
     <!-- 书籍 end -->
 
   </view>
+
+  <complete wx:if="{{ !pending && networkError }}" 
+            title="数据请求失败"
+            remark="服务器无响应，请稍后重试">
+    <button size="mini" bind:tap="pageInit">重新加载</button>
+  </complete>
   
 </scroll-view>

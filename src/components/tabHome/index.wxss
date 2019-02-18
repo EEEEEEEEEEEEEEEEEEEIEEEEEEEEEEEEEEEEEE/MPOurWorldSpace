@@ -13,7 +13,6 @@
 
 /* 快捷入口*/
 .entries {
-  margin-bottom: -40rpx;
   position: relative;
 }
 

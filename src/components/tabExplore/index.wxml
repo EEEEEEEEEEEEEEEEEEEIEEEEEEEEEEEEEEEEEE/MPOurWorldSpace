@@ -3,10 +3,14 @@
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
-  <block wx:for="{{ explores }}" wx:key="{{ index }}">
-    <explore-item item="{{ item }}" />
-  </block>
+  <view class="contents" wx:hidden="{{ explores.length > 0 }}">
 
-  <load-handler bind:tap="loadList" />
+    <block wx:for="{{ explores }}" wx:key="{{ index }}">
+      <explore-item item="{{ item }}" />
+    </block>
+
+    <load-handler bind:tap="loadList" loading="{{ pending }}" />
+
+  </view>
 
 </scroll-view>

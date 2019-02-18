@@ -10,15 +10,19 @@
       </view>
     </view>
 
-    <text class="tips">微信扫描或点击保存下面的赞赏码，可以选择不同的赞赏消费以鼓励作者更好的维护本应用的内容。</text>
+    <view hidden="{{ !codePath }}">
 
-    <view class="code-wrap" wx:if="{{ codePath }}">
-      <view class="code">
-        <image src="{{ codePath }}" data-path="{{ codePath }}" bind:tap="saveImage" mode="aspectFill" lazy-load />
+      <text class="tips">微信扫描或点击保存下面的赞赏码，可以选择不同的赞赏消费以鼓励作者更好的维护本应用的内容。</text>
+
+      <view class="code-wrap" wx:if="{{ codePath }}">
+        <view class="code">
+          <image src="{{ codePath }}" data-path="{{ codePath }}" bind:tap="saveImage" mode="aspectFill" lazy-load />
+        </view>
       </view>
-    </view>
 
-    <text class="tips">赞赏码是微信新增的一种收款功能，主要应用于个人收款场景，可以帮助有收取赞赏、小费等需求的用户在线下场景更便捷地收款。</text>
+      <text class="tips">赞赏码是微信新增的一种收款功能，主要应用于个人收款场景，可以帮助有收取赞赏、小费等需求的用户在线下场景更便捷地收款。</text>
+
+    </view>
 
     <footer-mark />
 

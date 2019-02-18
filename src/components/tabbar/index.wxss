@@ -14,7 +14,7 @@
   z-index: 2;
 }
 
-.inner tabbarItem {
+.inner tabbar-item {
   flex: 1;
   margin-left: 10rpx;
   margin-right: 10rpx;

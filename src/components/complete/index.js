@@ -1,4 +1,3 @@
-// components/complete/index.js
 Component({
 
   properties: {

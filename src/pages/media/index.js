@@ -5,10 +5,11 @@ Page({
 
   data: {
     pending: false,
+    page: 1,
     media: [],
   },
 
-  getlist() {
+  loadList(page = 1) {
     let _self = this;
 
     wx.showNavigationBarLoading();
@@ -17,13 +18,16 @@ Page({
     });
 
     this.setData({
-      isPending: true,
+      pending: true,
     });
 
     wx.request({
       method: 'GET',
       url: `${app.globalData.api}/media/index`,
       header: app.globalData.httpHeader,
+      data: {
+        page: page || 1,
+      },
       complete() {
         wx.hideNavigationBarLoading();
         wx.hideLoading();
@@ -35,26 +39,33 @@ Page({
       },
       success(res) {
         let data = res.data;
-        
+
         if (data.statusCode !== '000000') {
           console.error(data.statusMessage);
           return;
         }
 
-        // 初始化分类
         let _cahce = [..._self.data.media, ...data.data];
-
-        // 设置数据
         _self.setData({
           media: _cahce,
         });
 
       },
     });
+
+  },
+
+  // 加载下一页数据
+  loadMore() {
+    let page = this.data.page + 1;
+    this.setData({
+      page: page,
+    });
+    this.loadList(page);
   },
 
   onLoad: function (options) {
-    this.getlist();
+    this.loadList();
   },
 
 })
