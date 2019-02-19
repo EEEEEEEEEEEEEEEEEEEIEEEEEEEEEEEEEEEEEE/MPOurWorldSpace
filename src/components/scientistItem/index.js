@@ -13,11 +13,10 @@ Component({
   methods: {
 
     // 跳转到详情页
-    tapChange(e) {
-      let target = e.target;
-      let dataId = target.dataset.id;
+    pushToDetail(e) {
+      let item = this.data.item;
       wx.navigateTo({
-        url: "/pages/scientistDetail/index",
+        url: `/pages/scientistDetail/index?id=${item.id}`,
       });
 
     },

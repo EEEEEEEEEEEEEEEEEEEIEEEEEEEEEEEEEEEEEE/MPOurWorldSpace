@@ -1,8 +1,7 @@
-<view class="item {{ current ? 'current' : '' }}" 
-      hover-class="item-hover"
-      wx:if="{{ item }}">
-  <view class="image" bind:tap="tapChange">
+<navigator class="item {{ current ? 'current' : '' }}" 
+      hover-class="item-hover" wx:if="{{ item }}" url="{{ item.url }}">
+  <view class="image">
     <image src="{{ item.image }}" mode="scaleToFill" lazy-load />
     <image class="shadow" src="{{ item.image }}" mode="scaleToFill" lazy-load />
   </view>
-</view>
+</navigator>

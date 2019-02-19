@@ -12,9 +12,9 @@ Component({
   methods: {
 
     tapChange(e) {
-      let gallery = this.data.item;
+      let item = this.data.item;
       wx.navigateTo({
-        url: `/pages/galleryDetail/index?id=${gallery.id}`,
+        url: `/pages/galleryDetail/index?id=${item.id}`,
       });
     }
 

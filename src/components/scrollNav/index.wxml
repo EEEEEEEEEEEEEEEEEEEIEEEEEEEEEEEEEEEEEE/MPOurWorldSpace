@@ -1,7 +1,8 @@
-<scroll-view class="scroll-nav" scroll-x="{{ true }}">
+<scroll-view class="scroll-nav" scroll-with-animation scroll-x>
   <view class="inner">
     <block wx:for="{{ items }}" wx:key="{{ index }}">
       <text class="item {{ currentIndex === index ? ' current' : '' }}" 
+            id="item-{{ index }}"
             data-item="{{ item }}" data-index="{{ index }}" 
             bindtap="itemChange">{{ item }}</text>
     </block>

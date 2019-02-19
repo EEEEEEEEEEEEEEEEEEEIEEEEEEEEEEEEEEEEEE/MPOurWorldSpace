@@ -29,8 +29,8 @@
   </view>
 
   <menu title="用户" remark="个性化您的信息">
-    <menu-item icon="home" color="#f60" title="我的收藏" />
-    <menu-item icon="history" color="#098" title="浏览历史" />
+    <menu-item icon="home" color="#f60" title="我的收藏" bind:tap="pushToCollect" />
+    <menu-item icon="history" color="#098" title="浏览历史" bind:tap="pushToHistory" />
   </menu>
 
   <menu title="应用" footer="兴趣 · 发现 · 探索 · 科学 · 智慧">

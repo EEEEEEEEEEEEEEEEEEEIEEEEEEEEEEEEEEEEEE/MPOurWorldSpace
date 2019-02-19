@@ -7,11 +7,19 @@ Component({
       value: [],
     },
 
+    current: {
+      type: Number,
+      value: 0,
+      observer(newVal, oldVal, changedPath) {
+        this.updateCurrent(newVal);
+      }
+    },
+
   },
 
   data: {
     currentIndex: 0,
-    current: '',
+    currentUse: '',
   },
 
   hasItems() {
@@ -22,15 +30,22 @@ Component({
   methods: {
 
     itemChange(e) {
+      this.updateCurrent(e.target.dataset.index);
+    },
+
+    updateCurrent(index) {
+      if (index === this.data.currentIndex) return;
+      let _self = this;
+      let query = this.createSelectorQuery();
+      let item = this.data.items[index];
+
       let data = {
-        current: e.target.dataset.item,
-        currentIndex: e.target.dataset.index,
+        currentUse: item,
+        currentIndex: index,
       };
 
-      // 更新数据
       this.setData(data);
 
-      // 事件回调
       this.triggerEvent('onChange', data);
 
     },

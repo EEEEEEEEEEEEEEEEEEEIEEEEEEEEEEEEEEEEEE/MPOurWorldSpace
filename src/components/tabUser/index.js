@@ -51,6 +51,18 @@ Component({
       pushed = true;
     },
 
+    pushToCollect(e) {
+      wx.navigateTo({
+        url: "/pages/collect/index"
+      });
+    },
+
+    pushToHistory(e) {
+      wx.navigateTo({
+        url: "/pages/history/index"
+      });
+    },
+
     pushToAbout(e) {
       wx.navigateTo({
         url: "/pages/about/index"

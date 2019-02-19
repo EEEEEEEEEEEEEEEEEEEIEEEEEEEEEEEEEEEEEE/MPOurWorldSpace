@@ -17,24 +17,12 @@ Component({
       let target = e.target;
       let dataId = target.dataset.id;
 
-      // 点击了收藏按钮
-      if (dataId === 'like') return this.toggleLike();
-
-      // 点击了分类按钮
-      if (dataId === 'category') return this.pushToCategory();
-
       // 转到详情页
+      let item = this.data.item;
       wx.navigateTo({
-        url: "/pages/mediaDetail/index",
+        url: `/pages/mediaDetail/index?id=${item.id}`,
       });
 
-    },
-
-    // 转到分类
-    pushToCategory() {
-      wx.navigateTo({
-        url: "/pages/media/index",
-      });
     },
 
   },

@@ -1,0 +1,93 @@
+<view class="wrap">
+
+  <page-header title="收藏" title-sub="管理您的收藏" />
+
+  <scroll-nav class="nav" 
+              items="{{ categories }}" current="{{ current }}"
+              bind:onChange="categoryChange" />
+
+  <swiper class="contents" current="{{ current }}" bindchange="swiperChange">
+
+    <swiper-item>
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <block wx:for="{{ explores }}" 
+                wx:for-item="explore" wx:for-index="exploreIndex" 
+                wx:key="{{ exploreIndex }}">
+            <explore-item item="{{ explore }}" />
+          </block>
+
+          <load-handler />
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <block wx:for="{{ explores }}" 
+                wx:for-item="explore" wx:for-index="exploreIndex" 
+                wx:key="{{ exploreIndex }}">
+            <explore-item item="{{ explore }}" />
+          </block>
+
+          <load-handler />
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <block wx:for="{{ explores }}" 
+                wx:for-item="explore" wx:for-index="exploreIndex" 
+                wx:key="{{ exploreIndex }}">
+            <explore-item item="{{ explore }}" />
+          </block>
+
+          <load-handler />
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <block wx:for="{{ explores }}" 
+                wx:for-item="explore" wx:for-index="exploreIndex" 
+                wx:key="{{ exploreIndex }}">
+            <explore-item item="{{ explore }}" />
+          </block>
+
+          <load-handler />
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <block wx:for="{{ explores }}" 
+                wx:for-item="explore" wx:for-index="exploreIndex" 
+                wx:key="{{ exploreIndex }}">
+            <explore-item item="{{ explore }}" />
+          </block>
+
+          <load-handler />
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+
+</view>

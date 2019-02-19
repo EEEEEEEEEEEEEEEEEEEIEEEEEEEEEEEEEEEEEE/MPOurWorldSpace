@@ -22,25 +22,25 @@
               "image": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/images/carousel/001.png?raw=true",
               "title": "我们的太阳系",
               "remark": "听专家为您解读我们的太阳系",
-              "url": "#"
+              "url": "/pages/specialDetail/index?id=245"
             },
             {
               "image": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/images/carousel/002.png?raw=true",
               "title": "银河系探秘",
               "remark": "听专家为您解读我们的太阳系",
-              "url": "#"
+              "url": "/pages/specialDetail/index?id=300"
             },
             {
               "image": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/images/carousel/003.png?raw=true",
               "title": "那些为人类探索宇宙做出贡献的天文学家",
               "remark": "听专家为您解读我们的太阳系",
-              "url": "#"
+              "url": "/pages/specialDetail/index?id=12"
             },
             {
               "image": "https://github.com/djyuning/MPOurWorldSpace/blob/master/assets/images/carousel/004.png?raw=true",
               "title": "月球的秘密",
               "remark": "听专家为您解读我们的太阳系",
-              "url": "#"
+              "url": "/pages/specialDetail/index?id=7485"
             }
           ],
           "special": [

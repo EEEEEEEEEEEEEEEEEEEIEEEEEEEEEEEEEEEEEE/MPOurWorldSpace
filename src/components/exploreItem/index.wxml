@@ -1,4 +1,4 @@
-<view class="explore-item" wx:if="{{ item }}">
+<navigator class="explore-item" wx:if="{{ item }}" url="{{ item.url }}">
 
   <view class="cover-wrap">
     <view class="cover">
@@ -14,4 +14,4 @@
     <icon class="arrow" type="arrow-line-right-copy" />
   </view>
 
-</view>
+</navigator>

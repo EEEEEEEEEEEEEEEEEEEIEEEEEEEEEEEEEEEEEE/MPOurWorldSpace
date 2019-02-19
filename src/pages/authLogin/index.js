@@ -14,6 +14,11 @@ Page({
     // 获取用户信息
     let user = e.detail.userInfo;
 
+    wx.showNavigationBarLoading();
+    wx.showLoading({
+      title: '加载中',
+    });
+
     /**
      * 初始化远程账户
      * 首先，使用 wx.login 获取登录凭证（code）；
@@ -21,10 +26,18 @@ Page({
      * 开发者远程基于 openid 创建用户数据
      */
     wx.login({
-      complete() {},
+      complate(res) {
+        wx.hideNavigationBarLoading();
+        wx.hideLoading();
+      },
       success(res) {
         // 登录凭证
         let code = res.code;
+
+        wx.showNavigationBarLoading();
+        wx.showLoading({
+          title: '验证中',
+        });
 
         // 换取用户唯一标识等信息
         wx.request({
@@ -37,9 +50,18 @@ Page({
             js_code: code,
             grant_type: 'authorization_code',
           },
+          complate(res) {
+            wx.hideNavigationBarLoading();
+            wx.hideLoading();
+          },
           success(res) {
             // 如：{session_key: "i8vG38lfJAdvbplD4DZDgQ==", openid: "oiLgc5OTwONtKZT-PcqP76EM0m8A"}
             let data = res.data;
+
+            wx.showNavigationBarLoading();
+            wx.showLoading({
+              title: '正在登录',
+            });
 
             // 登录我们自己的服务器验证和初始化账户信息
             wx.request({
@@ -49,8 +71,11 @@ Page({
               data: Object.assign({}, data, {
                 user: user,
               }),
+              complate(res) {
+                wx.hideNavigationBarLoading();
+                wx.hideLoading();
+              },
               success(res) {
-                console.log(res);
 
                 // 写入本地缓存
                 wx.setStorageSync('uid', data.openid);
@@ -58,11 +83,9 @@ Page({
                 wx.setStorageSync('last_login_at', new Date().getTime());
 
                 // 登录跳转
-                setTimeout(function () {
-                  wx.redirectTo({
-                    url: `/pages/index/index`,
-                  });
-                }, 200);
+                wx.redirectTo({
+                  url: `/pages/index/index`,
+                });
 
               },
             });
@@ -70,6 +93,9 @@ Page({
           }
         });
 
+      },
+      error(error) {
+        console.error(error);
       },
     });
 

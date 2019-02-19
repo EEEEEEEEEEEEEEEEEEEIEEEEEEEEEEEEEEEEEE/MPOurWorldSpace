@@ -1,7 +1,4 @@
 {
   "usingComponents": {
-    "tab-home": "/components/tabHome/index",
-    "tab-explore": "/components/tabExplore/index",
-    "tab-user": "/components/tabUser/index"
   }
 }

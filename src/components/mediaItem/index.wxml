@@ -1,22 +1,12 @@
 <view class="media-item" hover-class="media-item-hover" wx:if="{{ item }}" bindtap="tapChange">
-
-  <!-- 封面 start -->
   <view class="sub cover-wrap">
     <view class="cover">
       <image src="{{ item.cover }}" mode="aspectFill" lazy-load />
     </view>
   </view>
-  <!-- 封面 end -->
-
-  <!-- 标题 start -->
   <text class="title">{{ item.title }}</text>
-  <!-- 标题 end -->
-
-  <!-- 附加属性 start -->
   <view class="attr">
     <text class="category">{{ item.category.name }}</text>
     <text class="badge">阅读 {{ item.popularity }} 次</text>
   </view>
-  <!-- 附加属性 end -->
-
 </view>

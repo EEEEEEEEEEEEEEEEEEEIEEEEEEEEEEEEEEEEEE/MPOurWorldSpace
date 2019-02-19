@@ -1,11 +1,14 @@
+// 获取应用实例
+const app = getApp();
+
 // 是否需要暂停页面更新
 let pushed = false;
 
 // 页面是否已完成初始化
 let inited = false;
 
-// 获取应用实例
-const app = getApp();
+// 网络实例 RequestTask
+let reqTaskInit = null;
 
 Component({
 
@@ -32,6 +35,14 @@ Component({
     scientist: [], // 科学家
     scientistSize: (Math.floor((wx.getSystemInfoSync().windowWidth - 40) / 5)) + 25, // 科学家轮播图尺寸
     books: [], // 书籍
+  },
+
+  pageLifetimes: {
+
+    hide() {
+      this.pageInitCancel();
+    },
+
   },
 
   methods: {
@@ -111,7 +122,7 @@ Component({
         title: '加载中',
       });
 
-      wx.request({
+      reqTaskInit = wx.request({
         method: 'GET',
         url: `${app.globalData.api}/index`,
         header: app.globalData.httpHeader,
@@ -119,9 +130,12 @@ Component({
           wx.hideNavigationBarLoading();
           wx.hideLoading();
 
-          if(res.errMsg === 'request:fail timeout'){
+          _self.setData({
+            pending: false,
+          });
+
+          if (res.errMsg === 'request:fail timeout') {
             _self.setData({
-              pending: false,
               networkError: true,
             });
           }
@@ -155,11 +169,20 @@ Component({
 
     },
 
+    // 取消获取首页数据
+    pageInitCancel() {
+      wx.hideNavigationBarLoading();
+      wx.hideLoading();
+      this.setData({
+        pending: false,
+      });
+      reqTaskInit.abort();
+    },
+
     //////////////////////////////////////////////
 
     // 开始事件
     viewStart() {
-      // 获取首页数据
       this.pageInit();
     },
 

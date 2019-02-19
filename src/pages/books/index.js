@@ -1,13 +1,22 @@
+const main = require('../../lib/main');
+
 // 获取应用实例
 const app = getApp();
+
+// 分类
+let categories = [{
+  name: '全部',
+  key: 0,
+}];
+
+// 请求实例
+let reqTaskCategory;
+let reqTaskBooks;
 
 Page({
 
   data: {
-    categories: [{
-      name: '全部',
-      key: 0,
-    }], // 可用分类
+    categories: categories,
     books: {},
     currentIndex: 0, // 高亮的索引
     currentCategory: 0, // 高亮分类
@@ -20,32 +29,36 @@ Page({
 
   // 获取书籍分类
   getCategories() {
+    if (reqTaskCategory) {
+      reqTaskCategory.abort();
+    }
+
     let _self = this;
 
     wx.showNavigationBarLoading();
     wx.showLoading({
-      title: '加载中',
+      title: '加载分类中',
     });
 
     this.setData({
-      isPending: true,
+      peiding: true,
     });
 
-    wx.request({
-      method: 'GET',
+    main.request({
+      cache: true,
       url: `${app.globalData.api}/books/category`,
-      header: app.globalData.httpHeader,
-      success(res) {
-        let resData = res.data;
-
-        // 返回了错误数据
-        if (resData.statusCode !== '000000') {
-          console.error(resData.statusMessage);
-          return;
-        }
+      complete() {
+        wx.hideNavigationBarLoading();
+        wx.hideLoading();
+        _self.setData({
+          peiding: false,
+        });
+        reqTaskCategory = null;
+      },
+      success(data) {
 
         // 初始化分类
-        let categories = [..._self.data.categories, ...resData.data];
+        categories = [...categories, ...data];
 
         // 设置数据
         _self.setData({
@@ -64,51 +77,38 @@ Page({
 
   // 获取书籍列表
   getBooks() {
+    if (reqTaskBooks) {
+      reqTaskBooks.abort();
+    }
+
     let _self = this;
-    let current = _self.data.currentCategory;
+    let current = this.data.currentCategory;
+
+    // 获取对应索引的数据
     let _cache = this.data.books[current];
 
     wx.showNavigationBarLoading();
-    wx.showLoading({
-      title: '加载中',
-    });
 
     this.setData({
-      isPending: true,
+      pending: true,
     });
 
-    wx.request({
-      method: 'GET',
-      url: `${app.globalData.api}/books/index`,
-      header: app.globalData.httpHeader,
-      data: {
-        category: _self.data.currentCategory,
-      },
+    main.request({
+      cache: true,
+      url: `${app.globalData.api}/books/index?category=${_self.data.currentCategory}`,
       complete() {
         wx.hideNavigationBarLoading();
-        wx.hideLoading();
-
-        wx.stopPullDownRefresh();
-
         _self.setData({
-          isPending: false,
+          pending: false,
         });
-
+        reqTaskBooks = null;
       },
-      success(res) {
-        let resData = res.data;
-
-        // 返回了错误数据
-        if (resData.statusCode !== '000000') {
-          console.error(resData.statusMessage);
-          return;
-        }
-
+      success(data) {
         // 设置数据
         if (_cache) {
-          _cache = [..._cache, ...resData.data];
+          _cache = [..._cache, ...data];
         } else {
-          _cache = resData.data;
+          _cache = data;
         }
 
         // 设置数据
@@ -123,24 +123,31 @@ Page({
 
   },
 
-  // 分类切换
-  categoryChange(e) {
-    let detail = e.detail;
-    let index = detail.currentIndex;
-    let current = this.data.categories.find(c => c.name === detail.current).key;
+  // 设置选择的类别
+  changeSet(index) {
+    if (index === this.data.currentIndex) return;
 
     // 更新数据
     this.setData({
       currentIndex: index,
-      currentCategory: current,
+      currentCategory: categories[index].key,
     });
 
     // 获取书籍列表
-    let _cache = this.data.books[current];
+    let _cache = this.data.books[index];
     if (!_cache) {
       this.getBooks();
     }
+  },
 
+  // 分类切换
+  categoryChange(e) {
+    this.changeSet(e.detail.currentIndex);
+  },
+
+  // swiper 组件切换监听
+  swiperChange(e) {
+    this.changeSet(e.detail.current);
   },
 
   //////////////////////////////////

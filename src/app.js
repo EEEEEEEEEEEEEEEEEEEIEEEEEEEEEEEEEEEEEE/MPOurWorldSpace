@@ -17,7 +17,7 @@ App({
 
     // API 地址
     //api: 'https://22aea742-7278-464c-989e-dd4cfd6f40db.mock.pstmn.io',
-    api: 'http://10.164.6.99:8806',
+    api: 'http://10.164.5.17:8806',
 
     // HTTP 请求头
     httpHeader: {

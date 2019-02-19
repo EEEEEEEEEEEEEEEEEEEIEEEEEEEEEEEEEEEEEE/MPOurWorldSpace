@@ -3,23 +3,33 @@
   <page-header title="科普书籍" title-sub="从书籍中获取更多知识" />
 
   <scroll-nav class="book-category" 
-              items="{{ categoriesName }}" 
-              bind:onChange="categoryChange" />
+        current="{{ currentIndex }}"
+        items="{{ categoriesName }}" 
+        bind:onChange="categoryChange" />
 
-  <scroll-view class="contents" 
-                wx:for="{{ categories }}"
+  <swiper class="contents" current="{{ currentIndex }}" 
+        bindchange="swiperChange">
+
+    <swiper-item wx:for="{{ categories }}"
                 wx:for-index="categoryIndex" wx:for-item="category" 
-                wx:key="{{ categoryIndex }}"
-                hidden="{{ categoryIndex !== currentIndex }}" scroll-y>
+                wx:key="{{ categoryIndex }}">
+      <scroll-view class="contents-body-wrap" scroll-y>
+        <view class="contents-body">
+          
+          <book-list>
+            <block wx:for="{{ books[category.key] }}" 
+                    wx:for-index="bookIndex" wx:for-item="book" 
+                    wx:key="{{ bookIndex }}">
+              <book-item item="{{ book }}"></book-item>
+            </block>
+          </book-list>
 
-    <book-list>
-      <block wx:for="{{ books[category.key] }}" 
-              wx:for-index="bookIndex" wx:for-item="book" 
-              wx:key="{{ bookIndex }}">
-        <book-item item="{{ book }}"></book-item>
-      </block>
-    </book-list>
+          <load-handler />
 
-  </scroll-view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
 
 </view>
