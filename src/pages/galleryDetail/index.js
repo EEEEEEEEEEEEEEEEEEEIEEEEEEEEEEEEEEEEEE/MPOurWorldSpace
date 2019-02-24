@@ -1,3 +1,6 @@
+const util = require('../../lib/util.js');
+const app = getApp();
+
 Page({
 
   data: {
@@ -33,7 +36,8 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(options);
+    // 写入缓存
+    app.pushToHistory(this.data.gallery.id, this.data.gallery.title, util.getPageURL(this));
   },
 
 })

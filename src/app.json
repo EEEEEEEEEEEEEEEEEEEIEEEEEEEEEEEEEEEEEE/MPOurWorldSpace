@@ -16,7 +16,6 @@
     "search-handler": "components/searchHandler/index",
     "load-handler": "components/loadHandler/index",
     "collect-handler": "components/collectHandler/index",
-    "special-topic": "components/specialTopic/index",
     "special-item": "components/specialItem/index",
     "entry-item": "components/entryItem/index",
     "carousel-base-item": "components/carouselBaseItem/index",
@@ -32,11 +31,13 @@
     "player-audio": "components/playerAudio/index",
     "player-video": "components/playerVideo/index",
     "scientist-item": "components/scientistItem/index",
+    "content-item": "components/contentItem/index",
     "tab-home": "components/tabHome/index",
     "tab-explore": "components/tabExplore/index",
     "tab-user": "components/tabUser/index"
   },
   "pages": [
+    
     "pages/index/index",
     "pages/search/index",
     "pages/special/index",

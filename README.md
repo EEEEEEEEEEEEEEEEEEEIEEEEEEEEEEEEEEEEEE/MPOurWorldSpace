@@ -64,15 +64,6 @@
 - [x] section           页面栏目分块
 - [x] specialItem       专栏条目
 - [x] specialTopic      专栏专题 banner
-- [ ] mallEnter         资源购买入口
-
-## API
-
-- [ ] /public/index     首页
-- [ ] /user/login       用户初始化
-- [ ] 获取指定类别的资源
-- [ ] 资源收藏
-- [ ] /public/search    搜索
 
 ## 参数
 

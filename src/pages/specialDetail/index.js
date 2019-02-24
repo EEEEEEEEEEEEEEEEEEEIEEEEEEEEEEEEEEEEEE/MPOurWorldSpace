@@ -1,6 +1,5 @@
+const util = require('../../lib/util.js');
 const WxParse = require('../../lib/wxParse/wxParse.js');
-
-// 获取应用实例
 const app = getApp();
 
 Page({
@@ -36,15 +35,19 @@ Page({
         _self.setData({
           pending: false,
         });
-        
+
       },
       success(res) {
         let data = res.data;
+        let content = data.data;
 
         if (data.statusCode !== '000000') {
           console.error('数据加载失败', data.statusMessage);
           return;
         }
+
+        // 写入缓存
+        app.pushToHistory(id, content.title, util.getPageURL(_self));
 
         WxParse.wxParse('detail', 'html', data.data.detail, _self);
 
@@ -58,10 +61,7 @@ Page({
   },
 
   onLoad: function (options) {
-    options.id = 12;
-
-    this.getDetail(options.id);
-
+    this.getDetail(parseInt(options.id, 10));
     //WxParse.wxParse('detail', 'html', this.data.content.detail, this);
   },
 

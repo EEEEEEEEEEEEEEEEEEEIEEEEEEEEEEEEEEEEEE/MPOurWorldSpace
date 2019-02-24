@@ -1,6 +1,0 @@
-<view class="special-topic">
-  <view class="cover">
-    <image src="{{ cover }}" mode="scaleToFill" lazy-load="true" />
-    <image class="shadow" src="{{ cover }}" mode="scaleToFill" lazy-load="true" />
-  </view>
-</view>

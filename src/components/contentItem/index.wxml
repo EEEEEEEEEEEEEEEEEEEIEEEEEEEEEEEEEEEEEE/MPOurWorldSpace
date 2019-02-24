@@ -1,0 +1,7 @@
+<navigator class="content-item" wx:if="{{ item }}" url="{{ item.url }}">
+  <view class="base">
+    <text class="title">{{ item.title }}</text>
+    <text class="remark">{{ item.browser_at }}</text>
+  </view>
+  <icon class="arrow" type="arrow-line-right-copy" />
+</navigator>

@@ -1,8 +1,10 @@
+const util = require('/lib/util.js');
+
 App({
 
   /**
    * 全局数据
-   * 在其他组件和页面中，可以使用 getApp().globalData[key] 进行访问
+   * @description 在其他组件和页面中，可以使用 `getApp().globalData[key]` 进行访问
    */
   globalData: {
 
@@ -16,12 +18,10 @@ App({
     user: null,
 
     // API 地址
-    //api: 'https://22aea742-7278-464c-989e-dd4cfd6f40db.mock.pstmn.io',
     api: 'http://192.168.0.105:8806',
 
     // HTTP 请求头
     httpHeader: {
-      appId: '12312312',
       'x-api-key': '93dadbe63be14463aff5cd969940b942',
     },
 
@@ -48,8 +48,11 @@ App({
 
   },
 
+  /**
+   * 登录验证
+   * @description 检测用户是否已登录，未登录则跳转到授权登录页面
+   */
   checkLogin: function () {
-    // 检测用户是否已授权
     let user = wx.getStorageSync('user');
     if (user !== '') {
       this.globalData.user = user;
@@ -60,11 +63,54 @@ App({
     }
   },
 
+  /**
+   * 添加条目到历史记录
+   */
+  pushToHistory(id, title, url) {
+    let historyName = 'history';
+    let _cache = [];
+
+    // 获取本地缓存
+    try {
+      // 读取本地缓存
+      _cache = wx.getStorageSync(historyName) || [];
+
+      // 是否存在当前条目
+      let index = _cache.findIndex(item => item.id === id);
+      if (index !== -1) {
+        _cache.push(_cache.splice(index, 1)[0]);
+      } else {
+        // 添加新数据
+        _cache.push({
+          id: id,
+          title: title,
+          url: url,
+          browser_at: util.formatTime(new Date),
+        });
+      }
+
+      // 更新缓存
+      wx.setStorageSync(historyName, _cache);
+
+    } catch (e) {
+      console.log(e);
+    }
+
+  },
+
+  clearHistory(callback) {
+    try {
+      wx.removeStorageSync('history');
+      callback();
+    } catch (e) {
+      console.log(e);
+    }
+  },
+
   // 应用运行时执行的内容
   onLaunch: function () {
     // 授权检测
     this.checkLogin();
-
   },
 
   // 页面未找到时执行

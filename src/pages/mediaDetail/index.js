@@ -1,4 +1,4 @@
-// 获取应用实例
+const util = require('../../lib/util.js');
 const app = getApp();
 
 Page({
@@ -34,11 +34,15 @@ Page({
       },
       success(res) {
         let data = res.data;
+        let content = data.data;
 
         if (data.statusCode !== '000000') {
           console.error('数据加载失败', data.statusMessage);
           return;
         }
+
+        // 写入缓存
+        app.pushToHistory(id, content.title, util.getPageURL(_self));
 
         _self.setData({
           item: data.data,
@@ -53,8 +57,4 @@ Page({
     this.getMedia(options);
   },
 
-  onHide: function () {
-
-  },
-
-})
+});

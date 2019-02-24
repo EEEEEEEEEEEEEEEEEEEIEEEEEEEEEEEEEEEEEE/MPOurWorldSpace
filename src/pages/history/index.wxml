@@ -1,2 +1,28 @@
-<!--pages/history/index.wxml-->
-<text>pages/history/index.wxml</text>
+<view class="wrap">
+
+  <page-header class="header"
+        title="历史记录"
+        title-sub="您的浏览足迹都在这里了">
+
+    <button type="warn" size="mini" bind:tap="clearHistory"
+      wx:if="{{ contents.length > 0 }}">清空</button>
+
+  </page-header>
+
+  <view class="contents" wx:if="{{ !pending && contents.length > 0 }}">
+
+    <view class="content-list">
+      <block wx:for="{{ contents }}" wx:key="{{ index }}">
+        <content-item item="{{ item }}" />
+      </block>
+    </view>
+
+    <load-handler bind:tap="loadMore"
+        loading="{{ pending }}" />
+
+  </view>
+
+  <complete wx:if="{{ !pending && contents.length === 0 }}" icon="empty"
+    title="暂无记录" remark="没有历史记录可以显示" />
+
+</view>
