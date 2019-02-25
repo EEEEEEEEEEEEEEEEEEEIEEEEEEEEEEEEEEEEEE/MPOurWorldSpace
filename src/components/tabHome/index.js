@@ -1,14 +1,8 @@
-// 获取应用实例
 const app = getApp();
 
-// 是否需要暂停页面更新
-let pushed = false;
-
-// 页面是否已完成初始化
-let inited = false;
-
-// 网络实例 RequestTask
-let reqTaskInit = null;
+let pushed = false; // 是否需要暂停页面更新
+let inited = false; // 页面是否已完成初始化
+let reqTaskInit = null; // 网络实例 RequestTask
 
 Component({
 
@@ -46,13 +40,6 @@ Component({
   },
 
   methods: {
-
-    // 轮播图切换时调整选中的条目索引
-    carouselChange(e) {
-      this.setData({
-        carouselCurrent: e.detail.current,
-      });
-    },
 
     // 入口条目选择
     entryCheck(e) {
@@ -99,9 +86,6 @@ Component({
       });
     },
 
-    //////////////////////////////////////////////
-
-    // 获取首页数据
     pageInit() {
       let _self = this;
 
@@ -122,61 +106,37 @@ Component({
         title: '加载中',
       });
 
-      reqTaskInit = wx.request({
-        method: 'GET',
+      app.request({
+        cache: true,
         url: `${app.globalData.api}/index`,
-        header: app.globalData.httpHeader,
         complete(res) {
           wx.hideNavigationBarLoading();
           wx.hideLoading();
-
           _self.setData({
             pending: false,
           });
-
-          if (res.errMsg === 'request:fail timeout') {
-            _self.setData({
-              networkError: true,
-            });
-          }
-
         },
         success(res) {
-          let data = res.data;
+          let resData = res.data;
 
-          if (data.statusCode !== '000000') {
-            console.error('数据加载失败', data.statusMessage);
-            return;
+          if (resData.statusCode !== '000000') {
+            return app.requestError(resData);
           }
 
-          // 数据写入本地缓存
-          wx.setStorageSync('_chache_index', data.data);
-
           // 更新数据
-          _self.setData(data.data);
+          _self.setData(resData.data);
 
           // 标记页面已完成初始化
           inited = true;
 
         },
-        error(error) {
-          _self.setData({
-            pending: false,
-            networkError: true,
+        fail(e) {
+          wx.redirectTo({
+            url: `/pages/networkError/index`,
           });
         },
       });
 
-    },
-
-    // 取消获取首页数据
-    pageInitCancel() {
-      wx.hideNavigationBarLoading();
-      wx.hideLoading();
-      this.setData({
-        pending: false,
-      });
-      reqTaskInit.abort();
     },
 
     //////////////////////////////////////////////

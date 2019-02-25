@@ -3,13 +3,22 @@
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
-  <view class="contents" wx:hidden="{{ explores.length > 0 }}">
+  <view class="contents" wx:if="{{ !pending }}">
 
-    <block wx:for="{{ explores }}" wx:key="{{ index }}">
-      <explore-item item="{{ item }}" />
-    </block>
+    <view wx:if="{{ explores.length > 0 }}">
 
-    <load-handler bind:tap="loadList" loading="{{ pending }}" />
+      <block wx:for="{{ explores }}" wx:key="{{ index }}">
+        <explore-item item="{{ item }}" />
+      </block>
+
+      <load-handler bind:tap="pageNext"
+        loading="{{ loading }}" disabled="{{ ended }}" />
+
+    </view>
+
+    <complete wx:if="{{ explores.length == 0 }}"
+              icon="empty" title="没有内容"
+              remark="没有内容可以显示" />
 
   </view>
 

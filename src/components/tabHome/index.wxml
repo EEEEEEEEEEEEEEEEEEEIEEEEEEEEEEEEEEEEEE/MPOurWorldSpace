@@ -1,21 +1,20 @@
-<scroll-view class="wrap" hidden="{{hidden}}" enable-back-to-top scroll-y>
+<scroll-view class="wrap" hidden="{{ hidden }}" enable-back-to-top scroll-y>
 
   <page-header title="{{ page.title }}" title-sub="{{ page.slogan }}" />
 
-  <!-- 搜索入口 start -->
-  <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家" input="{{ false }}" bindtap="pushToSearch" />
-  <!-- 搜索入口 end -->
+  <search-handler placeholder="专栏 / 媒体 / 书籍 / 科学家"
+    input="{{ false }}"
+    bind:tap="pushToSearch" />
 
-  <view hidden="{{ pending || networkError }}">
+  <view wx:if="{{ !pending }}">
 
     <!-- 主轮播图 start -->
-    <swiper class="carousel" autoplay="false" 
-            circular="true" 
-            interval="5000" 
-            duration="600" 
-            previous-margin="15px" 
+    <swiper class="carousel" autoplay="{{ false }}"
+            circular="{{ true }}"
+            interval="5000"
+            duration="600"
+            previous-margin="15px"
             next-margin="15px"
-            bindchange="carouselChange" 
             style="height: {{ carouselSize }}px">
       <swiper-item item-id="{{ index }}" wx:for="{{ carousel }}" wx:key="{{ index }}">
         <carousel-base-item item="{{ item }}" current="{{ carouselCurrent === index }}" />
@@ -47,7 +46,7 @@
     <!-- 专栏 end -->
 
     <!-- 科学家 start -->
-    <section title="科学家" title-sub="有趣又有料的科普知识" bind:onMoreTap="pushToScientist">
+    <section title="科学家" title-sub="他们是人类历史上的骄傲" bind:onMoreTap="pushToScientist">
       <swiper class="scientis-topic" display-multiple-items="5"
         previous-margin="20rpx" next-margin="20rpx"
         style="height: {{ scientistSize }}px;">
@@ -82,10 +81,4 @@
 
   </view>
 
-  <complete wx:if="{{ !pending && networkError }}" 
-            title="数据请求失败"
-            remark="服务器无响应，请稍后重试">
-    <button size="mini" bind:tap="pageInit">重新加载</button>
-  </complete>
-  
 </scroll-view>

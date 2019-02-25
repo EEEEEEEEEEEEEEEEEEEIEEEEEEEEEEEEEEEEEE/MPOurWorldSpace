@@ -1,8 +1,6 @@
-// 获取应用实例
 const app = getApp();
 
-// 是否需要暂停页面更新
-let pushed = false;
+let pushed = false; // 是否需要暂停页面更新
 
 Component({
 
@@ -17,35 +15,21 @@ Component({
   },
 
   data: {
-
-    // 页面信息
     page: app.globalData.tabBarSet[2],
-
     user: null,
-
   },
 
   methods: {
 
-    //////////////////////////////////////////////
-    // 开始事件
     viewStart() {
-
       // 检测用户是否已授权
-      let user = wx.getStorageSync('user');
-      if (user !== '') {
+      app.checkLogin(user => {
         this.setData({
           user: user,
         });
-      } else {
-        wx.redirectTo({
-          url: `/pages/authLogin/index`,
-        });
-      }
-
+      });
     },
 
-    // 暂停事件
     viewPush() {
       if (pushed) return;
       pushed = true;

@@ -1,0 +1,9 @@
+<view class="wrap">
+
+  <page-header title="网络错误" title-sub="网络不稳定或已断开连接" />
+
+  <complete icon="empty" title="网络错误" remark="网络不稳定或已断开连接">
+    <button type="primary" size="mini" bind:tap="reLaunch">重试</button>
+  </complete>
+
+</view>

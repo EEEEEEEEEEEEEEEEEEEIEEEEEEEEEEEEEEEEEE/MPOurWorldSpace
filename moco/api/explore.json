@@ -7,7 +7,8 @@
     "json": {
       "statusCode": "000000",
       "statusMessage": "Success",
-      "data": [{
+      "data": {
+        "list":  [{
           "id": 12,
           "title": "神秘宇宙",
           "remark": "探秘神奇宇宙",
@@ -55,7 +56,8 @@
           "url": "/pages/specialDetail/index?id=1024",
           "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550139343538&di=d07fb084d45df82b827da3a58bea3c51&imgtype=0&src=http%3A%2F%2Fpic.hualongxiang.com%2Fattachment%2Fthumb%2FDay_140403%2F103_1240034_7f7f825679f33389.jpg"
         }
-      ]
+      ]},
+      "ended": false
     }
   }
 }, {
@@ -68,7 +70,7 @@
       "statusCode": "000000",
       "statusMessage": "Success",
       "data": {
-        
+
       }
     }
   }

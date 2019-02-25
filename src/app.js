@@ -1,5 +1,9 @@
 const util = require('/lib/util.js');
 
+let httpHeader = {
+  'x-api-key': '93dadbe63be14463aff5cd969940b942',
+};
+
 App({
 
   /**
@@ -21,9 +25,9 @@ App({
     api: 'http://192.168.0.105:8806',
 
     // HTTP 请求头
-    httpHeader: {
-      'x-api-key': '93dadbe63be14463aff5cd969940b942',
-    },
+    httpHeader: httpHeader,
+
+    pageSize: 20, // 每页显示数据条数
 
     // tabBar 预设
     tabBarSet: [{
@@ -48,14 +52,91 @@ App({
 
   },
 
+  // 网络请求，可使用本地缓存
+  request(options) {
+    options = Object.assign({}, {
+      cache: false, // 使用否使用缓存
+      expires: 43200000, // 有效期，默认为 12小时
+      method: 'GET', // 请求方式
+      header: httpHeader,
+      data: null,
+      url: null, // 请求地址
+      complete: () => {},
+      success: () => {},
+      fail: () => {},
+    }, options);
+
+    let now = new Date().getTime();
+    let keyRequest;
+    let key;
+
+    // 请求标识
+    key = `_api_${options.method}-${options.url}`;
+    if (options.data) {
+      for (let k in options.data) {
+        key += `-${k}=${options.data[k]}`;
+      }
+    }
+
+    // 优先查询缓存
+    if (options.cache) {
+      let cache = wx.getStorageSync(key);
+      if (cache && (now - cache.expires) < options.expires) {
+        options.complete(cache.data);
+        options.success(cache.data);
+        return;
+      }
+    }
+
+    // 取消已存在的同名请求
+    if (keyRequest) {
+      keyRequest.abort();
+    }
+
+    // 请求新数据
+    keyRequest = wx.request({
+      method: options.method,
+      url: options.url,
+      header: options.header,
+      data: options.data,
+      complete(res) {
+        options.complete(res);
+      },
+      success(res) {
+
+        // 写入缓存
+        if (options.cache) {
+          wx.setStorageSync(key, {
+            expires: new Date().getTime(),
+            data: res,
+          });
+        }
+
+        options.success(res);
+      },
+      fail(e) {
+        options.fail(e);
+      },
+    });
+
+  },
+
+  // 网络请求成功，但服务器返回了错误的信息
+  requestError(res) {
+    return wx.redirectTo({
+      url: `/pages/networkError/index`,
+    });
+  },
+
   /**
    * 登录验证
    * @description 检测用户是否已登录，未登录则跳转到授权登录页面
    */
-  checkLogin: function () {
+  checkLogin: function (callback) {
     let user = wx.getStorageSync('user');
     if (user !== '') {
       this.globalData.user = user;
+      callback(user);
     } else {
       wx.redirectTo({
         url: `/pages/authLogin/index`,
@@ -108,10 +189,7 @@ App({
   },
 
   // 应用运行时执行的内容
-  onLaunch: function () {
-    // 授权检测
-    this.checkLogin();
-  },
+  onLaunch: function () {},
 
   // 页面未找到时执行
   onPageNotFound() {},

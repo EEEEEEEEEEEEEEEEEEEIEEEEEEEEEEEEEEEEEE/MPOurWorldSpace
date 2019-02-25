@@ -1,6 +1,3 @@
-const main = require('../../lib/main');
-
-// 获取应用实例
 const app = getApp();
 
 // 分类
@@ -44,7 +41,7 @@ Page({
       peiding: true,
     });
 
-    main.request({
+    app.request({
       cache: true,
       url: `${app.globalData.api}/books/category`,
       complete() {
@@ -93,7 +90,7 @@ Page({
       pending: true,
     });
 
-    main.request({
+    app.request({
       cache: true,
       url: `${app.globalData.api}/books/index?category=${_self.data.currentCategory}`,
       complete() {

@@ -37,9 +37,9 @@
     "tab-user": "components/tabUser/index"
   },
   "pages": [
-    
     "pages/index/index",
     "pages/search/index",
+    "pages/networkError/index",
     "pages/special/index",
     "pages/specialDetail/index",
     "pages/gallery/index",

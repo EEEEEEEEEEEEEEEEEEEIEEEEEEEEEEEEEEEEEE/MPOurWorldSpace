@@ -1,11 +1,10 @@
-// 获取应用实例
+const main = require('../../lib/main');
 const app = getApp();
 
-// 是否需要暂停页面更新
-let pushed = false;
-
-// 页面是否已完成初始化
-let inited = false;
+let pushed = false; // 是否需要暂停页面更新
+let inited = false; // 页面是否已完成初始化
+let pageNow = 1; // 当前页码
+let pageSize = 20; // 分页大小
 
 Component({
 
@@ -22,75 +21,96 @@ Component({
   data: {
     page: app.globalData.tabBarSet[1], // 页面信息
     pending: false,
+    loading: false,
+    ended: false,
     explores: [],
   },
 
   methods: {
 
-    //////////////////////////////////////////////
-
-    // 获取探索内容列表
     loadList() {
-      let _self = this;
-      let _cache = this.data.explores;
+      return new Promise((resolve, reject) => {
+        let _self = this;
+        let _cache = this.data.explores || [];
+
+        wx.showNavigationBarLoading();
+        wx.showLoading({
+          title: '加载中',
+        });
+
+        app.request({
+          cache: true,
+          url: `${app.globalData.api}/explore/index`,
+          data: {
+            page: pageNow,
+            page_size: pageSize,
+          },
+          complete() {
+            wx.hideNavigationBarLoading();
+            wx.hideLoading();
+          },
+          success(res) {
+            let resData = res.data;
+            let data = resData.data;
+
+            if (resData.statusCode !== '000000') {
+              return wx.redirectTo({
+                url: `/pages/networkError/index`,
+              });
+            }
+
+            _self.setData({
+              explores: [..._cache, ...data.list],
+              ended: data.ended || false,
+            });
+
+            resolve();
+
+          },
+          fail(e) {
+            reject(e);
+          },
+        });
+
+      });
+    },
+
+    pageNext() {
+      if (this.data.ended) return;
+
+      pageNow += 1;
+
+      this.setData({
+        loading: true,
+      });
+
+      this.loadList().then((res) => {
+        this.setData({
+          loading: false,
+        });
+      });
+
+    },
+
+    pageInit() {
+      if (inited) return;
 
       this.setData({
         pending: true,
       });
 
-      wx.showNavigationBarLoading();
-      wx.showLoading({
-        title: '加载中',
-      });
-
-      wx.request({
-        method: 'GET',
-        url: `${app.globalData.api}/explore/index`,
-        header: app.globalData.httpHeader,
-        complete() {
-          wx.hideNavigationBarLoading();
-          wx.hideLoading();
-
-          _self.setData({
-            pending: false,
-          });
-
-        },
-        success(res) {
-          let data = res.data;
-
-          if (data.statusCode !== '000000') {
-            console.error(data.statusMessage);
-            return;
-          }
-
-          if (_cache) {
-            _cache = [..._cache, ...data.data];
-          } else {
-            _cache = data.data;
-          }
-
-          _self.setData({
-            explores: _cache,
-          });
-
-          // 标记状态
-          inited = true;
-
-        },
+      this.loadList().then((res) => {
+        this.setData({
+          pending: false,
+        });
       });
 
     },
 
-    //////////////////////////////////////////////
-    // 开始事件
     viewStart() {
-      if (!inited) {
-        this.loadList();
-      }
+      this.pageInit();
     },
 
-    // 暂停事件
     viewPush() {
       if (pushed) return;
       pushed = true;
