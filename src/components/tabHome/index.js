@@ -31,14 +31,6 @@ Component({
     books: [], // 书籍
   },
 
-  pageLifetimes: {
-
-    hide() {
-      this.pageInitCancel();
-    },
-
-  },
-
   methods: {
 
     // 入口条目选择
@@ -94,7 +86,7 @@ Component({
         networkError: false,
       });
 
-      if (inited) {
+      if (inited && wx.getStorageSync('_chache_index')) {
         this.setData(Object.assign({}, {
           pending: false,
         }, wx.getStorageSync('_chache_index')));
@@ -150,6 +142,15 @@ Component({
     viewPush() {
       if (pushed) return;
       pushed = true;
+    },
+
+  },
+
+  pageLifetimes: {
+
+    show() {
+      console.log( '123',this );
+      this.pageInit();
     },
 
   },

@@ -100,6 +100,7 @@ Component({
       });
 
       this.loadList().then((res) => {
+        inited = true;
         this.setData({
           pending: false,
         });
