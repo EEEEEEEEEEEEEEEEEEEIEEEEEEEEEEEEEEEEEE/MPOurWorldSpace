@@ -1,4 +1,7 @@
 {
   "usingComponents": {
+    "tab-home": "../../fragments/tabHome/index",
+    "tab-explore": "../../fragments/tabExplore/index",
+    "tab-user": "../../fragments/tabUser/index"
   }
 }

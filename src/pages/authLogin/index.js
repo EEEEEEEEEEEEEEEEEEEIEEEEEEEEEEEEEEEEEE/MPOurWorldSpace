@@ -128,7 +128,7 @@ Page({
         wx.setStorageSync('last_login_at', new Date().getTime());
 
         // 登录跳转
-        wx.redirectTo({
+        wx.reLaunch({
           url: `/pages/index/index`,
         });
 

@@ -86,6 +86,9 @@ App({
         options.success(cache.data);
         return;
       }
+    } else {
+      // 删除已存在的缓存
+      wx.removeStorageSync(key);
     }
 
     // 取消已存在的同名请求

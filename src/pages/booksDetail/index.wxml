@@ -8,7 +8,7 @@
 
     <view class="cover-wrap">
       <view class="cover">
-        <image src="{{ book.cover || '../../assets/books/001/001.png' }}" />
+        <image src="{{ book.cover }}" />
       </view>
     </view>
 
@@ -21,7 +21,7 @@
       <text class="title">{{ book.name }}</text>
       <text class="author">{{ book.author }} 著</text>
       <view class="category">
-        <text wx:for="{{ book.category }}" 
+        <text wx:for="{{ book.category }}"
               wx:key="{{ index }}">{{ item.name }}</text>
       </view>
     </view>

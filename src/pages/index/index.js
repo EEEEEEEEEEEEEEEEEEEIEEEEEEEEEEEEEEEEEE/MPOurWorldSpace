@@ -46,7 +46,7 @@ Page({
 
   ///////////////////////////////////////////////////////////
 
-  onShow: function (options) {
+  onLoad: function (options) {
     this.tabFlip(0);
   },
 

@@ -1,27 +1,9 @@
 /* 内容 */
 .contents {
   bottom: 0;
+  height: unset;
   left: 0;
   position: absolute;
   right: 0;
   top: 270rpx;
-}
-
-/* 列表 */
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20rpx;
-  position: relative;
-}
-
-.list .col {
-  overflow: hidden;
-  position: relative;
-  width: 33.333333%;
-}
-
-
-.list .col scientist-item > view {
-  padding: 40rpx;
 }

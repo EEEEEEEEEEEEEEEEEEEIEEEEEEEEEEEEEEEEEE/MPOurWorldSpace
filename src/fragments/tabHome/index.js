@@ -1,7 +1,6 @@
 const app = getApp();
 
 let pushed = false; // 是否需要暂停页面更新
-let inited = false; // 页面是否已完成初始化
 let reqTaskInit = null; // 网络实例 RequestTask
 
 Component({
@@ -17,6 +16,7 @@ Component({
   },
 
   data: {
+    inited: false,
     pending: false, // 页面是否正在加载数据
     networkError: false, // 请求是否出现错误
     page: app.globalData.tabBarSet[0], // 页面信息
@@ -79,19 +79,20 @@ Component({
     },
 
     pageInit() {
+      if (this.data.inited) return;
       let _self = this;
+      let cacheName = '_chache_index';
+      let _cache = wx.getStorageSync(cacheName);
+
+      if (_cache !== '') {
+        _self.setData(_cache);
+        return;
+      }
 
       this.setData({
         pending: true,
         networkError: false,
       });
-
-      if (inited && wx.getStorageSync('_chache_index')) {
-        this.setData(Object.assign({}, {
-          pending: false,
-        }, wx.getStorageSync('_chache_index')));
-        return;
-      };
 
       wx.showNavigationBarLoading();
       wx.showLoading({
@@ -116,10 +117,12 @@ Component({
           }
 
           // 更新数据
-          _self.setData(resData.data);
+          _self.setData(Object.assign({}, {
+            inited: true,
+          }, resData.data));
 
-          // 标记页面已完成初始化
-          inited = true;
+          // 创建缓存
+          wx.setStorageSync(cacheName, resData.data);
 
         },
         fail(e) {
@@ -142,15 +145,6 @@ Component({
     viewPush() {
       if (pushed) return;
       pushed = true;
-    },
-
-  },
-
-  pageLifetimes: {
-
-    show() {
-      console.log( '123',this );
-      this.pageInit();
     },
 
   },

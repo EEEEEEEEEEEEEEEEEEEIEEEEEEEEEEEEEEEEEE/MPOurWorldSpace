@@ -1,19 +1,14 @@
 <view class="wrap">
-
   <page-header title="科学家" title-sub="请铭记他们为人类科学探索做出的贡献" />
 
-  <scroll-nav class="book-category" 
-              items="{{ types }}" 
-              bind:onChange="typesChange" />
+  <scroll-nav class="book-category" items="{{ typesNav }}" current="{{ current }}" bind:onChange="typesChange" />
 
-  <scroll-view class="contents" scroll-y>
-    <view class="list">
-      <block wx:for="{{ scientist }}" wx:key="{{ index }}">
-        <view class="col">
-          <scientist-item item="{{ item }}" />
-        </view>
-      </block>
-    </view>
-  </scroll-view>
+  <swiper class="contents" current="{{ current }}" bindchange="swiperChange">
+    <block wx:for="{{ types }}" wx:key="{{ index }}">
+      <swiper-item>
+        <scientist-list id="list-{{ index }}" category="{{ item.id }}" />
+      </swiper-item>
+    </block>
+  </swiper>
 
 </view>

@@ -1,10 +1,6 @@
-const main = require('../../lib/main');
 const app = getApp();
 
 let pushed = false; // 是否需要暂停页面更新
-let inited = false; // 页面是否已完成初始化
-let pageNow = 1; // 当前页码
-let pageSize = 20; // 分页大小
 
 Component({
 
@@ -20,10 +16,13 @@ Component({
 
   data: {
     page: app.globalData.tabBarSet[1], // 页面信息
+    inited: false,
     pending: false,
     loading: false,
     ended: false,
     explores: [],
+    pageNow: 1,
+    pageSize: app.globalData.pageSize || 20,
   },
 
   methods: {
@@ -42,8 +41,8 @@ Component({
           cache: true,
           url: `${app.globalData.api}/explore/index`,
           data: {
-            page: pageNow,
-            page_size: pageSize,
+            page: _self.data.pageNow,
+            page_size: _self.data.pageSize,
           },
           complete() {
             wx.hideNavigationBarLoading();
@@ -78,9 +77,8 @@ Component({
     pageNext() {
       if (this.data.ended) return;
 
-      pageNow += 1;
-
       this.setData({
+        pageNow: this.data.pageNow + 1,
         loading: true,
       });
 
@@ -93,15 +91,15 @@ Component({
     },
 
     pageInit() {
-      if (inited) return;
+      if (this.data.inited) return;
 
       this.setData({
         pending: true,
       });
 
       this.loadList().then((res) => {
-        inited = true;
         this.setData({
+          inited: true,
           pending: false,
         });
       });

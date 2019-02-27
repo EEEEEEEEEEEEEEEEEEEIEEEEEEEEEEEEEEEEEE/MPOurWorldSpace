@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "scientist-list": "../../fragments/scientistList/index"
+  }
 }
